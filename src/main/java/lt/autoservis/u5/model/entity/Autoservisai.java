@@ -11,28 +11,42 @@ public class Autoservisai {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String pavadinimas;
-    private int ivertinimas;
+    private String adresas;
+    private String telefonas;
+    private String vadovas;
+
+
+
+        @ManyToMany
+    @JoinTable (
+            name = "sujungimas_autoservisai_specializacija",
+            joinColumns = @JoinColumn(name = "autoservisai_id"),
+            inverseJoinColumns = @JoinColumn(name = "specializacija_id"))
+    private Set<Specializacija> autoservisoSpecializacija;
 
     @ManyToMany
     @JoinTable (
-            name = "sujungimas_servisai_kategorija",
-            joinColumns = @JoinColumn(name = "serviso_id"),
-            inverseJoinColumns = @JoinColumn(name = "kategorijos_id"))
-    private Set<Autoservisai> autoservisoKategorija;
+            name = "sujungimas_autoservisai_meistrai",
+            joinColumns = @JoinColumn(name = "autoservisai_id"),
+            inverseJoinColumns = @JoinColumn(name = "meistrai_id"))
+    private Set<Meistrai> autoservisoMeistrai;
 
-
-
-
-
-
-    public Autoservisai(long id, String pavadinimas, int ivertinimas, Set<Autoservisai> autoservisoKategorija) {
-        this.id = id;
-        this.pavadinimas = pavadinimas;
-        this.ivertinimas = ivertinimas;
-        this.autoservisoKategorija = autoservisoKategorija;
-    }
+    @ManyToOne
+    @JoinColumn(name = "vartotojas_id")
+    private Vartotojas irasoKurejas;
 
     public Autoservisai() {
+    }
+
+    public Autoservisai(long id, String pavadinimas, String adresas, String telefonas, String vadovas, Set<Specializacija> autoservisoSpecializacija, Set<Meistrai> autoservisoMeistrai, Vartotojas irasoKurejas) {
+        this.id = id;
+        this.pavadinimas = pavadinimas;
+        this.adresas = adresas;
+        this.telefonas = telefonas;
+        this.vadovas = vadovas;
+        this.autoservisoSpecializacija = autoservisoSpecializacija;
+        this.autoservisoMeistrai = autoservisoMeistrai;
+        this.irasoKurejas = irasoKurejas;
     }
 
     public long getId() {
@@ -51,20 +65,52 @@ public class Autoservisai {
         this.pavadinimas = pavadinimas;
     }
 
-    public int getIvertinimas() {
-        return ivertinimas;
+    public String getAdresas() {
+        return adresas;
     }
 
-    public void setIvertinimas(int ivertinimas) {
-        this.ivertinimas = ivertinimas;
+    public void setAdresas(String adresas) {
+        this.adresas = adresas;
     }
 
-    public Set<Autoservisai> getAutoservisoKategorija() {
-        return autoservisoKategorija;
+    public String getTelefonas() {
+        return telefonas;
     }
 
-    public void setAutoservisoKategorija(Set<Autoservisai> autoservisoKategorija) {
-        this.autoservisoKategorija = autoservisoKategorija;
+    public void setTelefonas(String telefonas) {
+        this.telefonas = telefonas;
+    }
+
+    public String getVadovas() {
+        return vadovas;
+    }
+
+    public void setVadovas(String vadovas) {
+        this.vadovas = vadovas;
+    }
+
+    public Set<Specializacija> getAutoservisoSpecializacija() {
+        return autoservisoSpecializacija;
+    }
+
+    public void setAutoservisoSpecializacija(Set<Specializacija> autoservisoSpecializacija) {
+        this.autoservisoSpecializacija = autoservisoSpecializacija;
+    }
+
+    public Set<Meistrai> getAutoservisoMeistrai() {
+        return autoservisoMeistrai;
+    }
+
+    public void setAutoservisoMeistrai(Set<Meistrai> autoservisoMeistrai) {
+        this.autoservisoMeistrai = autoservisoMeistrai;
+    }
+
+    public Vartotojas getIrasoKurejas() {
+        return irasoKurejas;
+    }
+
+    public void setIrasoKurejas(Vartotojas irasoKurejas) {
+        this.irasoKurejas = irasoKurejas;
     }
 
     @Override
@@ -72,8 +118,12 @@ public class Autoservisai {
         return "Autoservisai{" +
                 "id=" + id +
                 ", pavadinimas='" + pavadinimas + '\'' +
-                ", ivertinimas=" + ivertinimas +
-                ", autoservisoKategorija=" + autoservisoKategorija +
+                ", adresas='" + adresas + '\'' +
+                ", telefonas='" + telefonas + '\'' +
+                ", vadovas='" + vadovas + '\'' +
+                ", autoservisoSpecializacija=" + autoservisoSpecializacija +
+                ", autoservisoMeistrai=" + autoservisoMeistrai +
+                ", irasoKurejas=" + irasoKurejas +
                 '}';
     }
 }
