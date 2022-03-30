@@ -25,5 +25,10 @@ import org.springframework.web.bind.annotation.RestController;
 
         }
 
+//        @GetMapping("/superadmin/vienas")
+//        @GetMapping("/superadmin/kazkoks/kitas")
+//        @GetMapping("/superadmin/meistras/add")
+//        @GetMapping("/superadmin/meistras/delet")
+
 
 }
