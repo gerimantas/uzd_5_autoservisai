@@ -12,8 +12,9 @@ public class Meistrai {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String vardas_pavarde;
-    private String specializacija;
-    private String telefonas;
+    private long autoservisas_id;
+    private long ivertinimas_id;
+
 
 
 }
