@@ -1,5 +1,7 @@
 package lt.autoservis.u5.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -18,15 +20,19 @@ public class Meistrai {
             name = "sujungimas_meistrai_specializacija",
             joinColumns = @JoinColumn(name = "meistrai_id"),
             inverseJoinColumns = @JoinColumn(name = "specializacija_id"))
+    @JsonIgnore
     private Set<Specializacija> specializacijaMeistro;
 
-    @OneToMany(mappedBy = "meistroAutoservisas")
-    Set<Autoservisai> autoservisoMeistrai;
+    @ManyToOne
+    @JoinColumn(name = "autoservisai_id")
+    private Autoservisai autoservisoMeistrai;
+
+
 
     public Meistrai() {
     }
 
-    public Meistrai(long id, String vardas_pavarde, long autoservisas_id, long ivertinimas_id, Set<Specializacija> specializacijaMeistro, Set<Autoservisai> autoservisoMeistrai) {
+    public Meistrai(long id, String vardas_pavarde, long autoservisas_id, long ivertinimas_id, Set<Specializacija> specializacijaMeistro, Autoservisai autoservisoMeistrai) {
         this.id = id;
         this.vardas_pavarde = vardas_pavarde;
         this.autoservisas_id = autoservisas_id;
@@ -75,11 +81,11 @@ public class Meistrai {
         this.specializacijaMeistro = specializacijaMeistro;
     }
 
-    public Set<Autoservisai> getAutoservisoMeistrai() {
+    public Autoservisai getAutoservisoMeistrai() {
         return autoservisoMeistrai;
     }
 
-    public void setAutoservisoMeistrai(Set<Autoservisai> autoservisoMeistrai) {
+    public void setAutoservisoMeistrai(Autoservisai autoservisoMeistrai) {
         this.autoservisoMeistrai = autoservisoMeistrai;
     }
 

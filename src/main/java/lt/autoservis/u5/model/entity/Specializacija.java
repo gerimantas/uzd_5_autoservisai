@@ -1,5 +1,7 @@
 package lt.autoservis.u5.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -16,7 +18,10 @@ public class Specializacija {
             name = "sujungimas_autoservisai_specializacija",
             joinColumns = @JoinColumn(name = "specializacija_id"),
             inverseJoinColumns = @JoinColumn(name = "autoservisai_id"))
+    @JsonIgnore
     private Set<Autoservisai> specializacijaAutoserviso;
+
+
 
     @ManyToMany
     @JoinTable(

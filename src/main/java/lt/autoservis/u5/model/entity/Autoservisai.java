@@ -29,14 +29,13 @@ public class Autoservisai {
             inverseJoinColumns = @JoinColumn(name = "miestai_id"))
     private Set<Miestai> autoservisoMiestas;
 
-    @ManyToOne
-    @JoinColumn(name = "meistrai_id")
-    private Meistrai meistroAutoservisas;
+    @OneToMany(mappedBy = "autoservisoMeistrai")
+    Set<Meistrai>  meistroAutoservisas;
 
     public Autoservisai() {
     }
 
-    public Autoservisai(long id, String pavadinimas, String vadovas, Set<Specializacija> autoservisoSpecializacija, Set<Miestai> autoservisoMiestas, Meistrai meistroAutoservisas) {
+    public Autoservisai(long id, String pavadinimas, String vadovas, Set<Specializacija> autoservisoSpecializacija, Set<Miestai> autoservisoMiestas, Set<Meistrai> meistroAutoservisas) {
         this.id = id;
         this.pavadinimas = pavadinimas;
         this.vadovas = vadovas;
@@ -85,11 +84,11 @@ public class Autoservisai {
         this.autoservisoMiestas = autoservisoMiestas;
     }
 
-    public Meistrai getMeistroAutoservisas() {
+    public Set<Meistrai> getMeistroAutoservisas() {
         return meistroAutoservisas;
     }
 
-    public void setMeistroAutoservisas(Meistrai meistroAutoservisas) {
+    public void setMeistroAutoservisas(Set<Meistrai> meistroAutoservisas) {
         this.meistroAutoservisas = meistroAutoservisas;
     }
 
