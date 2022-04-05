@@ -11,4 +11,5 @@ public interface AutoservisaiRepository extends JpaRepository<Autoservisai,Long>
     Autoservisai findByPavadinimas(String pavadinimas);
 
 
+
 }

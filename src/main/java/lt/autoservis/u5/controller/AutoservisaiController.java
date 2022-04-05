@@ -21,7 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 
         @GetMapping("/autoservisai/visi")
         Autoservisai gautiPagalPavadinima (@RequestParam String pavadinimas){
-          return autoservisasRepository.findByPavadinimas(pavadinimas);
+            Autoservisai autoservisai = autoservisasRepository.findByPavadinimas(pavadinimas);
+            System.out.println(autoservisai.getAutoservisoMiestas());
+          return autoservisai;
 
         }
 

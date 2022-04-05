@@ -1,9 +1,7 @@
 package lt.autoservis.u5.model.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Specializacija {
@@ -13,12 +11,29 @@ public class Specializacija {
     private long id;
     private String pavadinimas;
 
-    public Specializacija(long id, String pavadinimas) {
-        this.id = id;
-        this.pavadinimas = pavadinimas;
-    }
+    @ManyToMany
+    @JoinTable(
+            name = "sujungimas_autoservisai_specializacija",
+            joinColumns = @JoinColumn(name = "specializacija_id"),
+            inverseJoinColumns = @JoinColumn(name = "autoservisai_id"))
+    private Set<Autoservisai> specializacijaAutoserviso;
+
+    @ManyToMany
+    @JoinTable(
+            name = "sujungimas_meistrai_specializacija",
+            joinColumns = @JoinColumn(name = "specializacija_id"),
+            inverseJoinColumns = @JoinColumn(name = "meistrai_id"))
+    private Set<Meistrai> specializacijaMeistro;
+
 
     public Specializacija() {
+    }
+
+    public Specializacija(long id, String pavadinimas, Set<Autoservisai> specializacijaAutoserviso, Set<Meistrai> specializacijaMeistro) {
+        this.id = id;
+        this.pavadinimas = pavadinimas;
+        this.specializacijaAutoserviso = specializacijaAutoserviso;
+        this.specializacijaMeistro = specializacijaMeistro;
     }
 
     public long getId() {
@@ -37,11 +52,30 @@ public class Specializacija {
         this.pavadinimas = pavadinimas;
     }
 
+    public Set<Autoservisai> getSpecializacijaAutoserviso() {
+        return specializacijaAutoserviso;
+    }
+
+    public void setSpecializacijaAutoserviso(Set<Autoservisai> specializacijaAutoserviso) {
+        this.specializacijaAutoserviso = specializacijaAutoserviso;
+    }
+
+    public Set<Meistrai> getSpecializacijaMeistro() {
+        return specializacijaMeistro;
+    }
+
+    public void setSpecializacijaMeistro(Set<Meistrai> specializacijaMeistro) {
+        this.specializacijaMeistro = specializacijaMeistro;
+    }
+
     @Override
     public String toString() {
         return "Specializacija{" +
                 "id=" + id +
                 ", pavadinimas='" + pavadinimas + '\'' +
+                ", specializacijaAutoserviso=" + specializacijaAutoserviso +
+                ", specializacijaMeistro=" + specializacijaMeistro +
                 '}';
     }
 }
+

@@ -10,7 +10,6 @@ public class Autoservisai {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long miestas_id;
     private String pavadinimas;
     private String vadovas;
 
@@ -23,26 +22,27 @@ public class Autoservisai {
             inverseJoinColumns = @JoinColumn(name = "specializacija_id"))
     private Set<Specializacija> autoservisoSpecializacija;
 
-//    @ManyToMany
-//    @JoinTable (
-//            name = "sujungimas_autoservisai_meistrai",
-//            joinColumns = @JoinColumn(name = "autoservisai_id"),
-//            inverseJoinColumns = @JoinColumn(name = "meistrai_id"))
-//    private Set<Meistrai> autoservisoMeistrai;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "vartotojas_id")
-//    private Vartotojas irasoKurejas;
+    @ManyToMany
+    @JoinTable (
+            name = "sujungimas_autoservisai_miestai",
+            joinColumns = @JoinColumn(name = "autoservisai_id"),
+            inverseJoinColumns = @JoinColumn(name = "miestai_id"))
+    private Set<Miestai> autoservisoMiestas;
+
+    @ManyToOne
+    @JoinColumn(name = "meistrai_id")
+    private Meistrai meistroAutoservisas;
 
     public Autoservisai() {
     }
 
-    public Autoservisai(long id, long miestas_id, String pavadinimas, String vadovas, Set<Specializacija> autoservisoSpecializacija) {
+    public Autoservisai(long id, String pavadinimas, String vadovas, Set<Specializacija> autoservisoSpecializacija, Set<Miestai> autoservisoMiestas, Meistrai meistroAutoservisas) {
         this.id = id;
-        this.miestas_id = miestas_id;
         this.pavadinimas = pavadinimas;
         this.vadovas = vadovas;
         this.autoservisoSpecializacija = autoservisoSpecializacija;
+        this.autoservisoMiestas = autoservisoMiestas;
+        this.meistroAutoservisas = meistroAutoservisas;
     }
 
     public long getId() {
@@ -51,14 +51,6 @@ public class Autoservisai {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public long getMiestas_id() {
-        return miestas_id;
-    }
-
-    public void setMiestas_id(long miestas_id) {
-        this.miestas_id = miestas_id;
     }
 
     public String getPavadinimas() {
@@ -85,14 +77,31 @@ public class Autoservisai {
         this.autoservisoSpecializacija = autoservisoSpecializacija;
     }
 
+    public Set<Miestai> getAutoservisoMiestas() {
+        return autoservisoMiestas;
+    }
+
+    public void setAutoservisoMiestas(Set<Miestai> autoservisoMiestas) {
+        this.autoservisoMiestas = autoservisoMiestas;
+    }
+
+    public Meistrai getMeistroAutoservisas() {
+        return meistroAutoservisas;
+    }
+
+    public void setMeistroAutoservisas(Meistrai meistroAutoservisas) {
+        this.meistroAutoservisas = meistroAutoservisas;
+    }
+
     @Override
     public String toString() {
         return "Autoservisai{" +
                 "id=" + id +
-                ", miestas_id=" + miestas_id +
                 ", pavadinimas='" + pavadinimas + '\'' +
                 ", vadovas='" + vadovas + '\'' +
                 ", autoservisoSpecializacija=" + autoservisoSpecializacija +
+                ", autoservisoMiestas=" + autoservisoMiestas +
+                ", meistroAutoservisas=" + meistroAutoservisas +
                 '}';
     }
 }
