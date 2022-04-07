@@ -13,7 +13,7 @@ public class Meistrai {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String vardas_pavarde;
-    private long ivertinimas_id;
+
 
     @ManyToMany
     @JoinTable (
@@ -28,13 +28,18 @@ public class Meistrai {
     @JoinColumn(name = "autoservisai_id")
     private Autoservisai autoservisoMeistrai;
 
+    @ManyToOne
+    @JoinColumn(name = "vertinimas_id")
+    private Vertinimas meistroVertinimas;
+
+
+
     public Meistrai() {
     }
 
     public Meistrai(long id, String vardas_pavarde, long ivertinimas_id, Set<Specializacija> specializacijaMeistro, Autoservisai autoservisoMeistrai) {
         this.id = id;
         this.vardas_pavarde = vardas_pavarde;
-        this.ivertinimas_id = ivertinimas_id;
         this.specializacijaMeistro = specializacijaMeistro;
         this.autoservisoMeistrai = autoservisoMeistrai;
     }
@@ -55,13 +60,6 @@ public class Meistrai {
         this.vardas_pavarde = vardas_pavarde;
     }
 
-    public long getIvertinimas_id() {
-        return ivertinimas_id;
-    }
-
-    public void setIvertinimas_id(long ivertinimas_id) {
-        this.ivertinimas_id = ivertinimas_id;
-    }
 
     public Set<Specializacija> getSpecializacijaMeistro() {
         return specializacijaMeistro;
@@ -84,7 +82,6 @@ public class Meistrai {
         return "Meistrai{" +
                 "id=" + id +
                 ", vardas_pavarde='" + vardas_pavarde + '\'' +
-                ", ivertinimas_id=" + ivertinimas_id +
                 ", specializacijaMeistro=" + specializacijaMeistro +
                 ", autoservisoMeistrai=" + autoservisoMeistrai +
                 '}';

@@ -32,16 +32,26 @@ public class Autoservisai {
     @OneToMany(mappedBy = "autoservisoMeistrai")
     Set<Meistrai> autoservisoMeistrai;
 
+    @OneToMany(mappedBy = "autoservisoAdresas")
+    Set<Adresai> autoservisoAdresas;
+
+    @OneToMany(mappedBy = "autoservisoTelefonas")
+    Set<Telefonai> autoservisoTelefonas;
+
+
+
     public Autoservisai() {
     }
 
-    public Autoservisai(long id, String pavadinimas, String vadovas, Set<Specializacija> autoservisoSpecializacija, Set<Miestai> autoservisoMiestas, Set<Meistrai> meistroAutoservisas) {
+    public Autoservisai(long id, String pavadinimas, String vadovas, Set<Specializacija> autoservisoSpecializacija, Set<Miestai> autoservisoMiestas, Set<Meistrai> autoservisoMeistrai, Set<Adresai> autoservisoAdresas, Set<Telefonai> autoservisoTelefonas) {
         this.id = id;
         this.pavadinimas = pavadinimas;
         this.vadovas = vadovas;
         this.autoservisoSpecializacija = autoservisoSpecializacija;
         this.autoservisoMiestas = autoservisoMiestas;
-        this.autoservisoMeistrai = meistroAutoservisas;
+        this.autoservisoMeistrai = autoservisoMeistrai;
+        this.autoservisoAdresas = autoservisoAdresas;
+        this.autoservisoTelefonas = autoservisoTelefonas;
     }
 
     public long getId() {
@@ -92,6 +102,22 @@ public class Autoservisai {
         this.autoservisoMeistrai = autoservisoMeistrai;
     }
 
+    public Set<Adresai> getAutoservisoAdresas() {
+        return autoservisoAdresas;
+    }
+
+    public void setAutoservisoAdresas(Set<Adresai> autoservisoAdresas) {
+        this.autoservisoAdresas = autoservisoAdresas;
+    }
+
+    public Set<Telefonai> getAutoservisoTelefonas() {
+        return autoservisoTelefonas;
+    }
+
+    public void setAutoservisoTelefonas(Set<Telefonai> autoservisoTelefonas) {
+        this.autoservisoTelefonas = autoservisoTelefonas;
+    }
+
     @Override
     public String toString() {
         return "Autoservisai{" +
@@ -100,7 +126,9 @@ public class Autoservisai {
                 ", vadovas='" + vadovas + '\'' +
                 ", autoservisoSpecializacija=" + autoservisoSpecializacija +
                 ", autoservisoMiestas=" + autoservisoMiestas +
-                ", meistroAutoservisas=" + autoservisoMeistrai +
+                ", autoservisoMeistrai=" + autoservisoMeistrai +
+                ", autoservisoAdresas=" + autoservisoAdresas +
+                ", autoservisoTelefonas=" + autoservisoTelefonas +
                 '}';
     }
 }
