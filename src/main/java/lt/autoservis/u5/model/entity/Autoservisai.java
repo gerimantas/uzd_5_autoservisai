@@ -15,7 +15,7 @@ public class Autoservisai {
 
 
 
-        @ManyToMany
+    @ManyToMany
     @JoinTable (
             name = "sujungimas_autoservisai_specializacija",
             joinColumns = @JoinColumn(name = "autoservisai_id"),
@@ -30,7 +30,7 @@ public class Autoservisai {
     private Set<Miestai> autoservisoMiestas;
 
     @OneToMany(mappedBy = "autoservisoMeistrai")
-    Set<Meistrai>  meistroAutoservisas;
+    Set<Meistrai> autoservisoMeistrai;
 
     public Autoservisai() {
     }
@@ -41,7 +41,7 @@ public class Autoservisai {
         this.vadovas = vadovas;
         this.autoservisoSpecializacija = autoservisoSpecializacija;
         this.autoservisoMiestas = autoservisoMiestas;
-        this.meistroAutoservisas = meistroAutoservisas;
+        this.autoservisoMeistrai = meistroAutoservisas;
     }
 
     public long getId() {
@@ -84,12 +84,12 @@ public class Autoservisai {
         this.autoservisoMiestas = autoservisoMiestas;
     }
 
-    public Set<Meistrai> getMeistroAutoservisas() {
-        return meistroAutoservisas;
+    public Set<Meistrai> getAutoservisoMeistrai() {
+        return autoservisoMeistrai;
     }
 
-    public void setMeistroAutoservisas(Set<Meistrai> meistroAutoservisas) {
-        this.meistroAutoservisas = meistroAutoservisas;
+    public void setAutoservisoMeistrai(Set<Meistrai> autoservisoMeistrai) {
+        this.autoservisoMeistrai = autoservisoMeistrai;
     }
 
     @Override
@@ -100,7 +100,7 @@ public class Autoservisai {
                 ", vadovas='" + vadovas + '\'' +
                 ", autoservisoSpecializacija=" + autoservisoSpecializacija +
                 ", autoservisoMiestas=" + autoservisoMiestas +
-                ", meistroAutoservisas=" + meistroAutoservisas +
+                ", meistroAutoservisas=" + autoservisoMeistrai +
                 '}';
     }
 }

@@ -2,6 +2,7 @@ package lt.autoservis.u5.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -12,7 +13,6 @@ public class Meistrai {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String vardas_pavarde;
-    private long autoservisas_id;
     private long ivertinimas_id;
 
     @ManyToMany
@@ -23,19 +23,17 @@ public class Meistrai {
     @JsonIgnore
     private Set<Specializacija> specializacijaMeistro;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "autoservisai_id")
     private Autoservisai autoservisoMeistrai;
 
-
-
     public Meistrai() {
     }
 
-    public Meistrai(long id, String vardas_pavarde, long autoservisas_id, long ivertinimas_id, Set<Specializacija> specializacijaMeistro, Autoservisai autoservisoMeistrai) {
+    public Meistrai(long id, String vardas_pavarde, long ivertinimas_id, Set<Specializacija> specializacijaMeistro, Autoservisai autoservisoMeistrai) {
         this.id = id;
         this.vardas_pavarde = vardas_pavarde;
-        this.autoservisas_id = autoservisas_id;
         this.ivertinimas_id = ivertinimas_id;
         this.specializacijaMeistro = specializacijaMeistro;
         this.autoservisoMeistrai = autoservisoMeistrai;
@@ -55,14 +53,6 @@ public class Meistrai {
 
     public void setVardas_pavarde(String vardas_pavarde) {
         this.vardas_pavarde = vardas_pavarde;
-    }
-
-    public long getAutoservisas_id() {
-        return autoservisas_id;
-    }
-
-    public void setAutoservisas_id(long autoservisas_id) {
-        this.autoservisas_id = autoservisas_id;
     }
 
     public long getIvertinimas_id() {
@@ -94,7 +84,6 @@ public class Meistrai {
         return "Meistrai{" +
                 "id=" + id +
                 ", vardas_pavarde='" + vardas_pavarde + '\'' +
-                ", autoservisas_id=" + autoservisas_id +
                 ", ivertinimas_id=" + ivertinimas_id +
                 ", specializacijaMeistro=" + specializacijaMeistro +
                 ", autoservisoMeistrai=" + autoservisoMeistrai +
