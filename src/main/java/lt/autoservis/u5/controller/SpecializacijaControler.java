@@ -3,9 +3,7 @@ package lt.autoservis.u5.controller;
 import lt.autoservis.u5.model.entity.Specializacija;
 import lt.autoservis.u5.model.repository.SpecializacijaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class SpecializacijaControler {
@@ -14,11 +12,11 @@ public class SpecializacijaControler {
     SpecializacijaRepository specializacijaRepository;
 
     @PostMapping ("/specializacija/ideti")
-    String idetiSpecializacija(String pavadinimas) {
-        Specializacija naujaSpecializacija = new Specializacija();
-        naujaSpecializacija.setSpecializacijaAutoserviso(pavadinimas);
+    String idetiSpecializacija(@RequestBody Specializacija naujaSpecializacija) {
+//        Specializacija naujaSpecializacija = new Specializacija();
+//        naujaSpecializacija.setPavadinimas(pavadinimas);
         specializacijaRepository.save(naujaSpecializacija);
-        return "Specializacija" + pavadinimas + "sekmingai ideta";
+        return "sekmingai ideta";
     }
 
 
