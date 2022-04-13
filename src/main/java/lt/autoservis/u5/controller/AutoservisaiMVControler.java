@@ -15,14 +15,14 @@ public class AutoservisaiMVControler {
     AutoservisaiRepository autoservisaiRepository;
 
 
-    @GetMapping("/th/rec/ideti")
-    String autoservisoIdejimoPuslapis(Model model, @RequestParam String autoservisai) {
-        Autoservisai autoservisai = new Autoservisai();
-        model.addAttribute("autoservisai", autoservisai);
-        return "ideti autoservisa.html";
+    @GetMapping("/test/autoservisai")
+    String autoservisuPuslapis(Model model, @RequestParam String pavadinimas) {
+        Autoservisai autoservisai = autoservisaiRepository.findByPavadinimas(pavadinimas);
+        model.addAttribute("pavadinimas", autoservisai.getPavadinimas());
+        return "testas_autoservisai.html";
     }
 
-//    http://localhost:8080/th/rec/ideti
+//    http://localhost:8080//test/autoservisai
 
 
 }
