@@ -10,6 +10,8 @@ import java.util.List;
 public interface AutoservisaiRepository extends JpaRepository<Autoservisai,Long> {
     Autoservisai findByPavadinimas(String pavadinimas);
 
+    Autoservisai findById(long id);
+
 
 
 }
