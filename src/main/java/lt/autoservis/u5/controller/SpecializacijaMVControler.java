@@ -32,8 +32,21 @@ public class SpecializacijaMVControler {
 
     }
 
+//    @GetMapping ("/specializacija/rasti_autoservisus")
+//    String rastiAutoservisuSpecializacijas(Model model, @RequestParam long id) {
+//        Specializacija specializacija = specializacijaRepository.findById(id);
+//        model.addAttribute("specializacijaAutoserviso", specializacija.getSpecializacijaAutoserviso());
+//        model.addAttribute("specializacijosPavadinimas", specializacija.getPavadinimas());
+//        return "specializacijos_autoservisai.html";
+//
+//    }
+
 }
 
 //       http://localhost:8080/test/visos_specializacijos
 
 //       http://localhost:8080/specializacija/rodyti_autoservisus
+
+//       http://localhost:8080/specializacija/rasti_autoservisus
+
+

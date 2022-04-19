@@ -12,7 +12,7 @@
 </head>
 <body>
 <div th:each="specializacija : ${visosSpecializacijos}" class="list-group">
-    <a th:text="${specializacija.getPavadinimas()}" href="@{/specializacija/rodyti_specializacijas/(pavadinimas=${specializacija.getPavadinimas()})}" class="list-group-item list-group-item-action"></a>
+    <a th:text="${specializacija.getPavadinimas()}" th:href="@{/specializacija/rodyti_autoservisus/(id=${specializacija.getId()})}" class="list-group-item list-group-item-action"></a>
 </div>
 </body>
 </html>
