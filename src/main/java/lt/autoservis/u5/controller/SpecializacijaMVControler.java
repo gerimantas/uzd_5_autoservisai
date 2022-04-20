@@ -32,14 +32,7 @@ public class SpecializacijaMVControler {
 
     }
 
-//    @GetMapping ("/specializacija/rasti_autoservisus")
-//    String rastiAutoservisuSpecializacijas(Model model, @RequestParam long id) {
-//        Specializacija specializacija = specializacijaRepository.findById(id);
-//        model.addAttribute("specializacijaAutoserviso", specializacija.getSpecializacijaAutoserviso());
-//        model.addAttribute("specializacijosPavadinimas", specializacija.getPavadinimas());
-//        return "specializacijos_autoservisai.html";
-//
-//    }
+
 
 }
 
