@@ -3,6 +3,8 @@ package lt.autoservis.u5.controller;
 import lt.autoservis.u5.model.entity.Autoservisai;
 import lt.autoservis.u5.model.entity.Meistrai;
 import lt.autoservis.u5.model.repository.AutoservisaiRepository;
+import lt.autoservis.u5.model.repository.MiestaiRepository;
+import lt.autoservis.u5.model.repository.SpecializacijaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,13 @@ public class AutoservisaiMVControler {
 
     @Autowired
     AutoservisaiRepository autoservisaiRepository;
+
+    @Autowired
+    SpecializacijaRepository specializacijaRepository;
+
+    @Autowired
+    MiestaiRepository miestaiRepository;
+
 
 
 
@@ -43,7 +52,19 @@ public class AutoservisaiMVControler {
     String autoservisoIdejimas(Model model){
         Autoservisai autoservisas = new Autoservisai();
         model.addAttribute("autoservisai", autoservisas);
+        model.addAttribute("specializacija", specializacijaRepository.findAll());
+        model.addAttribute("miestai", miestaiRepository.findAll());
         return "ideti_autoservisa.html";
+
+    }
+
+    @GetMapping("/autoservisas/redagavimas")
+    String autoservisoRedagavimas(Model model){
+        Autoservisai autoservisas = autoservisaiRepository.findById(1);
+        model.addAttribute("autoservisai", autoservisas);
+        model.addAttribute("specialist", specializacijaRepository.findAll());
+        model.addAttribute("miestai", miestaiRepository.findAll());
+        return "autoserviso_redagavimas.html";
 
     }
 
@@ -58,6 +79,7 @@ public class AutoservisaiMVControler {
 
 
 //    http://localhost:8080/autoservisas/idejimas
+//    http://localhost:8080/autoservisas/redagavimas
 
 
 

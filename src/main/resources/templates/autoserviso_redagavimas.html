@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Autoserviso įdėjimas</title>
+    <title>Autoserviso redagavimas</title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -10,25 +10,20 @@
 </head>
 <body>
 <div class="container">
-    <h1>Autoserviso įdėjimas</h1>
+    <h1>Autoserviso redagavimas</h1>
     <hr>
-    <h2>Įveskite autoserviso duomenis</h2>
+    <h2>Redaguokite autoserviso duomenis</h2>
 
     <form th:action="@{/ideti/idejo_autoservisa}" th:object="${autoservisai}" method="POST">
+        <input type="hidden" th:field="*{id}">
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">
 
         <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">
-            <option value="0">Pasirinkite specializaciją</option>
-            <option th:each="specializacija : ${specializacija}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>
+            <option th:each="specializacija : ${specialist}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}" th:selected="autoservisoSpecializacija.id"></option>
         </select>
 
-        <select th:field="*{autoservisoMiestas}" class="form-control" >
-            <option value="0">Pasirinkite miestą</option>
-            <option th:each="miestai : ${miestai}" th:value="${miestai.getId()}"th:text="${miestai.getPavadinimas()}"></option>
-        </select>
-
-        <button type="submit" class="btn btn-info col-2">Išsaugokite autoservisą</button>
+        <button type="submit" class="btn btn-info col-6">Išsaugokite redagavimą</button>
     </form>
 
     <hr>
