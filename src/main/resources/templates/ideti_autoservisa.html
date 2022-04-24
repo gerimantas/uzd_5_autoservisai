@@ -20,12 +20,12 @@
 
         <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">
             <option value="0">Pasirinkite specializaciją</option>
-            <option th:each="specializacija : ${specializacija}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>
+            <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>
         </select>
 
-        <select th:field="*{autoservisoMiestas}" class="form-control" >
+        <select th:field="*{autoservisoMiestas}" class="form-control" id="miest">
             <option value="0">Pasirinkite miestą</option>
-            <option th:each="miestai : ${miestai}" th:value="${miestai.getId()}"th:text="${miestai.getPavadinimas()}"></option>
+            <option th:each="miestai : ${miestas}" th:value="${miestai.getId()}"th:text="${miestai.getPavadinimas()}"></option>
         </select>
 
         <button type="submit" class="btn btn-info col-2">Išsaugokite autoservisą</button>
