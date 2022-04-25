@@ -1,5 +1,6 @@
 package lt.autoservis.u5.controller;
 
+import lt.autoservis.u5.model.entity.Autoservisai;
 import lt.autoservis.u5.model.entity.Specializacija;
 import lt.autoservis.u5.model.repository.SpecializacijaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,15 @@ public class SpecializacijaMVControler {
         model.addAttribute("specializacijosPavadinimas", specializacija.getPavadinimas());
         return "specializacijos_autoservisai.html";
 
+    }
+
+    @GetMapping("/duomenys/specializacijos")
+    String specializacijuuDuomenys(Model model, @RequestParam long id) {
+        Specializacija specializacija = specializacijaRepository.findById(id);
+        model.addAttribute("pavadinimas", specializacija.getPavadinimas());
+        model.addAttribute("specializacijaAutoserviso", specializacija.getSpecializacijaAutoserviso());
+        model.addAttribute("specializacijaMeistro", specializacija.getSpecializacijaMeistro());
+        return "duomenys_specializacijos.html";
     }
 
 

@@ -23,7 +23,7 @@
             <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>
         </select>
 
-        <select th:field="*{autoservisoMiestas}" class="form-control" id="miest">
+        <select th:field="*{autoservisoMiestas}" class="form-control">
             <option value="0">Pasirinkite miestą</option>
             <option th:each="miestai : ${miestas}" th:value="${miestai.getId()}"th:text="${miestai.getPavadinimas()}"></option>
         </select>

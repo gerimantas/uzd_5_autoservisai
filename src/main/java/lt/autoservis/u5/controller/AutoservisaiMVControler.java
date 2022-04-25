@@ -2,6 +2,7 @@ package lt.autoservis.u5.controller;
 
 import lt.autoservis.u5.model.entity.Autoservisai;
 import lt.autoservis.u5.model.entity.Meistrai;
+import lt.autoservis.u5.model.entity.Specializacija;
 import lt.autoservis.u5.model.repository.AutoservisaiRepository;
 import lt.autoservis.u5.model.repository.MiestaiRepository;
 import lt.autoservis.u5.model.repository.SpecializacijaRepository;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 public class AutoservisaiMVControler {
@@ -42,18 +45,30 @@ public class AutoservisaiMVControler {
         return "duomenys_autoservisai.html";
     }
 
-//    @GetMapping("/ideti/autoservisa")
-//    String autoservisoIdojimas(Model model) {
-//
-//        return "ideti_autoservisa.html";
+//    @GetMapping ("/rodyti/visi_autoservisai")
+//    String rodytiAutoservisus(Model model) {
+//        List<Autoservisai> autoservisas = autoservisaiRepository.findAll();
+//        model.addAttribute("visiAutoservisai", visiAutoservisai);
+//        return "visi_autoservisai.html";
 //    }
+//
+//    @GetMapping ("/autoservisas/rodyti_specializacijas")
+//    String rodytiSpecializacijasAutoservisuose(Model model, @RequestParam long id) {
+//        Autoservisai autoservisas = autoservisaiRepository.findById(id);
+//        model.addAttribute("specializacijaAutoserviso", specializacija.getSpecializacijaAutoserviso());
+//        model.addAttribute("specializacijosPavadinimas", specializacija.getPavadinimas());
+//        return "specializacijos_autoservisai.html";
+//
+//    }
+
+
 
     @GetMapping("/autoservisas/idejimas")
     String pridetiAutoservisa(Model model) {
         Autoservisai autoservisas = new Autoservisai();
         model.addAttribute("autoservisai", autoservisas);
         model.addAttribute("specializacijos", specializacijaRepository.findAll());
-        model.addAttribute("miestai", miestaiRepository.findAll());
+        model.addAttribute("miestas", miestaiRepository.findAll());
         return "ideti_autoservisa.html";
 
     }

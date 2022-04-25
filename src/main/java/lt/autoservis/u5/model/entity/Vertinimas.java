@@ -10,12 +10,9 @@ public class Vertinimas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long meistrai_id;
     private int balas;
     private LocalDate data;
     private String komentaras;
 
-    @OneToMany(mappedBy = "meistroVertinimas")
-    Set<Meistrai> meistroVertinimas;
 
 }
