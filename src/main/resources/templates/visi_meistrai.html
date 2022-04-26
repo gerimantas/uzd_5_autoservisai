@@ -11,8 +11,8 @@
 
 </head>
 <body>
-<div th:each="autoservisai : ${visiAutoservisai}" class="list-group">
-    <a th:text="${autoservisai.getPavadinimas()}" th:href="@{/duomenys/autoservisai/(id=${autoservisai.getId()})}" class="list-group-item list-group-item-action"></a>
+<div th:each="meistrai : ${visiMeistrai}" class="list-group">
+    <a th:text="${meistrai.getVardas_pavarde()}" th:href="@{/duomenys_meistrai/(id=${meistrai.getId()})}" class="list-group-item list-group-item-action"></a>
 </div>
 </body>
 </html>

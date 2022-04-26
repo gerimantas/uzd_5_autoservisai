@@ -26,9 +26,9 @@ public class SpecializacijaMVControler {
 
     @GetMapping ("/specializacija/rodyti_autoservisus")
     String rodytiAutoservisuSpecializacijas(Model model, @RequestParam long id) {
-        Specializacija specializacija = specializacijaRepository.findById(id);
-        model.addAttribute("specializacijaAutoserviso", specializacija.getSpecializacijaAutoserviso());
-        model.addAttribute("specializacijosPavadinimas", specializacija.getPavadinimas());
+        Specializacija specializacijos = specializacijaRepository.findById(id);
+        model.addAttribute("specializacijaAutoserviso", specializacijos.getSpecializacijaAutoserviso());
+        model.addAttribute("specializacijosPavadinimas", specializacijos.getPavadinimas());
         return "specializacijos_autoservisai.html";
 
     }

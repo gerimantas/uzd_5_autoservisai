@@ -32,16 +32,15 @@ public class Meistrai {
     @JoinColumn(name = "vertinimas_id")
     private Vertinimas meistroVertinimas;
 
-
-
     public Meistrai() {
     }
 
-    public Meistrai(long id, String vardas_pavarde, long ivertinimas_id, Set<Specializacija> specializacijaMeistro, Autoservisai autoservisoMeistrai) {
+    public Meistrai(long id, String vardas_pavarde, Set<Specializacija> specializacijaMeistro, Autoservisai autoservisoMeistrai, Vertinimas meistroVertinimas) {
         this.id = id;
         this.vardas_pavarde = vardas_pavarde;
         this.specializacijaMeistro = specializacijaMeistro;
         this.autoservisoMeistrai = autoservisoMeistrai;
+        this.meistroVertinimas = meistroVertinimas;
     }
 
     public long getId() {
@@ -60,7 +59,6 @@ public class Meistrai {
         this.vardas_pavarde = vardas_pavarde;
     }
 
-
     public Set<Specializacija> getSpecializacijaMeistro() {
         return specializacijaMeistro;
     }
@@ -77,6 +75,14 @@ public class Meistrai {
         this.autoservisoMeistrai = autoservisoMeistrai;
     }
 
+    public Vertinimas getMeistroVertinimas() {
+        return meistroVertinimas;
+    }
+
+    public void setMeistroVertinimas(Vertinimas meistroVertinimas) {
+        this.meistroVertinimas = meistroVertinimas;
+    }
+
     @Override
     public String toString() {
         return "Meistrai{" +
@@ -84,6 +90,7 @@ public class Meistrai {
                 ", vardas_pavarde='" + vardas_pavarde + '\'' +
                 ", specializacijaMeistro=" + specializacijaMeistro +
                 ", autoservisoMeistrai=" + autoservisoMeistrai +
+                ", meistroVertinimas=" + meistroVertinimas +
                 '}';
     }
 }

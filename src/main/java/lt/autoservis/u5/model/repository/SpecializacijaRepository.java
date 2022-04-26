@@ -9,5 +9,4 @@ import org.springframework.stereotype.Repository;
 public interface SpecializacijaRepository extends JpaRepository<Specializacija,Long> {
     Specializacija findById(long id);
     Specializacija findByPavadinimas(String pavadinimas);
-//    Specializacija findAll(long id, String pavadinimas);
 }

@@ -45,21 +45,21 @@ public class AutoservisaiMVControler {
         return "duomenys_autoservisai.html";
     }
 
-//    @GetMapping ("/rodyti/visi_autoservisai")
-//    String rodytiAutoservisus(Model model) {
-//        List<Autoservisai> autoservisas = autoservisaiRepository.findAll();
-//        model.addAttribute("visiAutoservisai", visiAutoservisai);
-//        return "visi_autoservisai.html";
-//    }
-//
-//    @GetMapping ("/autoservisas/rodyti_specializacijas")
-//    String rodytiSpecializacijasAutoservisuose(Model model, @RequestParam long id) {
-//        Autoservisai autoservisas = autoservisaiRepository.findById(id);
-//        model.addAttribute("specializacijaAutoserviso", specializacija.getSpecializacijaAutoserviso());
-//        model.addAttribute("specializacijosPavadinimas", specializacija.getPavadinimas());
-//        return "specializacijos_autoservisai.html";
-//
-//    }
+    @GetMapping ("/rodyti/visi_autoservisai")
+    String rodytiAutoservisus(Model model) {
+        List<Autoservisai> visiAutoservisai = autoservisaiRepository.findAll();
+        model.addAttribute("visiAutoservisai", visiAutoservisai);
+        return "visi_autoservisai.html";
+    }
+
+    @GetMapping ("/autoservisas/rodyti_specializacijas")
+    String rodytiSpecializacijasAutoservisuose(Model model, @RequestParam long id) {
+        Autoservisai autoservisas = autoservisaiRepository.findById(id);
+        model.addAttribute("autoservisoSpecializacija", autoservisas.getAutoservisoSpecializacija());
+        model.addAttribute("specializacijosPavadinimas", autoservisas.getPavadinimas());
+        return "autoservisai_specializacijos.html";
+
+    }
 
 
 
@@ -91,7 +91,7 @@ public class AutoservisaiMVControler {
 
 
 
-
+//    http://localhost:8080/rodyti/visi_autoservisai
 
 //    http://localhost:8080/autoservisas/idejimas
 //    http://localhost:8080/autoservisas/redagavimas

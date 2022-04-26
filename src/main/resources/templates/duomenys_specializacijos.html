@@ -15,26 +15,12 @@
         <th>Specializacija</th>
         <td th:text="${pavadinimas}"></td>
     </tr>
-    <tr>
-        <th>Vadovas</th>
-        <td th:text="${vadovas}"></td>
-    </tr>
 
     <tr>
         <th>Autoservisai:</th>
         <td>
             <ul th:each="autoservisai : ${specializacijaAutoserviso}" class="list-group">
                 <li th:text= "${autoservisai.getPavadinimas}" class="list-group-item"></li>
-
-            </ul>
-        </td>
-    </tr>
-
-    <tr>
-        <th>Meistrai:</th>
-        <td>
-            <ul th:each="meistrai : ${specializacijaMeistro}" class="list-group">
-                <li th:text= "${meistrai.getVardas_pavarde()}" class="list-group-item"></li>
 
             </ul>
         </td>
