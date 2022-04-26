@@ -22,6 +22,16 @@
             <li th:text= "${specializacija.getPavadinimas}" class="list-group-item"></li>
     </tr>
 
+    <tr>
+        <th>Vertinimas:</th>
+        <td>
+            <ul th:each="vertinimas : ${meistroVertinimas}" class="list-group">
+                <li th:text= "${vertinimas.getMeistroVertinimas()}" class="list-group-item"></li>
+
+            </ul>
+        </td>
+    </tr>
+
 <!--    <tr>-->
 <!--        <th>Meistro autoservisas:</th>-->
 <!--        <td>-->
@@ -31,17 +41,6 @@
 <!--            </ul>-->
 <!--        </td>-->
 <!--    </tr>-->
-
-<!--    <tr>-->
-<!--        <th>Vertinimas:</th>-->
-<!--        <td>-->
-<!--            <ul th:each="vertinimas : ${meistroVertinimas}" class="list-group">-->
-<!--                <li th:text= "${vertinimas.getMeistroVertinimas()}" class="list-group-item"></li>-->
-
-<!--            </ul>-->
-<!--        </td>-->
-<!--    </tr>-->
-
 
 
 </table>
