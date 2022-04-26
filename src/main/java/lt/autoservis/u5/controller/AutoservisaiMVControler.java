@@ -9,10 +9,7 @@ import lt.autoservis.u5.model.repository.SpecializacijaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -74,7 +71,7 @@ public class AutoservisaiMVControler {
     }
 
     @GetMapping("/autoservisas/redagavimas")
-    String autoservisoRedagavimas(Model model){
+    String redaguotiAutoservisa(Model model) {
         Autoservisai autoservisas = autoservisaiRepository.findById(1);
         model.addAttribute("autoservisai", autoservisas);
         model.addAttribute("specializacijos", specializacijaRepository.findAll());

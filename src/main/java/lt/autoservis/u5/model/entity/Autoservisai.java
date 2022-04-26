@@ -29,7 +29,7 @@ public class Autoservisai {
             inverseJoinColumns = @JoinColumn(name = "miestai_id"))
     private Set<Miestai> autoservisoMiestas;
 
-    @OneToMany(mappedBy = "autoservisoMeistrai")
+    @OneToMany(mappedBy = "meistroAutoservisas")
     Set<Meistrai> autoservisoMeistrai;
 
     @OneToMany(mappedBy = "autoservisoAdresas")

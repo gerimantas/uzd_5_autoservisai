@@ -18,29 +18,40 @@
 
     <tr>
         <th>Specializacija</th>
-        <td th:text="specializacija: ${specializacijaMeistro}"class="list-group">
+        <td>
+         <ul th:each="specializacija: ${specializacijaMeistro}"class="list-group">
             <li th:text= "${specializacija.getPavadinimas}" class="list-group-item"></li>
+
+         </ul>
+        </td>
+
     </tr>
 
+
     <tr>
-        <th>Vertinimas:</th>
+    <th>Vertinimas</th>
+    <td>
+        <ul th:each="vertinimas : ${meistroVertinimas}" class="list-group">
+            <li th:text= "${vertinimas.getMeistroVertinimas()}" class="list-group-item"></li>
+
+        </ul>
+    </td>
+
+    </tr>
+
+
+    <tr>
+        <th>Meistro autoservisas</th>
         <td>
-            <ul th:each="vertinimas : ${meistroVertinimas}" class="list-group">
-                <li th:text= "${vertinimas.getMeistroVertinimas()}" class="list-group-item"></li>
+            <ul th:each= "autoservisai : ${meistroAutoservisas}" class="list-group">
+                <li th:text= "${autoservisai.getPavadinimas()}" class="list-group-item"></li>
 
             </ul>
         </td>
+
     </tr>
 
-<!--    <tr>-->
-<!--        <th>Meistro autoservisas:</th>-->
-<!--        <td>-->
-<!--            <ul th:each="autoservisai : ${autoservisoMeistrai}" class="list-group">-->
-<!--                <li th:text= "${meistrai.getAutoservisoMeistrai}" class="list-group-item"></li>-->
 
-<!--            </ul>-->
-<!--        </td>-->
-<!--    </tr>-->
 
 
 </table>
