@@ -44,11 +44,11 @@ public class MeistraiControler {
 
     @GetMapping("/duomenys/meistrai")
     String meistruDuomenys(Model model, @RequestParam long id) {
-        Meistrai meistrai = meistraiRepository.findById(id);
-        model.addAttribute("vardas_pavarde", meistrai.getVardas_pavarde());
-        model.addAttribute("specializacijaMeistro", meistrai.getSpecializacijaMeistro());
-//        model.addAttribute("autoservisoMeistrai", meistrai.getAutoservisoMeistrai());
-        model.addAttribute("meistroVertinimas", meistrai.getMeistroVertinimas());
+        Meistrai meistras = meistraiRepository.findById(id);
+        model.addAttribute("vardas_pavarde", meistras.getVardas_pavarde());
+        model.addAttribute("specializacijaMeistro", meistras.getSpecializacijaMeistro());
+        model.addAttribute("meistroVertinimas", meistras.getMeistroVertinimas());
+        model.addAttribute("meistroAutoservisas", meistras.getMeistroAutoservisas());
         return "duomenys_meistrai.html";
     }
 

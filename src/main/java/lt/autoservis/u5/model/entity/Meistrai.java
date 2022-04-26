@@ -26,7 +26,7 @@ public class Meistrai {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "autoservisai_id")
-    private Autoservisai autoservisoMeistrai;
+    private Autoservisai meistroAutoservisas;
 
     @ManyToOne
     @JoinColumn(name = "vertinimas_id")
@@ -35,11 +35,11 @@ public class Meistrai {
     public Meistrai() {
     }
 
-    public Meistrai(long id, String vardas_pavarde, Set<Specializacija> specializacijaMeistro, Autoservisai autoservisoMeistrai, Vertinimas meistroVertinimas) {
+    public Meistrai(long id, String vardas_pavarde, Set<Specializacija> specializacijaMeistro, Autoservisai meistroAutoservisas, Vertinimas meistroVertinimas) {
         this.id = id;
         this.vardas_pavarde = vardas_pavarde;
         this.specializacijaMeistro = specializacijaMeistro;
-        this.autoservisoMeistrai = autoservisoMeistrai;
+        this.meistroAutoservisas = meistroAutoservisas;
         this.meistroVertinimas = meistroVertinimas;
     }
 
@@ -67,12 +67,12 @@ public class Meistrai {
         this.specializacijaMeistro = specializacijaMeistro;
     }
 
-    public Autoservisai getAutoservisoMeistrai() {
-        return autoservisoMeistrai;
+    public Autoservisai getMeistroAutoservisas() {
+        return meistroAutoservisas;
     }
 
-    public void setAutoservisoMeistrai(Autoservisai autoservisoMeistrai) {
-        this.autoservisoMeistrai = autoservisoMeistrai;
+    public void setMeistroAutoservisas(Autoservisai meistroAutoservisas) {
+        this.meistroAutoservisas = meistroAutoservisas;
     }
 
     public Vertinimas getMeistroVertinimas() {
@@ -89,7 +89,7 @@ public class Meistrai {
                 "id=" + id +
                 ", vardas_pavarde='" + vardas_pavarde + '\'' +
                 ", specializacijaMeistro=" + specializacijaMeistro +
-                ", autoservisoMeistrai=" + autoservisoMeistrai +
+                ", meistroAutoservisas=" + meistroAutoservisas +
                 ", meistroVertinimas=" + meistroVertinimas +
                 '}';
     }
