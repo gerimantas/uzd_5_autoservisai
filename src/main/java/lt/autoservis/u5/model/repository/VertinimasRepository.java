@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VertinimasRepository extends JpaRepository<Vertinimas,Long> {
     Vertinimas findById(long id);
+    Vertinimas findByBalas(long id);
 }
