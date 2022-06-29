@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Meistru duomenys</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-striped">
+    <tr>
+        <th>Meistras</th>
+        <td th:text="${vardas_pavarde}"></td>
+    </tr>
+
+    <tr>
+        <th>Specializacija</th>
+        <td>
+         <ul th:each="specializacija: ${specializacijaMeistro}"class="list-group">
+            <li th:text= "${specializacija.getPavadinimas}" class="list-group-item"></li>
+
+         </ul>
+        </td>
+
+    </tr>
+
+
+    <tr>
+    <th>Vertinimas</th>
+    <td>
+        <ul th:each="vertinimas : ${meistroVertinimas}" class="list-group">
+            <li th:text= "${vertinimas.getMeistroVertinimas()}" class="list-group-item"></li>
+
+        </ul>
+    </td>
+
+    </tr>
+
+
+    <tr>
+        <th>Meistro autoservisas</th>
+        <td>
+            <ul th:each= "autoservisai : ${meistroAutoservisas}" class="list-group">
+                <li th:text= "${autoservisai.getPavadinimas()}" class="list-group-item"></li>
+
+            </ul>
+        </td>
+
+    </tr>
+
+
+
+
+</table>
+</body>
+</html>

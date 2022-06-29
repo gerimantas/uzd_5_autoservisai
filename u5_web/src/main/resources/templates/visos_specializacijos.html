@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Visos specializacijos</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+
+</head>
+<body>
+<div th:each="specializacija : ${visosSpecializacijos}" class="list-group">
+    <a th:text="${specializacija.getPavadinimas()}" th:href="@{/specializacija/rodyti_autoservisus/(id=${specializacija.getId()})}" class="list-group-item list-group-item-action"></a>
+</div>
+</body>
+</html>
