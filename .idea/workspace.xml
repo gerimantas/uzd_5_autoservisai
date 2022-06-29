@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26ups2WWGLsnr2KKiVdPTRRt9pe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="exceleditor.install" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5_web\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lt.autoservis.u5.controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
+      <module name="uzduotis_5_autoservisai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lt.autoservis.u5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Praktika5Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="" />
+      <created>1648283533165</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648283533165</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Prijungta duomenu baze: autoservis">
+      <created>1648286984467</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648286984467</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Sukurti paketai, entity - Autoservisai">
+      <created>1648288376902</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648288376902</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Sukurtos Autoservisu ir Kategoriju jungciu lenteles">
+      <created>1648333389280</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648333389280</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Pratestuota su Postman">
+      <created>1648576393109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648576393109</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Klaidos ieskom">
+      <created>1649151287989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649151287989</updated>
+    </task>
+    <task id="LOCAL-00006" summary="@JsonIgnore">
+      <created>1649168460296</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1649168460296</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Istaisyta autoservisai_id dubliavimo klaida">
+      <created>1649324437241</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649324437241</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Sudeta adresai, telefonai, vartotojai, vertinimas">
+      <created>1649366864899</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649366864899</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Sudeti controleriai">
+      <created>1649667941121</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1649667941121</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Pratestuota su Thymeleaf (th), veikia">
+      <created>1649765816218</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649765816218</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Resursuose ideta autoservis.sql">
+      <created>1649833798198</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1649833798198</updated>
+    </task>
+    <task id="LOCAL−00012" summary="Specializaciju isvedimas">
+      <created>1650369280875</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1650369280875</updated>
+    </task>
+    <task id="LOCAL−00013" summary="Specializacijos ir autoservisai isvedimas">
+      <created>1650371975531</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1650371975531</updated>
+    </task>
+    <task id="LOCAL−00014" summary="Autoserviso idejimo klaida">
+      <created>1650478345440</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1650478345440</updated>
+    </task>
+    <task id="LOCAL−00015" summary="Prisijungta prie web serverio">
+      <created>1650797572384</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1650797572384</updated>
+    </task>
+    <task id="LOCAL−00016" summary="Prisijungta prie web serverio">
+      <created>1650879752722</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1650879752722</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Meistru sarasas ir pasirinkimo mygtukas">
+      <created>1650958187431</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1650958187431</updated>
+    </task>
+    <task id="LOCAL−00018" summary="Meistru sarasas ir pasirinkimo mygtukas">
+      <created>1650959650312</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1650959650312</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Meistru sarasas ir pasirinkimo mygtukas">
+      <created>1650959972134</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1650959972134</updated>
+    </task>
+    <task id="LOCAL−00020" summary="Meistru sarasas ir pasirinkimo mygtukas">
+      <created>1650987829066</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1650987829066</updated>
+    </task>
+    <task id="LOCAL−00021" summary="Meistru sarasas ir pasirinkimo mygtukas">
+      <created>1650988072161</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1650988072161</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Atnaujinta 06-26">
+      <created>1656443671236</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1656443671236</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Ikeltas projektas">
+      <created>1656520009409</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1656520009409</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="c4f46998-e62d-425e-b392-f50c13022d5c">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c4f46998-e62d-425e-b392-f50c13022d5c" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pradzia" />
+    <MESSAGE value="Prijungta duomenu baze: autoservis" />
+    <MESSAGE value="Sukurti paketai, entity - Autoservisai" />
+    <MESSAGE value="Sukurtos Autoservisu ir Kategoriju jungciu lenteles" />
+    <MESSAGE value="Pratestuota su Postman" />
+    <MESSAGE value="Klaidos ieskom" />
+    <MESSAGE value="@JsonIgnore" />
+    <MESSAGE value="Istaisyta autoservisai_id dubliavimo klaida" />
+    <MESSAGE value="Sudeta adresai, telefonai, vartotojai, vertinimas" />
+    <MESSAGE value="Sudeti controleriai" />
+    <MESSAGE value="Pratestuota su Thymeleaf (th), veikia" />
+    <MESSAGE value="Resursuose ideta autoservis.sql" />
+    <MESSAGE value="Specializaciju isvedimas" />
+    <MESSAGE value="Specializacijos ir autoservisai isvedimas" />
+    <MESSAGE value="Autoserviso idejimo klaida" />
+    <MESSAGE value="Prisijungta prie web serverio" />
+    <MESSAGE value="Meistru sarasas ir pasirinkimo mygtukas" />
+    <MESSAGE value="Atnaujinta 06-26" />
+    <MESSAGE value="Ikeltas projektas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ikeltas projektas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.MappingException" package="org.hibernate" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
