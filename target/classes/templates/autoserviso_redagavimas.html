@@ -14,7 +14,7 @@
     <hr>
     <h2>Redaguokite autoserviso duomenis</h2>
 
-    <form th:action="@{/autoservisas/redagavimas}" th:object="${autoservisai}" method="POST">
+    <form th:action="@{/ideti/idejo_autoservisa}" th:object="${autoservisai}" method="POST">
         <input type="hidden" th:field="*{id}">
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">

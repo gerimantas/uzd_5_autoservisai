@@ -71,5 +71,18 @@
     </tr>
 
 </table>
+
+<form th:action="@{'/autoservisas/redagavimas/' + ${id}}" method="get">
+    <input type="submit" value="Redaguoti autoservisą">
+</form>
+
+<form th:action="@{'/istrinti_autoservisa/' + ${id}}" method="post">
+    <input type="submit" value="Ištrinti autoservisą">
+</form>
+
+<!--<form th:action="@{'/vartotojas/pamegti_autoservisa' + ${id}}" method="post">-->
+<!--    <input type="submit" value="Pridėti autoservisą į mėgstamus">-->
+<!--</form>-->
+
 </body>
 </html>

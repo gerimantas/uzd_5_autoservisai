@@ -32,6 +32,7 @@ public class AutoservisaiMVControler {
     @GetMapping("/duomenys/autoservisai")
     String autoservisuDuomenys(Model model, @RequestParam long id) {
         Autoservisai autoservisai = autoservisaiRepository.findById(id);
+        model.addAttribute("id", autoservisai.getId());
         model.addAttribute("pavadinimas", autoservisai.getPavadinimas());
         model.addAttribute("vadovas", autoservisai.getVadovas());
         model.addAttribute("autoservisoSpecializacija", autoservisai.getAutoservisoSpecializacija());
@@ -70,15 +71,23 @@ public class AutoservisaiMVControler {
 
     }
 
-    @GetMapping("/autoservisas/redagavimas")
-    String redaguotiAutoservisa(Model model) {
-        Autoservisai autoservisas = autoservisaiRepository.findById(1);
+    @GetMapping("/autoservisas/redagavimas/{id}")
+    String redaguotiAutoservisa(Model model, @PathVariable long id) {
+        Autoservisai autoservisas = autoservisaiRepository.findById(id);
         model.addAttribute("autoservisai", autoservisas);
         model.addAttribute("specializacijos", specializacijaRepository.findAll());
         model.addAttribute("miestas", miestaiRepository.findAll());
+
         return "autoserviso_redagavimas.html";
 
     }
+
+//    @PostMapping("/redagavo_autoservisa")
+//    String redaguotiAutoservisa(@ModelAttribute Autoservisai redaguojamasAutoservisas) {
+//        autoservisaiRepository.save(redaguojamasAutoservisas);
+//        return "redaguotas_autoservisas.html";
+//    }
+
 
     @PostMapping("/ideti/idejo_autoservisa")
     String pridetiAutoservisa(@ModelAttribute Autoservisai ivedamasAutoservisas) {
