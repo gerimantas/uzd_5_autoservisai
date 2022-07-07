@@ -19,10 +19,11 @@
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">
 
-<!--        <<select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">&ndash;&gt;-->
-<!--                <option value="0">Pasirinkite specializaciją</option>-->
-<!--                <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>-->
-<!--            </select>-->
+<!--        <input th:field="*{specializacijosPavadinimas}"type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">-->
+        <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">-->
+                <option value="0">Pasirinkite specializaciją</option>
+                <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>
+            </select>
 
         <button type="submit" class="btn btn-info col-6">Išsaugokite redagavimą</button>
     </form>
