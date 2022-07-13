@@ -24,7 +24,7 @@
         <th>Specializacija:</th>
         <td>
             <ul th:each="specializacija : ${autoservisoSpecializacija}" class="list-group">
-                <li th:text= "${specializacija.getPavadinimas}" class="list-group-item"></li>
+                <li th:text= "${specializacija.getPavadinimas()}" class="list-group-item"></li>
 
             </ul>
         </td>
