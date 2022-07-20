@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AdresaiRepository extends JpaRepository<Adresai,Long> {
+    Adresai findById(long id);
+
 }

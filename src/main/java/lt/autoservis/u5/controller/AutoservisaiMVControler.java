@@ -1,11 +1,10 @@
 package lt.autoservis.u5.controller;
 
+import lt.autoservis.u5.model.entity.Adresai;
 import lt.autoservis.u5.model.entity.Autoservisai;
 import lt.autoservis.u5.model.entity.Meistrai;
 import lt.autoservis.u5.model.entity.Specializacija;
-import lt.autoservis.u5.model.repository.AutoservisaiRepository;
-import lt.autoservis.u5.model.repository.MiestaiRepository;
-import lt.autoservis.u5.model.repository.SpecializacijaRepository;
+import lt.autoservis.u5.model.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +23,18 @@ public class AutoservisaiMVControler {
 
     @Autowired
     MiestaiRepository miestaiRepository;
+
+    @Autowired
+    AdresaiRepository adresaiRepository;
+
+    @Autowired
+    TelefonaiRepository telefonaiRepository;
+
+    @Autowired
+    MeistraiRepository meistraiRepository;
+
+
+
 
 
 
@@ -72,13 +83,15 @@ public class AutoservisaiMVControler {
 
     }
 
-    @PostMapping("/autoservisas/redagavimas/{id}")
+    @GetMapping("/autoservisas/redagavimas/{id}")
     String redaguotiAutoservisa(Model model, @PathVariable long id) {
         Autoservisai autoservisas = autoservisaiRepository.findById(id);
         model.addAttribute("autoservisai", autoservisas);
         model.addAttribute("specializacijos", specializacijaRepository.findAll());
-        model.addAttribute("miestas", miestaiRepository.findAll());
-
+        model.addAttribute("meistrai", meistraiRepository.findAll());
+        model.addAttribute("miestai", miestaiRepository.findAll());
+        model.addAttribute("adresai", adresaiRepository.findAll());
+        model.addAttribute("telefonai", telefonaiRepository.findAll());
         return "autoserviso_redagavimas.html";
 
     }
