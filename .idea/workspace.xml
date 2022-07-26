@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,7 @@
   <component name="RunManager">
     <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
-      <module name="u5" />
+      <module name="uzduotis_5_autoservisai" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lt.autoservis.u5.*" />
