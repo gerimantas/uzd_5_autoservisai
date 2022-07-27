@@ -73,6 +73,7 @@ public class AutoservisaiMVControler {
 
         model.addAttribute("autoservisai", autoservisas);
         model.addAttribute("specializacijos", specializacijaRepository.findAll());
+        model.addAttribute("telefonas", telefonaiRepository.findAll());
         model.addAttribute("miestas", miestaiRepository.findAll());
         return "ideti_autoservisa.html";
 
