@@ -35,11 +35,6 @@ public class AutoservisaiMVControler {
 
 
 
-
-
-
-
-
     @GetMapping("/duomenys/autoservisai")
     String autoservisuDuomenys(Model model, @RequestParam long id) {
         Autoservisai autoservisai = autoservisaiRepository.findById(id);

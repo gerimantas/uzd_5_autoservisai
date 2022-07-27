@@ -16,19 +16,15 @@
 
     <form th:action="@{/ideti/idejo_autoservisa}" th:object="${autoservisai}" method="POST">
         <input type="hidden" th:field="*{id}">
+        <option value="0">Pavadinimas</option>
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
+        <option value="0">Vadovas</option>
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">
 
-        <input th:field="*{specializacijosPavadinimas}"type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">-->
-        <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">-->
-                <option value="0">Pasirinkite specializaciją</option>
-                <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>
-            </select>
 
-        <input th:field="*{miestaiPavadinimas}"type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">-->
-        <select th:field="*{autoservisoMiestas}" class="form-control" id="dropDownList2">-->
-            <option value="0">Pasirinkite miestą</option>
-            <option th:each="miestas : ${miestai}" th:value="${miestas.getId()}"th:text="${miestas.getPavadinimas()}"></option>
+        <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">
+                <option value="0">Pasirinkite specializaciją</option>
+                <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}" th:selected="autoservisoSpecializacija.id"></option>
         </select>
 
         <button type="submit" class="btn btn-info col-6">Išsaugokite redagavimą</button>
