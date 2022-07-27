@@ -17,6 +17,7 @@
     <form th:action="@{/ideti/idejo_autoservisa}" th:object="${autoservisai}" method="POST">
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">
+        <input th:field="*{telefonai}"type="text"  placeholder="Telefonas" class="form-control mb-4 col-4">
 
         <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">
             <option value="0">Pasirinkite specializaciją</option>
