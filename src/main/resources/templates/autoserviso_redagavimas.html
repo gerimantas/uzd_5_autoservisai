@@ -12,7 +12,7 @@
 <div class="container">
     <h1>Autoserviso redagavimas</h1>
     <hr>
-    <h2>Redaguokite autoserviso duomenis</h2>
+    <h1>Redaguokite autoserviso duomenis</h1>
 
     <form th:action="@{/ideti/idejo_autoservisa}" th:object="${autoservisai}" method="POST">
         <input type="hidden" th:field="*{id}">
@@ -22,10 +22,7 @@
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">
 
 
-        <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">
-                <option value="0">Pasirinkite specializaciją</option>
-                <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}" th:selected="autoservisoSpecializacija.id"></option>
-        </select>
+
 
         <button type="submit" class="btn btn-info col-6">Išsaugokite redagavimą</button>
     </form>

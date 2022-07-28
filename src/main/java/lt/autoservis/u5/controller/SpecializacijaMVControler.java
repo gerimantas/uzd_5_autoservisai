@@ -2,6 +2,8 @@ package lt.autoservis.u5.controller;
 
 import lt.autoservis.u5.model.entity.Autoservisai;
 import lt.autoservis.u5.model.entity.Specializacija;
+import lt.autoservis.u5.model.repository.AutoservisaiRepository;
+import lt.autoservis.u5.model.repository.MeistraiRepository;
 import lt.autoservis.u5.model.repository.SpecializacijaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,10 @@ public class SpecializacijaMVControler {
 
     @Autowired
     SpecializacijaRepository specializacijaRepository;
+    @Autowired
+    AutoservisaiRepository autoservisaiRepository;
+    @Autowired
+    MeistraiRepository meistraiRepository;
 
     @GetMapping ("/test/visos_specializacijos")
     String rodytivisasSpecializacijas(Model model) {
@@ -42,11 +48,27 @@ public class SpecializacijaMVControler {
         return "duomenys_specializacijos.html";
     }
 
+    @GetMapping("/specializacijos/idejimas")
+    String pridetiSpecializacija(Model model) {
+        Specializacija specializacija = new Specializacija();
 
+        model.addAttribute("specializacija", specializacija);
+        model.addAttribute("autoservisai", autoservisaiRepository.findAll());
+        model.addAttribute("meistrai", meistraiRepository.findAll());
+        return "ideti_specializacija.html";
+    }
+
+    @PostMapping("/ideti/idejo_specializacija")
+    String pridetiSpecializacija(@ModelAttribute Specializacija ivedamaSpecializacija) {
+        specializacijaRepository.save(ivedamaSpecializacija);
+        return "ideta_specializacija.html";
+    }
 
 }
 
 //       http://localhost:8080/test/visos_specializacijos
+
+//       http://localhost:8080/specializacijos/idejimas
 
 //       http://localhost:8080/specializacija/rodyti_autoservisus
 

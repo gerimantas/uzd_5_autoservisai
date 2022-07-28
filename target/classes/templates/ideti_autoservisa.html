@@ -10,28 +10,29 @@
 </head>
 <body>
 <div class="container">
-    <h1>Autoserviso įdėjimas</h1>
+    <h3>Autoserviso įdėjimas</h3>
     <hr>
-    <h2>Įveskite autoserviso duomenis</h2>
+    <h3>Įveskite autoserviso duomenis</h3>
 
     <form th:action="@{/ideti/idejo_autoservisa}" th:object="${autoservisai}" method="POST">
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">
-<!--        <input th:field="*{telefonas}"type="text"  placeholder="Telefonas" class="form-control mb-4 col-4">-->
+
 
         <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">
             <option value="0">Pasirinkite specializaciją</option>
             <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>
         </select>
-
+        <hr>
         <select th:field="*{autoservisoMiestas}" class="form-control">
             <option value="0">Pasirinkite miestą</option>
             <option th:each="miestai : ${miestas}" th:value="${miestai.getId()}"th:text="${miestai.getPavadinimas()}"></option>
         </select>
+        <hr>
+<!--            <option value="0">Autoserviso telefonas</option>-->
+<!--            <input th:value="${telefonai}" type="text" name="telefonai">-->
+        <hr>
 
-
-            <input th:value="${telefonai}" type="text" name="telefonas">
-            <input type="submit" value="Įrašykite telefoną">
 
 
         <button type="submit" class="btn btn-info col-2">Išsaugokite autoservisą</button>

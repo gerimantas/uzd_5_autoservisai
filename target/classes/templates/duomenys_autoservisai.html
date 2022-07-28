@@ -11,8 +11,11 @@
 </head>
 <body>
 <table class="table table-striped">
+    <h3>Autoservisų duomenys</h3>
+    <hr>
+    <hr>
     <tr>
-        <th>Autoservisas</th>
+        <th>Autoserviso pavadinimas</th>
         <td th:text="${pavadinimas}"></td>
     </tr>
     <tr>
@@ -21,7 +24,7 @@
     </tr>
 
     <tr>
-        <th>Specializacija:</th>
+        <th>Specializacija</th>
         <td>
             <ul th:each="specializacija : ${autoservisoSpecializacija}" class="list-group">
                 <li th:text= "${specializacija.getPavadinimas()}" class="list-group-item"></li>
@@ -31,7 +34,7 @@
     </tr>
 
     <tr>
-        <th>Meistrai:</th>
+        <th>Meistrai</th>
         <td>
             <ul th:each="meistrai : ${autoservisoMeistrai}" class="list-group">
                 <li th:text= "${meistrai.getVardas_pavarde()}" class="list-group-item"></li>
@@ -41,7 +44,7 @@
     </tr>
 
     <tr>
-        <th>Telefonas:</th>
+        <th>Telefonas</th>
         <td>
             <ul th:each="telefonai : ${autoservisoTelefonas}" class="list-group">
                 <li th:text= "${telefonai.getNumeris()}" class="list-group-item"></li>
@@ -51,7 +54,7 @@
     </tr>
 
     <tr>
-        <th>Miestas:</th>
+        <th>Miestas</th>
         <td>
             <ul th:each="miestai : ${autoservisoMiestas}" class="list-group">
                 <li th:text= "${miestai.getPavadinimas()}" class="list-group-item"></li>
@@ -61,7 +64,7 @@
     </tr>
 
     <tr>
-        <th>Adresas:</th>
+        <th>Adresas</th>
         <td>
             <ul th:each="adresai : ${autoservisoAdresas}" class="list-group">
                 <li th:text= "${adresai.getGatve()} + ' ' + ${adresai.getNamas()}" class="list-group-item"></li>
@@ -69,13 +72,13 @@
             </ul>
         </td>
     </tr>
-
 </table>
+<hr>
 
 <form th:action="@{'/autoservisas/redagavimas/' + ${id}}" method="get">
     <input type="submit" value="Redaguoti autoservisą">
 </form>
-
+<hr>
 <form th:action="@{'/istrinti_autoservisa/' + ${id}}" method="post">
     <input type="submit" value="Ištrinti autoservisą">
 </form>

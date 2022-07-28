@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ideta_specializacija.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoservisai_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/autoservisai_specializacijos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ideti_autoservisa.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ideti_autoservisa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ideti_specializacija.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ideti_specializacija.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/specializacijos_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/specializacijos_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AutoservisaiMVControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AutoservisaiMVControler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/SpecializacijaMVControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/SpecializacijaMVControler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoservisai_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/autoservisai_specializacijos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ideti_autoservisa.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ideti_autoservisa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ideti_specializacija.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ideti_specializacija.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/specializacijos_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/specializacijos_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +398,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>
-          <line>35</line>
+          <line>41</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

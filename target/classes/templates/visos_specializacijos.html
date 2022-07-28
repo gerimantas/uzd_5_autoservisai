@@ -11,6 +11,8 @@
 
 </head>
 <body>
+<h3>Specializacijų sąrašas:</h3>
+<hr>
 <div th:each="specializacija : ${visosSpecializacijos}" class="list-group">
     <a th:text="${specializacija.getPavadinimas()}" th:href="@{/specializacija/rodyti_autoservisus/(id=${specializacija.getId()})}" class="list-group-item list-group-item-action"></a>
 </div>

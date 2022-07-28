@@ -10,7 +10,9 @@
           crossorigin="anonymous">
 </head>
 <body>
-<h2 th:text="${specializacijosPavadinimas}"></h2>
+<h3 th:text="${specializacijosPavadinimas}"></h3>
+<h5>Autoservisų sąrašas</h5>
+<hr>
 <div th:each="specializacija : ${autoservisoSpecializacija}" class="list-group">
     <a th:text="${specializacija.getPavadinimas()}" th:href="@{/duomenys/specializacijos/ (id=${specializacija.getId()})}" class="list-group-item list-group-item-action"></a>
 </div>
