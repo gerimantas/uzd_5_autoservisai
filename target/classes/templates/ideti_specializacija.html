@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"xmlns:th="http://www.thymeleaf.org" >
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
     <title>Specializacijos idejimas</title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -10,22 +10,22 @@
 </head>
 <body>
 <div class="container">
-    <h3>Specializacijos ?d?jimas</h3>
+    <h3>Specializacijos įdėjimas</h3>
     <hr>
-    <h3>?veskite specializacijos duomenis</h3>
+    <h3>Įveskite specializacijos duomenis</h3>
 
     <form th:action="@{/ideti/idejo_specializacija}" th:object="${specializacija}" method="POST">
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
         <hr>
 
         <select th:field="*{specializacijaAutoserviso}" class="form-control" id="dropDownList">
-            <option value="0">Pasirinkite autoservis?</option>
+            <option value="0">Pasirinkite autoservisą</option>
             <option th:each="autoservisai : ${autoservisai}" th:value="${autoservisai.getId()}"th:text="${autoservisai.getPavadinimas()}"></option>
         </select>
         <hr>
 
         <select th:field="*{specializacijaMeistro}" class="form-control" >
-            <option value="0">Pasirinkite meistr?</option>
+            <option value="0">Pasirinkite meistrą</option>
             <option th:each="meistrai : ${meistrai}" th:value="${meistrai.getId()}"th:text="${meistrai.getVardas_pavarde()}"></option>
         </select>
         <hr>
@@ -34,7 +34,7 @@
     </form>
     <hr>
 
-    <a th:href="@{/}"> Gr??ti atgal</a>
+    <a th:href="@{/}"> Grįžti atgal</a>
 </div>
 </body>
 </html>
