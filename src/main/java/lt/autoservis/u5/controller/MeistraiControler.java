@@ -1,9 +1,7 @@
 package lt.autoservis.u5.controller;
 
 
-import lt.autoservis.u5.model.entity.Autoservisai;
 import lt.autoservis.u5.model.entity.Meistrai;
-import lt.autoservis.u5.model.entity.Specializacija;
 import lt.autoservis.u5.model.repository.AutoservisaiRepository;
 import lt.autoservis.u5.model.repository.MeistraiRepository;
 import lt.autoservis.u5.model.repository.SpecializacijaRepository;
@@ -12,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -47,7 +43,7 @@ public class MeistraiControler {
         Meistrai meistras = meistraiRepository.findById(id);
         model.addAttribute("vardas_pavarde", meistras.getVardas_pavarde());
         model.addAttribute("specializacijaMeistro", meistras.getSpecializacijaMeistro());
-        model.addAttribute("meistroVertinimas", meistras.getMeistroVertinimas());
+        model.addAttribute("meistroVertinimas", meistras.getVertinimasMeistru());
         model.addAttribute("meistroAutoservisas", meistras.getMeistroAutoservisas());
         return "duomenys_meistrai.html";
     }

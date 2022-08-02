@@ -1,9 +1,6 @@
 package lt.autoservis.u5.controller;
 
-import lt.autoservis.u5.model.entity.Adresai;
 import lt.autoservis.u5.model.entity.Autoservisai;
-import lt.autoservis.u5.model.entity.Meistrai;
-import lt.autoservis.u5.model.entity.Specializacija;
 import lt.autoservis.u5.model.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -111,6 +108,8 @@ public class AutoservisaiMVControler {
 
 //    http://localhost:8080/autoservisas/idejimas
 //    http://localhost:8080/autoservisas/redagavimas
+
+//    http://localhost:8080/greeting
 
 
 
