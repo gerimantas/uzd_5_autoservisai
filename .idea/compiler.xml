@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="u5" />
         <module name="uzduotis_5_autoservisai" />
+        <module name="uzd_5_autoservisai-2" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="u5" options="-parameters" />
+      <module name="uzd_5_autoservisai-2" options="-parameters" />
       <module name="uzduotis_5_autoservisai" options="-parameters" />
     </option>
   </component>
