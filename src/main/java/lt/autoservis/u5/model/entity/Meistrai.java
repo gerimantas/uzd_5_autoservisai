@@ -29,18 +29,19 @@ public class Meistrai {
     private Autoservisai meistroAutoservisas;
 
     @ManyToOne
-    @JoinColumn(name = "vertinimas_id")
-    private Vertinimas meistroVertinimas;
+    @JoinColumn(name = "meistroVertinimas")
+    private Vertinimas vertinimasMeistru;
+
 
     public Meistrai() {
     }
 
-    public Meistrai(long id, String vardas_pavarde, Set<Specializacija> specializacijaMeistro, Autoservisai meistroAutoservisas, Vertinimas meistroVertinimas) {
+    public Meistrai(long id, String vardas_pavarde, Set<Specializacija> specializacijaMeistro, Autoservisai meistroAutoservisas, Vertinimas vertinimasMeistru) {
         this.id = id;
         this.vardas_pavarde = vardas_pavarde;
         this.specializacijaMeistro = specializacijaMeistro;
         this.meistroAutoservisas = meistroAutoservisas;
-        this.meistroVertinimas = meistroVertinimas;
+        this.vertinimasMeistru = vertinimasMeistru;
     }
 
     public long getId() {
@@ -75,12 +76,12 @@ public class Meistrai {
         this.meistroAutoservisas = meistroAutoservisas;
     }
 
-    public Vertinimas getMeistroVertinimas() {
-        return meistroVertinimas;
+    public Vertinimas getVertinimasMeistru() {
+        return vertinimasMeistru;
     }
 
-    public void setMeistroVertinimas(Vertinimas meistroVertinimas) {
-        this.meistroVertinimas = meistroVertinimas;
+    public void setVertinimasMeistru(Vertinimas vertinimasMeistru) {
+        this.vertinimasMeistru = vertinimasMeistru;
     }
 
     @Override
@@ -90,7 +91,7 @@ public class Meistrai {
                 ", vardas_pavarde='" + vardas_pavarde + '\'' +
                 ", specializacijaMeistro=" + specializacijaMeistro +
                 ", meistroAutoservisas=" + meistroAutoservisas +
-                ", meistroVertinimas=" + meistroVertinimas +
+                ", vertinimasMeistru=" + vertinimasMeistru +
                 '}';
     }
 }

@@ -1,31 +1,48 @@
 package lt.autoservis.u5.model.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 public class Vartotojas {
     @Id
-    @GeneratedValue
-    long id;
-    String username;
-    String password;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String username;
+    private String password;
+    private boolean enabled;
+
+    @JsonIgnore
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(name = "vartotojas_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<Role> rolesVartotoju = new HashSet<>();
 
 
-    @OneToMany(mappedBy = "vartotojoRole")
-    Set<VartotojuRoles> vartotojoRole;
+    @ManyToMany
+    @JoinTable(
+            name = "vartotoju_vertinimai",
+            joinColumns = @JoinColumn(name = "vartotojo_id"),
+            inverseJoinColumns = @JoinColumn(name = "vertinimas_id")
+    )
+    private Set<Vertinimas> vartotojuVertinimai;
 
     public Vartotojas() {
     }
 
-    public Vartotojas(long id, String username, String password, Set<VartotojuRoles> vartotojoRole) {
+    public Vartotojas(long id, String username, String password, boolean enabled, Set<Role> rolesVartotoju, Set<Vertinimas> vartotojuVertinimai) {
         this.id = id;
         this.username = username;
         this.password = password;
-        this.vartotojoRole = vartotojoRole;
+        this.enabled = enabled;
+        this.rolesVartotoju = rolesVartotoju;
+        this.vartotojuVertinimai = vartotojuVertinimai;
     }
 
     public long getId() {
@@ -52,12 +69,28 @@ public class Vartotojas {
         this.password = password;
     }
 
-    public Set<VartotojuRoles> getVartotojoRole() {
-        return vartotojoRole;
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void setVartotojoRole(Set<VartotojuRoles> vartotojoRole) {
-        this.vartotojoRole = vartotojoRole;
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public Set<Role> getRolesVartotoju() {
+        return rolesVartotoju;
+    }
+
+    public void setRolesVartotoju(Set<Role> rolesVartotoju) {
+        this.rolesVartotoju = rolesVartotoju;
+    }
+
+    public Set<Vertinimas> getVartotojuVertinimai() {
+        return vartotojuVertinimai;
+    }
+
+    public void setVartotojuVertinimai(Set<Vertinimas> vartotojuVertinimai) {
+        this.vartotojuVertinimai = vartotojuVertinimai;
     }
 
     @Override
@@ -66,8 +99,11 @@ public class Vartotojas {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", vartotojoRole=" + vartotojoRole +
+                ", enabled=" + enabled +
+                ", rolesVartotoju=" + rolesVartotoju +
+                ", vartotojuVertinimai=" + vartotojuVertinimai +
                 '}';
     }
+
 }
 
