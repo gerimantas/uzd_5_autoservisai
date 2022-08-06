@@ -5,14 +5,133 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas duombazes failas i resourses">
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/ImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user-edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AdresaiControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/MiestaiControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/TelefonaiControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/TestinisControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/VartotojasControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/VertinimasControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Adresai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Autoservisai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Meistrai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Miestai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Specializacija.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Telefonai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Vartotojas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Vertinimas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/AutoservisaiRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/MeistraiRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/MiestaiRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/TelefonaiRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/VartotojasRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/VertinimasRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/u355634419_autoservis (1).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/Component/SetupDataLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AdresaiControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AutoservisaiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AutoservisaiMVControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/MeistraiControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/MiestaiControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/SpecializacijaControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/SpecializacijaMVControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/TelefonaiControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/TestinisControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/VartotojasControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/VartotojuRolesControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/VertinimasControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Adresai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Autoservisai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Meistrai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Miestai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Privilegijos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Specializacija.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Telefonai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Vartotojas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Vertinimas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/AdresaiRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/AutoservisaiRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/MeistraiRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/MiestaiRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/PrivilegijosRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/RoleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/SpecializacijaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/TelefonaiRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/VartotojasRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/VertinimasRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/MyUserDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AdresaiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AdresaiControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MiestaiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MiestaiControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TelefonaiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TelefonaiControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AutoservisaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AutoservisaiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MeistraiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MeistraiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MiestaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MiestaiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/TelefonaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/TelefonaiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +157,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -92,7 +212,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="exceleditor.install" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.mvn/wrapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -100,25 +220,25 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\.mvn\wrapper" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static\images" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static\css" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static\images" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\securingweb" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test\java\lt\autoservis\u5" />
-      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="lt.autoservis.u5.security" />
       <recent name="lt.autoservis.u5.model.repository" />
-      <recent name="lt.autoservis.u5.model.entity" />
-      <recent name="lt.autoservis.u5.Component" />
       <recent name="lt.autoservis.u5.config" />
+      <recent name="lt.autoservis.u5.model.entity" />
+      <recent name="lt.autoservis.u5.controller" />
+      <recent name="lt.autoservis.u5.model.enums" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Praktika5Application">
@@ -431,11 +551,6 @@
           <properties class="org.hibernate.MappingException" package="org.hibernate" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
