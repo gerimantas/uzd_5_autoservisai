@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+    <title>Admin Panel</title>
+<body>
+    <h1 style="text-align: center">Asmeninis kabinetas</h1>
+    <hr>
+    <br>
+    <div style="text-align: center">
+        <img src="/static/images/avatar.png"
+             style="border:2px solid black; border-radius: 20px" height="120">
+        <br>
+        <br>
+        <h2>${user.name}</h2>
+        <br>
+        Elektroninis pastas: <b>${user.email}</b>
+        <br>
+        Telefonas: <b>${user.phoneNumber}</b>
+        <br>
+        <br>
+        <#if user.isAdmin()>
+            <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
+               href="/admin">
+                Administratoriaus kabinetas
+            </a><br>
+        </#if>
+        <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
+           href="/my/products">
+            Mano autoservisai
+        </a>
+        <form action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+            <button type="submit" style="text-align: center; width: 100%" class="btn btn-danger mb-2">
+                Iseiti is kabineto
+            </button>
+        </form>
+    </div>
+</body>
+</html>
