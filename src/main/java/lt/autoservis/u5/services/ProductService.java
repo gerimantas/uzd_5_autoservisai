@@ -2,11 +2,11 @@ package lt.autoservis.u5.services;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import lt.autoservis.u5.model.entity.Image;
-import lt.autoservis.u5.model.entity.Product;
-import lt.autoservis.u5.model.entity.User;
-import lt.autoservis.u5.model.repository.ProductRepository;
-import lt.autoservis.u5.model.repository.UserRepository;
+import lt.autoservis.u5.models.Product;
+import lt.autoservis.u5.models.Image;
+import lt.autoservis.u5.models.User;
+import lt.autoservis.u5.repositories.ProductRepository;
+import lt.autoservis.u5.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

@@ -2,9 +2,9 @@ package lt.autoservis.u5.services;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import lt.autoservis.u5.model.entity.User;
-import lt.autoservis.u5.model.enums.Role;
-import lt.autoservis.u5.model.repository.UserRepository;
+import lt.autoservis.u5.models.User;
+import lt.autoservis.u5.models.enums.Role;
+import lt.autoservis.u5.repositories.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

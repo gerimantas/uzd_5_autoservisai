@@ -18,7 +18,7 @@
         <#if user.isAdmin()>
             <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
                href="/admin">
-                Панель администратора
+                Administratoriaus kabinetas
             </a><br>
         </#if>
         <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
@@ -28,7 +28,7 @@
         <form action="/logout" method="post">
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
             <button type="submit" style="text-align: center; width: 100%" class="btn btn-danger mb-2">
-                Выйти из аккаунта
+                Išeiti iš kabineto
             </button>
         </form>
     </div>

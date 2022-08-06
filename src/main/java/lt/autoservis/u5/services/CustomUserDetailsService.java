@@ -1,7 +1,7 @@
 package lt.autoservis.u5.services;
 
 import lombok.RequiredArgsConstructor;
-import lt.autoservis.u5.model.repository.UserRepository;
+import lt.autoservis.u5.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
