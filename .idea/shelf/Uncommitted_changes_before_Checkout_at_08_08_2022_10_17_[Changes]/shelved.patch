@@ -1,0 +1,906 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]/shelved.patch	(revision fbf38f8dc713f347ae87fccd2975dc86b405802e)
++++ /dev/null	(revision fbf38f8dc713f347ae87fccd2975dc86b405802e)
+@@ -1,23 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"Ikeltas projektas\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"26ups2WWGLsnr2KKiVdPTRRt9pe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"exceleditor.install\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/..\" />\r\n    <property name=\"project.structure.last.edited\" value=\"SDKs\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"advanced.settings\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\IdeaProjects\\Spring-boot\\u5_web\\src\\main\\resources\\templates\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\IdeaProjects\\Spring-boot\\u5\\src\\main\\resources\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"lt.autoservis.u5.controller\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Praktika5Application\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.autoservis.u5.Praktika5Application\" />\r\n      <module name=\"uzduotis_5_autoservisai\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.autoservis.u5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Praktika5Application\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"\" />\r\n      <created>1648283533165</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1648283533165</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Prijungta duomenu baze: autoservis\">\r\n      <created>1648286984467</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648286984467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Sukurti paketai, entity - Autoservisai\">\r\n      <created>1648288376902</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648288376902</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\">\r\n      <created>1648333389280</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648333389280</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Pratestuota su Postman\">\r\n      <created>1648576393109</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648576393109</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Klaidos ieskom\">\r\n      <created>1649151287989</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649151287989</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"@JsonIgnore\">\r\n      <created>1649168460296</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649168460296</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Istaisyta autoservisai_id dubliavimo klaida\">\r\n      <created>1649324437241</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649324437241</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Sudeta adresai, telefonai, vartotojai, vertinimas\">\r\n      <created>1649366864899</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649366864899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Sudeti controleriai\">\r\n      <created>1649667941121</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649667941121</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Pratestuota su Thymeleaf (th), veikia\">\r\n      <created>1649765816218</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649765816218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Resursuose ideta autoservis.sql\">\r\n      <created>1649833798198</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649833798198</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00012\" summary=\"Specializaciju isvedimas\">\r\n      <created>1650369280875</created>\r\n      <option name=\"number\" value=\"LOCAL−00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00012\" />\r\n      <updated>1650369280875</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00013\" summary=\"Specializacijos ir autoservisai isvedimas\">\r\n      <created>1650371975531</created>\r\n      <option name=\"number\" value=\"LOCAL−00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00013\" />\r\n      <updated>1650371975531</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00014\" summary=\"Autoserviso idejimo klaida\">\r\n      <created>1650478345440</created>\r\n      <option name=\"number\" value=\"LOCAL−00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00014\" />\r\n      <updated>1650478345440</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00015\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650797572384</created>\r\n      <option name=\"number\" value=\"LOCAL−00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00015\" />\r\n      <updated>1650797572384</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00016\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650879752722</created>\r\n      <option name=\"number\" value=\"LOCAL−00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00016\" />\r\n      <updated>1650879752722</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00017\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650958187431</created>\r\n      <option name=\"number\" value=\"LOCAL−00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00017\" />\r\n      <updated>1650958187431</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00018\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959650312</created>\r\n      <option name=\"number\" value=\"LOCAL−00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00018\" />\r\n      <updated>1650959650312</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00019\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959972134</created>\r\n      <option name=\"number\" value=\"LOCAL−00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00019\" />\r\n      <updated>1650959972134</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00020\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650987829066</created>\r\n      <option name=\"number\" value=\"LOCAL−00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00020\" />\r\n      <updated>1650987829066</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00021\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650988072161</created>\r\n      <option name=\"number\" value=\"LOCAL−00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00021\" />\r\n      <updated>1650988072161</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Atnaujinta 06-26\">\r\n      <created>1656443671236</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656443671236</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Ikeltas projektas\">\r\n      <created>1656520009409</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656520009409</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"24\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Pradzia\" />\r\n    <MESSAGE value=\"Prijungta duomenu baze: autoservis\" />\r\n    <MESSAGE value=\"Sukurti paketai, entity - Autoservisai\" />\r\n    <MESSAGE value=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\" />\r\n    <MESSAGE value=\"Pratestuota su Postman\" />\r\n    <MESSAGE value=\"Klaidos ieskom\" />\r\n    <MESSAGE value=\"@JsonIgnore\" />\r\n    <MESSAGE value=\"Istaisyta autoservisai_id dubliavimo klaida\" />\r\n    <MESSAGE value=\"Sudeta adresai, telefonai, vartotojai, vertinimas\" />\r\n    <MESSAGE value=\"Sudeti controleriai\" />\r\n    <MESSAGE value=\"Pratestuota su Thymeleaf (th), veikia\" />\r\n    <MESSAGE value=\"Resursuose ideta autoservis.sql\" />\r\n    <MESSAGE value=\"Specializaciju isvedimas\" />\r\n    <MESSAGE value=\"Specializacijos ir autoservisai isvedimas\" />\r\n    <MESSAGE value=\"Autoserviso idejimo klaida\" />\r\n    <MESSAGE value=\"Prisijungta prie web serverio\" />\r\n    <MESSAGE value=\"Meistru sarasas ir pasirinkimo mygtukas\" />\r\n    <MESSAGE value=\"Atnaujinta 06-26\" />\r\n    <MESSAGE value=\"Ikeltas projektas\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Ikeltas projektas\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.StackOverflowError\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"org.hibernate.MappingException\" package=\"org.hibernate\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 0f91fb845e7034653da460a59d6d32b62f57f59c)
+-+++ b/.idea/workspace.xml	(date 1659275199651)
+-@@ -4,11 +4,7 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas">
+--      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" afterDir="false" />
+--    </list>
+-+    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas" />
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml	(revision fbf38f8dc713f347ae87fccd2975dc86b405802e)
++++ /dev/null	(revision fbf38f8dc713f347ae87fccd2975dc86b405802e)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]" date="1659275576353" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 31/07/2022 16:52 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: target/classes/u355634419_autoservis (1).sql
+===================================================================
+diff --git a/target/classes/u355634419_autoservis (1).sql b/target/classes/u355634419_autoservis (1).sql
+deleted file mode 100644
+--- a/target/classes/u355634419_autoservis (1).sql	(revision fbf38f8dc713f347ae87fccd2975dc86b405802e)
++++ /dev/null	(revision fbf38f8dc713f347ae87fccd2975dc86b405802e)
+@@ -1,628 +0,0 @@
+--- phpMyAdmin SQL Dump
+--- version 5.1.1
+--- https://www.phpmyadmin.net/
+---
+--- Host: 127.0.0.1:3306
+--- Generation Time: Aug 02, 2022 at 09:32 PM
+--- Server version: 10.5.12-MariaDB-cll-lve
+--- PHP Version: 7.2.34
+-
+-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+-START TRANSACTION;
+-SET time_zone = "+00:00";
+-
+-
+-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+-/*!40101 SET NAMES utf8mb4 */;
+-
+---
+--- Database: `u355634419_autoservis`
+---
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `adresai`
+---
+-
+-CREATE TABLE `adresai` (
+-  `id` bigint(20) NOT NULL,
+-  `gatve` varchar(255) DEFAULT NULL,
+-  `namas` bigint(20) NOT NULL,
+-  `pasto_kodas` bigint(20) NOT NULL,
+-  `autoservisai_id` bigint(20) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `adresai`
+---
+-
+-INSERT INTO `adresai` (`id`, `gatve`, `namas`, `pasto_kodas`, `autoservisai_id`) VALUES
+-(1, 'Europos', 10, 50177, 1),
+-(2, 'Utenos', 11, 51222, 2),
+-(3, 'Pajūrio', 19, 55601, 3),
+-(4, 'Užupio', 2, 52010, 4),
+-(5, 'Ilgoji', 98, 59014, 5),
+-(6, 'Ukmergės', 151, 53023, 6);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `autoservisai`
+---
+-
+-CREATE TABLE `autoservisai` (
+-  `id` bigint(20) NOT NULL,
+-  `pavadinimas` varchar(255) DEFAULT NULL,
+-  `vadovas` varchar(255) DEFAULT NULL,
+-  `meistrai_id` bigint(20) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `autoservisai`
+---
+-
+-INSERT INTO `autoservisai` (`id`, `pavadinimas`, `vadovas`, `meistrai_id`) VALUES
+-(1, 'LALA dar karta pataisytas', 'ABC-xxxxx', NULL),
+-(2, 'Melga3', 'Rimas Asmenskas3', NULL),
+-(3, 'Raivinta2', 'Jonas Šustauskas2', NULL),
+-(4, 'Savja', 'Zigmas Freidas', NULL),
+-(5, 'Autobroliai', 'Josifas Majoras', NULL),
+-(6, 'Autotoja', 'Algis Jurevicius', NULL),
+-(25, 'Paradas', 'Tamas Tamas', NULL),
+-(26, 'Paradas5', 'vadas7', NULL),
+-(27, 'ABC', 'Jonas Janavicius', NULL),
+-(28, '2022-0627', 'Vadovas 27', NULL),
+-(29, '2022-0727', 'Liepos27', NULL),
+-(30, '2022-0727', 'Liepos27', NULL);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `hibernate_sequence`
+---
+-
+-CREATE TABLE `hibernate_sequence` (
+-  `next_val` bigint(20) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `hibernate_sequence`
+---
+-
+-INSERT INTO `hibernate_sequence` (`next_val`) VALUES
+-(1);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `meistrai`
+---
+-
+-CREATE TABLE `meistrai` (
+-  `id` bigint(20) NOT NULL,
+-  `autoservisai_id` bigint(20) NOT NULL,
+-  `vardas_pavarde` varchar(255) DEFAULT NULL,
+-  `vertinimas_id` bigint(20) DEFAULT NULL,
+-  `meistro_vertinimas` bigint(20) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `meistrai`
+---
+-
+-INSERT INTO `meistrai` (`id`, `autoservisai_id`, `vardas_pavarde`, `vertinimas_id`, `meistro_vertinimas`) VALUES
+-(1, 2, 'Jonas Janavicius', NULL, NULL),
+-(2, 2, 'Jonas Petravicius', NULL, NULL),
+-(3, 4, 'Sigitas Petrauskas', NULL, NULL),
+-(4, 3, 'Kazys Vilimas', NULL, NULL),
+-(5, 5, 'Antanas Vilimas', NULL, NULL),
+-(6, 5, 'Petras Jonaitis', NULL, NULL),
+-(7, 6, 'Algis Kontrimas', NULL, NULL),
+-(8, 1, 'Virginijus Alekna', NULL, NULL),
+-(9, 1, 'Mantas Sakalauskas', NULL, NULL);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `miestai`
+---
+-
+-CREATE TABLE `miestai` (
+-  `id` bigint(20) NOT NULL,
+-  `pavadinimas` varchar(255) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `miestai`
+---
+-
+-INSERT INTO `miestai` (`id`, `pavadinimas`) VALUES
+-(1, 'Vilnius'),
+-(2, 'Kaunas'),
+-(3, 'Klaipeda'),
+-(4, 'Siauliai'),
+-(5, 'Panevezys'),
+-(6, 'Kedainiai');
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `privilegijos`
+---
+-
+-CREATE TABLE `privilegijos` (
+-  `id` tinyint(1) UNSIGNED NOT NULL,
+-  `name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-
+---
+--- Dumping data for table `privilegijos`
+---
+-
+-INSERT INTO `privilegijos` (`id`, `name`) VALUES
+-(1, 'vadovas'),
+-(2, 'administratorius'),
+-(3, 'meistras'),
+-(4, 'klientas'),
+-(5, 'svecias');
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `role`
+---
+-
+-CREATE TABLE `role` (
+-  `id` int(11) NOT NULL,
+-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-
+---
+--- Dumping data for table `role`
+---
+-
+-INSERT INTO `role` (`id`, `name`) VALUES
+-(1, 'admin'),
+-(2, 'creator'),
+-(3, 'editor'),
+-(4, 'user');
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `specializacija`
+---
+-
+-CREATE TABLE `specializacija` (
+-  `id` bigint(20) NOT NULL,
+-  `pavadinimas` varchar(255) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `specializacija`
+---
+-
+-INSERT INTO `specializacija` (`id`, `pavadinimas`) VALUES
+-(1, 'Varikliu remontas'),
+-(2, 'Kėbulo remontas, dažymas'),
+-(3, 'Elektronikos remontas'),
+-(4, 'Važiuoklės remontas'),
+-(5, 'Padangos'),
+-(6, 'Ratų geometrija'),
+-(7, 'Duju iranga'),
+-(8, 'Kompiuterine diagnostika');
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `sujungimas_autoservisai_miestai`
+---
+-
+-CREATE TABLE `sujungimas_autoservisai_miestai` (
+-  `miestai_id` bigint(20) NOT NULL,
+-  `autoservisai_id` bigint(20) NOT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `sujungimas_autoservisai_miestai`
+---
+-
+-INSERT INTO `sujungimas_autoservisai_miestai` (`miestai_id`, `autoservisai_id`) VALUES
+-(3, 4),
+-(5, 5),
+-(6, 6),
+-(1, 25),
+-(1, 27),
+-(2, 28),
+-(1, 29),
+-(1, 30);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `sujungimas_autoservisai_specializacija`
+---
+-
+-CREATE TABLE `sujungimas_autoservisai_specializacija` (
+-  `specializacija_id` bigint(20) NOT NULL,
+-  `autoservisai_id` bigint(20) NOT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `sujungimas_autoservisai_specializacija`
+---
+-
+-INSERT INTO `sujungimas_autoservisai_specializacija` (`specializacija_id`, `autoservisai_id`) VALUES
+-(1, 1),
+-(3, 4),
+-(2, 5),
+-(7, 5),
+-(6, 6),
+-(8, 6),
+-(1, 25),
+-(1, 27),
+-(1, 28),
+-(5, 29),
+-(5, 30);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `sujungimas_meistrai_specializacija`
+---
+-
+-CREATE TABLE `sujungimas_meistrai_specializacija` (
+-  `specializacija_id` bigint(20) NOT NULL,
+-  `meistrai_id` bigint(20) NOT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `sujungimas_meistrai_specializacija`
+---
+-
+-INSERT INTO `sujungimas_meistrai_specializacija` (`specializacija_id`, `meistrai_id`) VALUES
+-(1, 8),
+-(2, 5),
+-(2, 9),
+-(3, 3),
+-(4, 4),
+-(6, 1),
+-(6, 2),
+-(6, 7),
+-(7, 6),
+-(8, 4);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `telefonai`
+---
+-
+-CREATE TABLE `telefonai` (
+-  `id` bigint(20) NOT NULL,
+-  `numeris` bigint(20) NOT NULL,
+-  `autoservisai_id` bigint(20) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `telefonai`
+---
+-
+-INSERT INTO `telefonai` (`id`, `numeris`, `autoservisai_id`) VALUES
+-(1, 865521356, 1),
+-(2, 865521366, 1),
+-(3, 865521376, 2),
+-(4, 865521386, 2),
+-(5, 865521396, 3),
+-(6, 865521406, 4),
+-(7, 865521416, 5),
+-(8, 865521426, 6),
+-(9, 865521436, 6);
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `users_roles`
+---
+-
+-CREATE TABLE `users_roles` (
+-  `vartotojo_id` bigint(20) NOT NULL,
+-  `role_id` int(11) NOT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `vartotojas`
+---
+-
+-CREATE TABLE `vartotojas` (
+-  `id` bigint(20) NOT NULL,
+-  `password` varchar(255) DEFAULT NULL,
+-  `username` varchar(255) DEFAULT NULL,
+-  `enabled` bit(1) NOT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `vartotojas`
+---
+-
+-INSERT INTO `vartotojas` (`id`, `password`, `username`, `enabled`) VALUES
+-(1, '1111', 'Administratorius', b'0'),
+-(2, '2222', 'Darbuotojas', b'0'),
+-(3, '3333', 'Klientas1', b'0'),
+-(0, NULL, NULL, b'0'),
+-(0, 'grmt123', 'grmt', b'0');
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `vartotoju_roles`
+---
+-
+-CREATE TABLE `vartotoju_roles` (
+-  `id` bigint(20) NOT NULL,
+-  `pavadinimas` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+-  `vartotojas_id` bigint(20) DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `vartotoju_vertinimai`
+---
+-
+-CREATE TABLE `vartotoju_vertinimai` (
+-  `id` bigint(20) UNSIGNED NOT NULL,
+-  `vartotojo_id` bigint(20) UNSIGNED DEFAULT NULL,
+-  `vertinimas_id` bigint(20) UNSIGNED DEFAULT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-
+--- --------------------------------------------------------
+-
+---
+--- Table structure for table `vertinimas`
+---
+-
+-CREATE TABLE `vertinimas` (
+-  `id` bigint(20) NOT NULL,
+-  `balas` int(11) NOT NULL,
+-  `data` date DEFAULT NULL,
+-  `komentaras` varchar(255) DEFAULT NULL,
+-  `meistrai_id` bigint(20) NOT NULL
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-
+---
+--- Dumping data for table `vertinimas`
+---
+-
+-INSERT INTO `vertinimas` (`id`, `balas`, `data`, `komentaras`, `meistrai_id`) VALUES
+-(1, 2, '2022-05-18', 'Yahoo', 1),
+-(2, 4, '2022-05-02', 'Yahoo2', 1),
+-(3, 4, '2022-05-02', 'Yahoo3', 1),
+-(4, 5, '2022-05-03', 'Yahoo5', 1),
+-(5, 5, '2022-05-05', 'Yahoo6', 1),
+-(6, 5, '2022-05-06', 'Komentaras 1 2-o meistro', 2),
+-(7, 2, '2022-05-07', '4-0 meistro komentaras', 4);
+-
+---
+--- Indexes for dumped tables
+---
+-
+---
+--- Indexes for table `adresai`
+---
+-ALTER TABLE `adresai`
+-  ADD PRIMARY KEY (`id`),
+-  ADD KEY `FK18ve3s8vcx2skb1uuf3qwp07n` (`autoservisai_id`);
+-
+---
+--- Indexes for table `autoservisai`
+---
+-ALTER TABLE `autoservisai`
+-  ADD PRIMARY KEY (`id`),
+-  ADD KEY `FKopkr86k14hfn9i7uwg54kk8tq` (`meistrai_id`);
+-
+---
+--- Indexes for table `meistrai`
+---
+-ALTER TABLE `meistrai`
+-  ADD PRIMARY KEY (`id`);
+-
+---
+--- Indexes for table `miestai`
+---
+-ALTER TABLE `miestai`
+-  ADD PRIMARY KEY (`id`);
+-
+---
+--- Indexes for table `privilegijos`
+---
+-ALTER TABLE `privilegijos`
+-  ADD PRIMARY KEY (`id`);
+-
+---
+--- Indexes for table `role`
+---
+-ALTER TABLE `role`
+-  ADD PRIMARY KEY (`id`);
+-
+---
+--- Indexes for table `specializacija`
+---
+-ALTER TABLE `specializacija`
+-  ADD PRIMARY KEY (`id`);
+-
+---
+--- Indexes for table `sujungimas_autoservisai_miestai`
+---
+-ALTER TABLE `sujungimas_autoservisai_miestai`
+-  ADD PRIMARY KEY (`autoservisai_id`,`miestai_id`),
+-  ADD KEY `FKgeksey073h024q4epnvmmunf7` (`miestai_id`);
+-
+---
+--- Indexes for table `sujungimas_autoservisai_specializacija`
+---
+-ALTER TABLE `sujungimas_autoservisai_specializacija`
+-  ADD PRIMARY KEY (`autoservisai_id`,`specializacija_id`),
+-  ADD KEY `FK8n6cjw9l2lka8rd3sqrqry1ir` (`specializacija_id`);
+-
+---
+--- Indexes for table `sujungimas_meistrai_specializacija`
+---
+-ALTER TABLE `sujungimas_meistrai_specializacija`
+-  ADD PRIMARY KEY (`specializacija_id`,`meistrai_id`),
+-  ADD KEY `FK2juhf4wiceq233suk2lwo2na1` (`meistrai_id`);
+-
+---
+--- Indexes for table `telefonai`
+---
+-ALTER TABLE `telefonai`
+-  ADD PRIMARY KEY (`id`),
+-  ADD KEY `FKao1d9ac8mcdbjuhy7xfnjbhog` (`autoservisai_id`);
+-
+---
+--- Indexes for table `users_roles`
+---
+-ALTER TABLE `users_roles`
+-  ADD PRIMARY KEY (`vartotojo_id`,`role_id`);
+-
+---
+--- Indexes for table `vartotoju_roles`
+---
+-ALTER TABLE `vartotoju_roles`
+-  ADD PRIMARY KEY (`id`);
+-
+---
+--- Indexes for table `vartotoju_vertinimai`
+---
+-ALTER TABLE `vartotoju_vertinimai`
+-  ADD PRIMARY KEY (`id`);
+-
+---
+--- Indexes for table `vertinimas`
+---
+-ALTER TABLE `vertinimas`
+-  ADD PRIMARY KEY (`id`),
+-  ADD KEY `FKhsrsqf6e7b8f8pme63jad8pra` (`meistrai_id`);
+-
+---
+--- AUTO_INCREMENT for dumped tables
+---
+-
+---
+--- AUTO_INCREMENT for table `adresai`
+---
+-ALTER TABLE `adresai`
+-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+-
+---
+--- AUTO_INCREMENT for table `autoservisai`
+---
+-ALTER TABLE `autoservisai`
+-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+-
+---
+--- AUTO_INCREMENT for table `meistrai`
+---
+-ALTER TABLE `meistrai`
+-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+-
+---
+--- AUTO_INCREMENT for table `miestai`
+---
+-ALTER TABLE `miestai`
+-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+-
+---
+--- AUTO_INCREMENT for table `privilegijos`
+---
+-ALTER TABLE `privilegijos`
+-  MODIFY `id` tinyint(1) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+-
+---
+--- AUTO_INCREMENT for table `role`
+---
+-ALTER TABLE `role`
+-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+-
+---
+--- AUTO_INCREMENT for table `specializacija`
+---
+-ALTER TABLE `specializacija`
+-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+-
+---
+--- AUTO_INCREMENT for table `telefonai`
+---
+-ALTER TABLE `telefonai`
+-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+-
+---
+--- AUTO_INCREMENT for table `vartotoju_vertinimai`
+---
+-ALTER TABLE `vartotoju_vertinimai`
+-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-
+---
+--- AUTO_INCREMENT for table `vertinimas`
+---
+-ALTER TABLE `vertinimas`
+-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+-
+---
+--- Constraints for dumped tables
+---
+-
+---
+--- Constraints for table `adresai`
+---
+-ALTER TABLE `adresai`
+-  ADD CONSTRAINT `FK18ve3s8vcx2skb1uuf3qwp07n` FOREIGN KEY (`autoservisai_id`) REFERENCES `autoservisai` (`id`);
+-
+---
+--- Constraints for table `autoservisai`
+---
+-ALTER TABLE `autoservisai`
+-  ADD CONSTRAINT `FKopkr86k14hfn9i7uwg54kk8tq` FOREIGN KEY (`meistrai_id`) REFERENCES `meistrai` (`id`);
+-
+---
+--- Constraints for table `sujungimas_autoservisai_miestai`
+---
+-ALTER TABLE `sujungimas_autoservisai_miestai`
+-  ADD CONSTRAINT `FKk5myxwatbqg5hnrkqpcg4jijh` FOREIGN KEY (`autoservisai_id`) REFERENCES `autoservisai` (`id`),
+-  ADD CONSTRAINT `FKkkpiu9nnu2ixfexljwa5v64ho` FOREIGN KEY (`miestai_id`) REFERENCES `miestai` (`id`);
+-
+---
+--- Constraints for table `sujungimas_autoservisai_specializacija`
+---
+-ALTER TABLE `sujungimas_autoservisai_specializacija`
+-  ADD CONSTRAINT `FK8n6cjw9l2lka8rd3sqrqry1ir` FOREIGN KEY (`specializacija_id`) REFERENCES `specializacija` (`id`),
+-  ADD CONSTRAINT `FKt81usrd2mkoa8xkdwoxxdqyrt` FOREIGN KEY (`autoservisai_id`) REFERENCES `autoservisai` (`id`);
+-
+---
+--- Constraints for table `sujungimas_meistrai_specializacija`
+---
+-ALTER TABLE `sujungimas_meistrai_specializacija`
+-  ADD CONSTRAINT `FK2juhf4wiceq233suk2lwo2na1` FOREIGN KEY (`meistrai_id`) REFERENCES `meistrai` (`id`),
+-  ADD CONSTRAINT `FKsa1rkwkksxgk2popqiaf2soa7` FOREIGN KEY (`specializacija_id`) REFERENCES `specializacija` (`id`);
+-
+---
+--- Constraints for table `telefonai`
+---
+-ALTER TABLE `telefonai`
+-  ADD CONSTRAINT `FKao1d9ac8mcdbjuhy7xfnjbhog` FOREIGN KEY (`autoservisai_id`) REFERENCES `autoservisai` (`id`);
+-
+---
+--- Constraints for table `vertinimas`
+---
+-ALTER TABLE `vertinimas`
+-  ADD CONSTRAINT `FKhsrsqf6e7b8f8pme63jad8pra` FOREIGN KEY (`meistrai_id`) REFERENCES `meistrai` (`id`);
+-COMMIT;
+-
+-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"Ikeltas projektas\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/application.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/u355634419_autoservis (1).sql\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"26ups2WWGLsnr2KKiVdPTRRt9pe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"exceleditor.install\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/..\" />\r\n    <property name=\"project.structure.last.edited\" value=\"SDKs\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"advanced.settings\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\IdeaProjects\\Spring-boot\\u5_web\\src\\main\\resources\\templates\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\IdeaProjects\\Spring-boot\\u5\\src\\main\\resources\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"lt.autoservis.u5.controller\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Praktika5Application\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.autoservis.u5.Praktika5Application\" />\r\n      <module name=\"uzd_5_autoservisai-2\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.autoservis.u5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Praktika5Application\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"\" />\r\n      <created>1648283533165</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1648283533165</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Prijungta duomenu baze: autoservis\">\r\n      <created>1648286984467</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648286984467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Sukurti paketai, entity - Autoservisai\">\r\n      <created>1648288376902</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648288376902</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\">\r\n      <created>1648333389280</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648333389280</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Pratestuota su Postman\">\r\n      <created>1648576393109</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648576393109</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Klaidos ieskom\">\r\n      <created>1649151287989</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649151287989</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"@JsonIgnore\">\r\n      <created>1649168460296</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649168460296</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Istaisyta autoservisai_id dubliavimo klaida\">\r\n      <created>1649324437241</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649324437241</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Sudeta adresai, telefonai, vartotojai, vertinimas\">\r\n      <created>1649366864899</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649366864899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Sudeti controleriai\">\r\n      <created>1649667941121</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649667941121</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Pratestuota su Thymeleaf (th), veikia\">\r\n      <created>1649765816218</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649765816218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Resursuose ideta autoservis.sql\">\r\n      <created>1649833798198</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649833798198</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00012\" summary=\"Specializaciju isvedimas\">\r\n      <created>1650369280875</created>\r\n      <option name=\"number\" value=\"LOCAL−00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00012\" />\r\n      <updated>1650369280875</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00013\" summary=\"Specializacijos ir autoservisai isvedimas\">\r\n      <created>1650371975531</created>\r\n      <option name=\"number\" value=\"LOCAL−00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00013\" />\r\n      <updated>1650371975531</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00014\" summary=\"Autoserviso idejimo klaida\">\r\n      <created>1650478345440</created>\r\n      <option name=\"number\" value=\"LOCAL−00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00014\" />\r\n      <updated>1650478345440</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00015\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650797572384</created>\r\n      <option name=\"number\" value=\"LOCAL−00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00015\" />\r\n      <updated>1650797572384</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00016\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650879752722</created>\r\n      <option name=\"number\" value=\"LOCAL−00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00016\" />\r\n      <updated>1650879752722</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00017\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650958187431</created>\r\n      <option name=\"number\" value=\"LOCAL−00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00017\" />\r\n      <updated>1650958187431</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00018\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959650312</created>\r\n      <option name=\"number\" value=\"LOCAL−00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00018\" />\r\n      <updated>1650959650312</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00019\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959972134</created>\r\n      <option name=\"number\" value=\"LOCAL−00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00019\" />\r\n      <updated>1650959972134</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00020\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650987829066</created>\r\n      <option name=\"number\" value=\"LOCAL−00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00020\" />\r\n      <updated>1650987829066</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00021\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650988072161</created>\r\n      <option name=\"number\" value=\"LOCAL−00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00021\" />\r\n      <updated>1650988072161</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Atnaujinta 06-26\">\r\n      <created>1656443671236</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656443671236</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Ikeltas projektas\">\r\n      <created>1656520009409</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656520009409</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"24\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Pradzia\" />\r\n    <MESSAGE value=\"Prijungta duomenu baze: autoservis\" />\r\n    <MESSAGE value=\"Sukurti paketai, entity - Autoservisai\" />\r\n    <MESSAGE value=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\" />\r\n    <MESSAGE value=\"Pratestuota su Postman\" />\r\n    <MESSAGE value=\"Klaidos ieskom\" />\r\n    <MESSAGE value=\"@JsonIgnore\" />\r\n    <MESSAGE value=\"Istaisyta autoservisai_id dubliavimo klaida\" />\r\n    <MESSAGE value=\"Sudeta adresai, telefonai, vartotojai, vertinimas\" />\r\n    <MESSAGE value=\"Sudeti controleriai\" />\r\n    <MESSAGE value=\"Pratestuota su Thymeleaf (th), veikia\" />\r\n    <MESSAGE value=\"Resursuose ideta autoservis.sql\" />\r\n    <MESSAGE value=\"Specializaciju isvedimas\" />\r\n    <MESSAGE value=\"Specializacijos ir autoservisai isvedimas\" />\r\n    <MESSAGE value=\"Autoserviso idejimo klaida\" />\r\n    <MESSAGE value=\"Prisijungta prie web serverio\" />\r\n    <MESSAGE value=\"Meistru sarasas ir pasirinkimo mygtukas\" />\r\n    <MESSAGE value=\"Atnaujinta 06-26\" />\r\n    <MESSAGE value=\"Ikeltas projektas\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Ikeltas projektas\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.StackOverflowError\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"org.hibernate.MappingException\" package=\"org.hibernate\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>\r\n          <line>41</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision fbf38f8dc713f347ae87fccd2975dc86b405802e)
++++ b/.idea/workspace.xml	(date 1659911807454)
+@@ -4,18 +4,21 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas">
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Padarytas šifruotas spring security prisijungimas security4 branch'e">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022_08_03_13_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022_08_03_13_00__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/u355634419_autoservis (1).sql" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/u355634419_autoservis (1).sql" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="CodeInsightWorkspaceSettings">
++    <option name="optimizeImportsOnTheFly" value="true" />
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -29,11 +32,19 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="security4" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="ROOT_SYNC" value="DONT_SYNC" />
++  </component>
++  <component name="GitSEFilterConfiguration">
++    <file-type-list>
++      <filtered-out-file-type name="LOCAL_BRANCH" />
++      <filtered-out-file-type name="REMOTE_BRANCH" />
++      <filtered-out-file-type name="TAG" />
++      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
++    </file-type-list>
+   </component>
+   <component name="JpbToolWindowState">
+     <option name="myId2FirstActivated">
+@@ -50,6 +61,9 @@
+         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+       </map>
+     </option>
++  </component>
++  <component name="KotlinCodeInsightWorkspaceSettings">
++    <option name="optimizeImportsOnTheFly" value="true" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -72,33 +86,44 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
+-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="exceleditor.install" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/lt/autoservis/u5" />
+     <property name="project.structure.last.edited" value="SDKs" />
+     <property name="project.structure.proportion" value="0.0" />
+     <property name="project.structure.side.proportion" value="0.0" />
+-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
++    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5_web\src\main\resources\templates" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5\models" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates\blocks" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static\images" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\securingweb" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test\java\lt\autoservis\u5" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
+       <recent name="lt.autoservis.u5.controller" />
++      <recent name="lt.autoservis.u5.model.repository" />
++      <recent name="lt.autoservis.u5.config" />
++      <recent name="lt.autoservis.u5.model.entity" />
++      <recent name="lt.autoservis.u5.model.enums" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Application.Praktika5Application">
+     <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
+-      <module name="uzd_5_autoservisai-2" />
++      <module name="uzduotis_5_autoservisai" />
+       <extension name="coverage">
+         <pattern>
+           <option name="PATTERN" value="lt.autoservis.u5.*" />
+@@ -109,9 +134,34 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <configuration name="RestServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="restservice.RestServiceApplication" />
++      <module name="uzduotis_5_autoservisai" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="restservice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="JetRunConfigurationType">
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
++      <option name="filePath" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.Praktika5Application" />
++        <item itemvalue="Application.RestServiceApplication" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -275,7 +325,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1656520009409</updated>
+     </task>
+-    <option name="localTasksCounter" value="24" />
++    <task id="LOCAL-00024" summary="klaida 'flywayInitializer'">
++      <created>1659453134728</created>
++      <option name="number" value="00024" />
++      <option name="presentableId" value="LOCAL-00024" />
++      <option name="project" value="LOCAL" />
++      <updated>1659453134728</updated>
++    </task>
++    <task id="LOCAL-00025" summary="Padarytas security3 branch'as">
++      <created>1659792534010</created>
++      <option name="number" value="00025" />
++      <option name="presentableId" value="LOCAL-00025" />
++      <option name="project" value="LOCAL" />
++      <updated>1659792534010</updated>
++    </task>
++    <task id="LOCAL-00026" summary="Padarytas security3 branch'as">
++      <created>1659792621831</created>
++      <option name="number" value="00026" />
++      <option name="presentableId" value="LOCAL-00026" />
++      <option name="project" value="LOCAL" />
++      <updated>1659792621831</updated>
++    </task>
++    <option name="localTasksCounter" value="27" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -339,7 +410,6 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Pradzia" />
+     <MESSAGE value="Prijungta duomenu baze: autoservis" />
+     <MESSAGE value="Sukurti paketai, entity - Autoservisai" />
+@@ -359,7 +429,10 @@
+     <MESSAGE value="Meistru sarasas ir pasirinkimo mygtukas" />
+     <MESSAGE value="Atnaujinta 06-26" />
+     <MESSAGE value="Ikeltas projektas" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Ikeltas projektas" />
++    <MESSAGE value="Klaida security daryme 'flywayInitializer'" />
++    <MESSAGE value="klaida 'flywayInitializer'" />
++    <MESSAGE value="Padarytas security3 branch'as" />
++    <option name="LAST_COMMIT_MESSAGE" value="Padarytas security3 branch'as" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -372,11 +445,6 @@
+           <properties class="org.hibernate.MappingException" package="org.hibernate" />
+           <option name="timeStamp" value="4" />
+         </breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>
+-          <line>41</line>
+-          <option name="timeStamp" value="7" />
+-        </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+   </component>
+@@ -384,4 +452,9 @@
+     <expand />
+     <select />
+   </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/workspace_xml$Praktika5Application.ic" NAME="Praktika5Application Coverage Results" MODIFIED="1659467021624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>lt.autoservis.u5.*</FILTER>
++    </SUITE>
++  </component>
+ </project>
+\ No newline at end of file

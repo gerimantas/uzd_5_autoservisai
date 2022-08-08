@@ -1,0 +1,741 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"Padarytas security3 branch'as\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/ImageController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/ProductController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/templates/blocks/template.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/configurations/MvcConfig.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/SecurityConfig.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/configurations/SecurityConfig.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AdminController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/AdminController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/UserController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/UserController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Image.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/Image.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Product.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/Product.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/User.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/User.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/enums/Role.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/enums/Role.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/ImageRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/repositories/ImageRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/ProductRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/repositories/ProductRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/UserRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/repositories/UserRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/CustomUserDetailsService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/CustomUserDetailsService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/ProductService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/ProductService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/UserService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/UserService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/admin.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/admin.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/admin.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/autoservisai_specializacijos.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/duomenys_meistrai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/duomenys_specializacijos.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/hello.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/home.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/ideta_specializacija.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/idetas_autoservisas.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/ideti_autoservisa.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/ideti_specializacija.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/ivertinti_meistra.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/login.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/login.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/login.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/products.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/products.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/profile.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/profile.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/profile.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/redaguotas_autoservisas.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/registration.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/registration.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/registration.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/specializacijos_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/testas_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/testinis.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/user-edit.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/visi_meistrai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/Praktika5Application.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/Praktika5Application.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/SecurityConfig.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AdminController.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/UserController.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Image.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Product.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/User.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/enums/Role.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/ImageRepository.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/ProductRepository.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/UserRepository.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/CustomUserDetailsService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/CustomUserDetailsService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/ProductService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/ProductService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/UserService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/UserService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/admin.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/autoservisai_specializacijos.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/duomenys_meistrai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/duomenys_specializacijos.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/hello.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/home.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/ideta_specializacija.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/idetas_autoservisas.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/ideti_autoservisa.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/ideti_specializacija.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/ivertinti_meistra.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/login.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/profile.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/redaguotas_autoservisas.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/registration.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/specializacijos_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/testas_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/testinis.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/user-edit.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/visi_meistrai.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/config/MvcConfig.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/config/MvcConfig.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AdresaiControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AdresaiControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MiestaiControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MiestaiControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TelefonaiControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TelefonaiControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TestinisControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TestinisControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojasControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojasControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VertinimasControler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VertinimasControler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Adresai.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Adresai.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Autoservisai.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Autoservisai.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Meistrai.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Meistrai.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Miestai.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Miestai.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Role.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Role.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Specializacija.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Specializacija.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Telefonai.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Telefonai.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vartotojas.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vartotojas.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vertinimas.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vertinimas.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AutoservisaiRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AutoservisaiRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MeistraiRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MeistraiRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MiestaiRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MiestaiRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/TelefonaiRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/TelefonaiRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VartotojasRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VartotojasRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VertinimasRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VertinimasRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/UserDetailsServiceImpl.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/UserDetailsServiceImpl.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"security3\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"KotlinCodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"26ups2WWGLsnr2KKiVdPTRRt9pe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"exceleditor.install\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/java/lt/autoservis/u5\" />\r\n    <property name=\"project.structure.last.edited\" value=\"SDKs\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.fileTypes\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\\lt\\autoservis\\u5\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\\lt\\autoservis\\u5\\models\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\templates\\blocks\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\templates\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\static\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\static\\images\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\templates\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\\securingweb\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\test\\java\\lt\\autoservis\\u5\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"lt.autoservis.u5.controller\" />\r\n      <recent name=\"lt.autoservis.u5.model.repository\" />\r\n      <recent name=\"lt.autoservis.u5.config\" />\r\n      <recent name=\"lt.autoservis.u5.model.entity\" />\r\n      <recent name=\"lt.autoservis.u5.model.enums\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Praktika5Application\">\r\n    <configuration name=\"Praktika5Application\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.autoservis.u5.Praktika5Application\" />\r\n      <module name=\"uzduotis_5_autoservisai\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.autoservis.u5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RestServiceApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"restservice.RestServiceApplication\" />\r\n      <module name=\"uzduotis_5_autoservisai\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"restservice.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Praktika5Application\" />\r\n        <item itemvalue=\"Application.RestServiceApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"\" />\r\n      <created>1648283533165</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1648283533165</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Prijungta duomenu baze: autoservis\">\r\n      <created>1648286984467</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648286984467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Sukurti paketai, entity - Autoservisai\">\r\n      <created>1648288376902</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648288376902</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\">\r\n      <created>1648333389280</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648333389280</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Pratestuota su Postman\">\r\n      <created>1648576393109</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648576393109</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Klaidos ieskom\">\r\n      <created>1649151287989</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649151287989</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"@JsonIgnore\">\r\n      <created>1649168460296</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649168460296</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Istaisyta autoservisai_id dubliavimo klaida\">\r\n      <created>1649324437241</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649324437241</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Sudeta adresai, telefonai, vartotojai, vertinimas\">\r\n      <created>1649366864899</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649366864899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Sudeti controleriai\">\r\n      <created>1649667941121</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649667941121</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Pratestuota su Thymeleaf (th), veikia\">\r\n      <created>1649765816218</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649765816218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Resursuose ideta autoservis.sql\">\r\n      <created>1649833798198</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649833798198</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00012\" summary=\"Specializaciju isvedimas\">\r\n      <created>1650369280875</created>\r\n      <option name=\"number\" value=\"LOCAL−00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00012\" />\r\n      <updated>1650369280875</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00013\" summary=\"Specializacijos ir autoservisai isvedimas\">\r\n      <created>1650371975531</created>\r\n      <option name=\"number\" value=\"LOCAL−00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00013\" />\r\n      <updated>1650371975531</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00014\" summary=\"Autoserviso idejimo klaida\">\r\n      <created>1650478345440</created>\r\n      <option name=\"number\" value=\"LOCAL−00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00014\" />\r\n      <updated>1650478345440</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00015\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650797572384</created>\r\n      <option name=\"number\" value=\"LOCAL−00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00015\" />\r\n      <updated>1650797572384</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00016\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650879752722</created>\r\n      <option name=\"number\" value=\"LOCAL−00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00016\" />\r\n      <updated>1650879752722</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00017\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650958187431</created>\r\n      <option name=\"number\" value=\"LOCAL−00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00017\" />\r\n      <updated>1650958187431</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00018\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959650312</created>\r\n      <option name=\"number\" value=\"LOCAL−00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00018\" />\r\n      <updated>1650959650312</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00019\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959972134</created>\r\n      <option name=\"number\" value=\"LOCAL−00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00019\" />\r\n      <updated>1650959972134</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00020\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650987829066</created>\r\n      <option name=\"number\" value=\"LOCAL−00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00020\" />\r\n      <updated>1650987829066</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00021\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650988072161</created>\r\n      <option name=\"number\" value=\"LOCAL−00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00021\" />\r\n      <updated>1650988072161</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Atnaujinta 06-26\">\r\n      <created>1656443671236</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656443671236</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Ikeltas projektas\">\r\n      <created>1656520009409</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656520009409</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"klaida 'flywayInitializer'\">\r\n      <created>1659453134728</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1659453134728</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"Padarytas security3 branch'as\">\r\n      <created>1659792534010</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1659792534010</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"Padarytas security3 branch'as\">\r\n      <created>1659792621831</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1659792621831</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"27\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Pradzia\" />\r\n    <MESSAGE value=\"Prijungta duomenu baze: autoservis\" />\r\n    <MESSAGE value=\"Sukurti paketai, entity - Autoservisai\" />\r\n    <MESSAGE value=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\" />\r\n    <MESSAGE value=\"Pratestuota su Postman\" />\r\n    <MESSAGE value=\"Klaidos ieskom\" />\r\n    <MESSAGE value=\"@JsonIgnore\" />\r\n    <MESSAGE value=\"Istaisyta autoservisai_id dubliavimo klaida\" />\r\n    <MESSAGE value=\"Sudeta adresai, telefonai, vartotojai, vertinimas\" />\r\n    <MESSAGE value=\"Sudeti controleriai\" />\r\n    <MESSAGE value=\"Pratestuota su Thymeleaf (th), veikia\" />\r\n    <MESSAGE value=\"Resursuose ideta autoservis.sql\" />\r\n    <MESSAGE value=\"Specializaciju isvedimas\" />\r\n    <MESSAGE value=\"Specializacijos ir autoservisai isvedimas\" />\r\n    <MESSAGE value=\"Autoserviso idejimo klaida\" />\r\n    <MESSAGE value=\"Prisijungta prie web serverio\" />\r\n    <MESSAGE value=\"Meistru sarasas ir pasirinkimo mygtukas\" />\r\n    <MESSAGE value=\"Atnaujinta 06-26\" />\r\n    <MESSAGE value=\"Ikeltas projektas\" />\r\n    <MESSAGE value=\"Klaida security daryme 'flywayInitializer'\" />\r\n    <MESSAGE value=\"klaida 'flywayInitializer'\" />\r\n    <MESSAGE value=\"Padarytas security3 branch'as\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Padarytas security3 branch'as\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.StackOverflowError\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"org.hibernate.MappingException\" package=\"org.hibernate\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/workspace_xml$Praktika5Application.ic\" NAME=\"Praktika5Application Coverage Results\" MODIFIED=\"1659467021624\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>lt.autoservis.u5.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,144 +4,27 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Padarytas security3 branch'as">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/ImageController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/ProductController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/template.ftlh" afterDir="false" />
++    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Padarytas šifruotas spring security prisijungimas security4 branch'e">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_08_2022_12_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_08_2022_12_40__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_08_2022_12_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_08_2022_12_42__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/configurations/MvcConfig.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/configurations/SecurityConfig.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/AdminController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controllers/UserController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/Image.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/Product.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/User.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/models/enums/Role.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/repositories/ImageRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/repositories/ProductRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/repositories/UserRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/CustomUserDetailsService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/ProductService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/UserService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoservisai_specializacijos.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/duomenys_meistrai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/duomenys_specializacijos.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ideta_specializacija.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/idetas_autoservisas.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ideti_autoservisa.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ideti_specializacija.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ivertinti_meistra.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/redaguotas_autoservisas.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/specializacijos_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/testas_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/testinis.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-edit.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_meistrai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/Praktika5Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/Praktika5Application.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/SecurityConfig.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AdminController.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/UserController.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Image.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Product.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/User.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/enums/Role.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/ImageRepository.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/ProductRepository.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/repository/UserRepository.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/CustomUserDetailsService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/ProductService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/services/UserService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoservisai_specializacijos.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/duomenys_meistrai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/duomenys_specializacijos.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/hello.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ideta_specializacija.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/idetas_autoservisas.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ideti_autoservisa.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ideti_specializacija.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ivertinti_meistra.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/redaguotas_autoservisas.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/specializacijos_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/testas_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/testinis.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user-edit.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_meistrai.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/config/MvcConfig.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AdresaiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AdresaiControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MiestaiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/MiestaiControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TelefonaiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TelefonaiControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TestinisControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/TestinisControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojasControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojasControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VertinimasControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/controller/VertinimasControler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Adresai.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Adresai.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Autoservisai.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Autoservisai.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Meistrai.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Meistrai.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Miestai.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Miestai.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Role.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Specializacija.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Specializacija.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Telefonai.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Telefonai.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vartotojas.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vartotojas.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vertinimas.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/entity/Vertinimas.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AdresaiRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AutoservisaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/AutoservisaiRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MeistraiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MeistraiRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MiestaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/MiestaiRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/TelefonaiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/TelefonaiRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VartotojasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VartotojasRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VertinimasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/VertinimasRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/UserDetailsServiceImpl.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/my-products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/my-products.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product-info.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/products.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/user-edit.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user-edit.ftlh" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/templates/user-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user-info.ftlh" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="CodeInsightWorkspaceSettings">
+-    <option name="optimizeImportsOnTheFly" value="true" />
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -155,19 +38,11 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="security3" />
++        <entry key="$PROJECT_DIR$" value="security4" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="ROOT_SYNC" value="DONT_SYNC" />
+-  </component>
+-  <component name="GitSEFilterConfiguration">
+-    <file-type-list>
+-      <filtered-out-file-type name="LOCAL_BRANCH" />
+-      <filtered-out-file-type name="REMOTE_BRANCH" />
+-      <filtered-out-file-type name="TAG" />
+-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+-    </file-type-list>
+   </component>
+   <component name="JpbToolWindowState">
+     <option name="myId2FirstActivated">
+@@ -184,9 +59,6 @@
+         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+       </map>
+     </option>
+-  </component>
+-  <component name="KotlinCodeInsightWorkspaceSettings">
+-    <option name="optimizeImportsOnTheFly" value="true" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -209,41 +81,30 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
++    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="exceleditor.install" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/lt/autoservis/u5" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+     <property name="project.structure.last.edited" value="SDKs" />
+     <property name="project.structure.proportion" value="0.0" />
+     <property name="project.structure.side.proportion" value="0.0" />
+-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
++    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5\models" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates\blocks" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static" />
++      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5_web\src\main\resources\templates" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\static\images" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\securingweb" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test\java\lt\autoservis\u5" />
++      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
+       <recent name="lt.autoservis.u5.controller" />
+-      <recent name="lt.autoservis.u5.model.repository" />
+-      <recent name="lt.autoservis.u5.config" />
+-      <recent name="lt.autoservis.u5.model.entity" />
+-      <recent name="lt.autoservis.u5.model.enums" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Praktika5Application">
++  <component name="RunManager">
+     <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
+       <module name="uzduotis_5_autoservisai" />
+@@ -257,34 +118,9 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="RestServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="restservice.RestServiceApplication" />
+-      <module name="uzduotis_5_autoservisai" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="restservice.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration default="true" type="JetRunConfigurationType">
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+-      <option name="filePath" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.Praktika5Application" />
+-        <item itemvalue="Application.RestServiceApplication" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -448,28 +284,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1656520009409</updated>
+     </task>
+-    <task id="LOCAL-00024" summary="klaida 'flywayInitializer'">
+-      <created>1659453134728</created>
+-      <option name="number" value="00024" />
+-      <option name="presentableId" value="LOCAL-00024" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1659453134728</updated>
+-    </task>
+-    <task id="LOCAL-00025" summary="Padarytas security3 branch'as">
+-      <created>1659792534010</created>
+-      <option name="number" value="00025" />
+-      <option name="presentableId" value="LOCAL-00025" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1659792534010</updated>
+-    </task>
+-    <task id="LOCAL-00026" summary="Padarytas security3 branch'as">
+-      <created>1659792621831</created>
+-      <option name="number" value="00026" />
+-      <option name="presentableId" value="LOCAL-00026" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1659792621831</updated>
+-    </task>
+-    <option name="localTasksCounter" value="27" />
++    <option name="localTasksCounter" value="24" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -533,6 +348,7 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Pradzia" />
+     <MESSAGE value="Prijungta duomenu baze: autoservis" />
+     <MESSAGE value="Sukurti paketai, entity - Autoservisai" />
+@@ -552,10 +368,7 @@
+     <MESSAGE value="Meistru sarasas ir pasirinkimo mygtukas" />
+     <MESSAGE value="Atnaujinta 06-26" />
+     <MESSAGE value="Ikeltas projektas" />
+-    <MESSAGE value="Klaida security daryme 'flywayInitializer'" />
+-    <MESSAGE value="klaida 'flywayInitializer'" />
+-    <MESSAGE value="Padarytas security3 branch'as" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Padarytas security3 branch'as" />
++    <option name="LAST_COMMIT_MESSAGE" value="Ikeltas projektas" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -568,6 +381,11 @@
+           <properties class="org.hibernate.MappingException" package="org.hibernate" />
+           <option name="timeStamp" value="4" />
+         </breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>
++          <line>41</line>
++          <option name="timeStamp" value="7" />
++        </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+   </component>
+Index: target/classes/templates/login.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Авторизация</h1>\r\n    <hr>\r\n    <form action=\"/login \" method=\"post\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Электронная почта</label>\r\n            <input type=\"email\" class=\"form-control <#if RequestParameters.error??>is-invalid</#if>\" id=\"email\" name=\"username\">\r\n            <div id=\"email\" class=\"invalid-feedback\">\r\n                Неверныя электронная почта\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Пароль</label>\r\n            <input type=\"password\" class=\"form-control <#if RequestParameters.error??>is-invalid</#if>\" id=\"password\" name=\"password\">\r\n            <div id=\"password\" class=\"invalid-feedback\">\r\n                Неверный пароль\r\n            </div>\r\n        </div>\r\n        <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\">\r\n        <button type=\"submit\" style=\"width: 100%\" class=\"btn btn-dark\">Войти</button>\r\n    </form>\r\n    <hr>\r\n    <h2>Нет аккаунта BUYSELL? <a href=\"/registration\">Зарегистрируйся!</a></h2>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/login.ftlh b/target/classes/templates/login.ftlh
+--- a/target/classes/templates/login.ftlh	
++++ b/target/classes/templates/login.ftlh	
+@@ -1,25 +1,25 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Авторизация</h1>
++    <h1 style="text-align: center">Autorizacija</h1>
+     <hr>
+     <form action="/login " method="post">
+         <div class="form-group">
+-            <label for="email">Электронная почта</label>
++            <label for="email">Elektroninis paštas </label>
+             <input type="email" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="email" name="username">
+             <div id="email" class="invalid-feedback">
+-                Неверныя электронная почта
++                Neteisingas el. paštas
+             </div>
+         </div>
+         <div class="form-group">
+-            <label for="password">Пароль</label>
++            <label for="password">Slaptažodis</label>
+             <input type="password" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="password" name="password">
+             <div id="password" class="invalid-feedback">
+                 Неверный пароль
+             </div>
+         </div>
+         <input type="hidden" name="_csrf" value="${_csrf.token}">
+-        <button type="submit" style="width: 100%" class="btn btn-dark">Войти</button>
++        <button type="submit" style="width: 100%" class="btn btn-dark">Įeiti</button>
+     </form>
+     <hr>
+-    <h2>Нет аккаунта BUYSELL? <a href="/registration">Зарегистрируйся!</a></h2>
++    <h2>Nėra paskyros AUTOSERVISAI ? <a href="/registration">Registruotis!</a></h2>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/my-products.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Мои товары</h1>\r\n    <hr>\r\n    <a class=\"btn btn-dark mt-3 mb-3\" style=\"text-align: center; width: 100%\"\r\n       data-toggle=\"collapse\" href=\"#collapseExample\" role=\"button\"\r\n       aria-expanded=\"true\" aria-controls=\"collapseExample\">\r\n        Добавить новый товар\r\n    </a>\r\n    <div class=\"collapse mb-3\" id=\"collapseExample\" style=\"\">\r\n        <form action=\"/product/create\" method=\"post\" enctype=\"multipart/form-data\">\r\n            <div class=\"form-group\">\r\n                <label for=\"productName\">Название товара</label>\r\n                <input type=\"text\" required class=\"form-control\"\r\n                       id=\"productName\" name=\"title\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"price\">Цена товара</label>\r\n                <div class=\"input-group mb-3\">\r\n                    <input type=\"number\" required class=\"form-control\" id=\"price\" name=\"price\">\r\n                    <div class=\"input-group-append\">\r\n                        <span class=\"input-group-text\">₽</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"searchCity\">Город</label>\r\n                <select id=\"searchCity\" required name=\"city\" class=\"form-control\">\r\n                    <option value=\"\">Город не выбран</option>\r\n\r\n                    <option value=\"Москва\">Москва</option>\r\n                    <option value=\"Красноярск\">Красноярск</option>\r\n                    <option value=\"Казань\">Казань</option>\r\n\r\n                </select>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"description\">Описание товара</label>\r\n                <textarea required class=\"form-control\" id=\"description\" name=\"description\"></textarea>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <div class=\"custom-file\">\r\n                    <input required type=\"file\" name=\"file1\" id=\"file1\">\r\n                    <label class=\"custom-file-label\" for=\"file1\">Первая фотография к товару</label>\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <div class=\"custom-file\">\r\n                    <input type=\"file\" name=\"file2\" id=\"file2\">\r\n                    <label class=\"custom-file-label\" for=\"file2\">Вторая фотография к товару</label>\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <div class=\"custom-file\">\r\n                    <input type=\"file\" name=\"file3\" id=\"file3\">\r\n                    <label class=\"custom-file-label\" for=\"file3\">Третья фотография к товару</label>\r\n                </div>\r\n            </div>\r\n            <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\"/>\r\n\r\n            <button type=\"submit\" style=\"width: 100%\" class=\"btn btn-dark\">Добавить</button>\r\n        </form>\r\n    </div>\r\n    <div class=\"card-columns\">\r\n        <#list products as product>\r\n            <a href=\"/product/${product.id}\" class=\"product-link\">\r\n                <div class=\"card text-white bg-dark my-3 product\">\r\n                    <div class=\"card-top\">\r\n                        <form action=\"/product/delete/${product.id}\" method=\"post\">\r\n                            <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\"/>\r\n                            <button type=\"submit\" class=\"btn btn-danger m-3\">\r\n                                Удалить\r\n                            </button>\r\n                        </form>\r\n                    </div>\r\n                    <img src=\"/images/${product.previewImageId}\"\r\n                         class=\"card-img-top\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title\">${product.title}</h5>\r\n                        <p class=\"card-text\">${product.price} ₽</p>\r\n                    </div>\r\n                    <div class=\"card-footer\">\r\n                        ${product.city}\r\n                    </div>\r\n                </div>\r\n            </a>\r\n        <#else>\r\n            <h1 style=\"text-align: center\">Не найдено</h1>\r\n        </#list>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/my-products.ftlh b/target/classes/templates/my-products.ftlh
+--- a/target/classes/templates/my-products.ftlh	
++++ b/target/classes/templates/my-products.ftlh	
+@@ -1,64 +1,64 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Мои товары</h1>
++    <h1 style="text-align: center">Mano autoservisai</h1>
+     <hr>
+     <a class="btn btn-dark mt-3 mb-3" style="text-align: center; width: 100%"
+        data-toggle="collapse" href="#collapseExample" role="button"
+        aria-expanded="true" aria-controls="collapseExample">
+-        Добавить новый товар
++        Pridėti Autoservisą
+     </a>
+     <div class="collapse mb-3" id="collapseExample" style="">
+         <form action="/product/create" method="post" enctype="multipart/form-data">
+             <div class="form-group">
+-                <label for="productName">Название товара</label>
++                <label for="productName">Autoserviso pavadinimas</label>
+                 <input type="text" required class="form-control"
+                        id="productName" name="title">
+             </div>
+             <div class="form-group">
+-                <label for="price">Цена товара</label>
++                <label for="price">Autoserviso Įvertinimas</label>
+                 <div class="input-group mb-3">
+                     <input type="number" required class="form-control" id="price" name="price">
+                     <div class="input-group-append">
+-                        <span class="input-group-text">₽</span>
++                        <span class="input-group-text">balai</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group">
+-                <label for="searchCity">Город</label>
++                <label for="searchCity">Miestas</label>
+                 <select id="searchCity" required name="city" class="form-control">
+-                    <option value="">Город не выбран</option>
++                    <option value="">Nepasirinktas miestas</option>
+ 
+-                    <option value="Москва">Москва</option>
+-                    <option value="Красноярск">Красноярск</option>
+-                    <option value="Казань">Казань</option>
++                    <option value="Vilnius">Vilnius</option>
++                    <option value="Kaunas">Kaunas</option>
++                    <option value="Klaipėda">Klaipėda</option>
+ 
+                 </select>
+             </div>
+             <div class="form-group">
+-                <label for="description">Описание товара</label>
++                <label for="description">Specializacija</label>
+                 <textarea required class="form-control" id="description" name="description"></textarea>
+             </div>
+             <div class="form-group">
+                 <div class="custom-file">
+                     <input required type="file" name="file1" id="file1">
+-                    <label class="custom-file-label" for="file1">Первая фотография к товару</label>
++                    <label class="custom-file-label" for="file1">Foto1</label>
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="custom-file">
+                     <input type="file" name="file2" id="file2">
+-                    <label class="custom-file-label" for="file2">Вторая фотография к товару</label>
++                    <label class="custom-file-label" for="file2">Foto2</label>
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="custom-file">
+                     <input type="file" name="file3" id="file3">
+-                    <label class="custom-file-label" for="file3">Третья фотография к товару</label>
++                    <label class="custom-file-label" for="file3">Foto3</label>
+                 </div>
+             </div>
+             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+ 
+-            <button type="submit" style="width: 100%" class="btn btn-dark">Добавить</button>
++            <button type="submit" style="width: 100%" class="btn btn-dark">Pridėti</button>
+         </form>
+     </div>
+     <div class="card-columns">
+@@ -69,7 +69,7 @@
+                         <form action="/product/delete/${product.id}" method="post">
+                             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                             <button type="submit" class="btn btn-danger m-3">
+-                                Удалить
++                                Pašalinti
+                             </button>
+                         </form>
+                     </div>
+@@ -85,7 +85,7 @@
+                 </div>
+             </a>
+         <#else>
+-            <h1 style="text-align: center">Не найдено</h1>
++            <h1 style="text-align: center">Nerasta</h1>
+         </#list>
+     </div>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/admin.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    `<h1 style=\"text-align: center\">Панель администратора</h1><hr>\r\n    <table class=\"table table-hover table-dark\">\r\n        <tr>\r\n            <th scope=\"col\">Email</th>\r\n            <th scope=\"col\">Номер телефона</th>\r\n            <th scope=\"col\">Активность</th>\r\n            <th scope=\"col\">Роли</th>\r\n            <th scope=\"col\">Бан</th>\r\n            <th scope=\"col\">Редактирование</th>\r\n            <th scope=\"col\">Подробная информация</th>\r\n        </tr>\r\n        <#list users as user>\r\n            <tr>\r\n                <th>${user.email}</th>\r\n                <th>${user.phoneNumber}</th>\r\n                <th><#if user.active>true<#else>false</#if></th>\r\n                <th><#list user.roles as role>${role}</#list></th>\r\n                <th>\r\n                    <form action=\"/admin/user/ban/${user.id}\" method=\"post\">\r\n                        <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\">\r\n                        <input type=\"submit\" class=\"btn btn-light\" value=\"Бан\">\r\n                    </form>\r\n                </th>\r\n                <th><a href=\"/admin/user/edit/${user.id}\">Редактировние</a></th>\r\n                <th><a href=\"/user/${user.id}\">Подробная информация</a></th>\r\n            </tr>\r\n        <#else>\r\n            <h3>Пользователей нет</h3>\r\n        </#list>\r\n    </table>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/admin.ftlh b/target/classes/templates/admin.ftlh
+--- a/target/classes/templates/admin.ftlh	
++++ b/target/classes/templates/admin.ftlh	
+@@ -1,15 +1,15 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    `<h1 style="text-align: center">Панель администратора</h1><hr>
++    `<h1 style="text-align: center">Administratoriaus kabinetas</h1><hr>
+     <table class="table table-hover table-dark">
+         <tr>
+             <th scope="col">Email</th>
+-            <th scope="col">Номер телефона</th>
+-            <th scope="col">Активность</th>
+-            <th scope="col">Роли</th>
+-            <th scope="col">Бан</th>
+-            <th scope="col">Редактирование</th>
+-            <th scope="col">Подробная информация</th>
++            <th scope="col">Telefonas</th>
++            <th scope="col">Aktyvumas</th>
++            <th scope="col">Role</th>
++            <th scope="col">Ban</th>
++            <th scope="col">Redagavimas</th>
++            <th scope="col">Išsami informacija</th>
+         </tr>
+         <#list users as user>
+             <tr>
+@@ -23,11 +23,11 @@
+                         <input type="submit" class="btn btn-light" value="Бан">
+                     </form>
+                 </th>
+-                <th><a href="/admin/user/edit/${user.id}">Редактировние</a></th>
+-                <th><a href="/user/${user.id}">Подробная информация</a></th>
++                <th><a href="/admin/user/edit/${user.id}">Redagavimas</a></th>
++                <th><a href="/user/${user.id}">Išsami informacija</a></th>
+             </tr>
+         <#else>
+-            <h3>Пользователей нет</h3>
++            <h3>Vartotojų nėra</h3>
+         </#list>
+     </table>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/profile.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Личный кабинет</h1>\r\n    <hr>\r\n    <br>\r\n    <div style=\"text-align: center\">\r\n        <img src=\"/static/images/avatar.png\"\r\n             style=\"border:2px solid black; border-radius: 20px\" height=\"120\">\r\n        <br>\r\n        <br>\r\n        <h2>${user.name}</h2>\r\n        <br>\r\n        Электоронная почта: <b>${user.email}</b>\r\n        <br>\r\n        Номер телефона: <b>${user.phoneNumber}</b>\r\n        <br>\r\n        <br>\r\n        <#if user.isAdmin()>\r\n            <a class=\"btn btn-dark mb-3\" style=\"text-align: center; width: 100%\"\r\n               href=\"/admin\">\r\n                Панель администратора\r\n            </a><br>\r\n        </#if>\r\n        <a class=\"btn btn-dark mb-3\" style=\"text-align: center; width: 100%\"\r\n           href=\"/my/products\">\r\n            Мои товары\r\n        </a>\r\n        <form action=\"/logout\" method=\"post\">\r\n            <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\"/>\r\n            <button type=\"submit\" style=\"text-align: center; width: 100%\" class=\"btn btn-danger mb-2\">\r\n                Выйти из аккаунта\r\n            </button>\r\n        </form>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/profile.ftlh b/target/classes/templates/profile.ftlh
+--- a/target/classes/templates/profile.ftlh	
++++ b/target/classes/templates/profile.ftlh	
+@@ -18,7 +18,7 @@
+         <#if user.isAdmin()>
+             <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
+                href="/admin">
+-                Панель администратора
++                Administratoriaus kabinetas
+             </a><br>
+         </#if>
+         <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
+@@ -28,7 +28,7 @@
+         <form action="/logout" method="post">
+             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+             <button type="submit" style="text-align: center; width: 100%" class="btn btn-danger mb-2">
+-                Выйти из аккаунта
++                Išeiti iš kabineto
+             </button>
+         </form>
+     </div>
+Index: target/classes/templates/products.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Поиск товаров</h1><hr>\r\n    <form method=\"get\" action=\"/\">\r\n        <div class=\"form-row\">\r\n            <div class=\"form-group col-md-2\">\r\n                <label for=\"searchCity\">Город</label>\r\n                <select id=\"searchCity\" class=\"form-control\">\r\n                    <option value=\"\">Город не выбран</option>\r\n                    <option value=\"Москва\">Москва</option>\r\n                    <option value=\"Красноярск\">Красноярск</option>\r\n                    <option value=\"Казань\">Казань</option>\r\n                </select>\r\n            </div>\r\n            <div class=\"form-group col-md-10\">\r\n                <label for=\"searchWord\">Поиск по объявлениям</label>\r\n                <input type=\"text\" name=\"searchWord\" <#if searchWord??>value=\"${searchWord}\"</#if> class=\"form-control\"\r\n                       id=\"searchWord\">\r\n            </div>\r\n            <button style=\"width: 100%\" type=\"submit\" class=\"btn btn-dark\">Поиск</button>\r\n        </div>\r\n    </form>\r\n    <hr>\r\n    <div class=\"card-columns\">\r\n        <#list products as product>\r\n            <a href=\"/product/${product.id}\" class=\"product-link\">\r\n                <div class=\"card text-white bg-dark my-3 product\">\r\n\r\n                    <img src=\"/images/${product.previewImageId}\"\r\n                         class=\"card-img-top\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title\">${product.title}</h5>\r\n                        <p class=\"card-text\">${product.price} ₽</p>\r\n                    </div>\r\n                    <div class=\"card-footer\">\r\n                        ${product.city}\r\n                    </div>\r\n                </div>\r\n            </a>\r\n        <#else>\r\n            <h1 style=\"text-align: center\">Не найдено</h1>\r\n        </#list>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/products.ftlh b/target/classes/templates/products.ftlh
+--- a/target/classes/templates/products.ftlh	
++++ b/target/classes/templates/products.ftlh	
+@@ -1,23 +1,23 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Поиск товаров</h1><hr>
++    <h1 style="text-align: center">Autoservisų paieška</h1><hr>
+     <form method="get" action="/">
+         <div class="form-row">
+             <div class="form-group col-md-2">
+-                <label for="searchCity">Город</label>
++                <label for="searchCity">Miestas</label>
+                 <select id="searchCity" class="form-control">
+-                    <option value="">Город не выбран</option>
+-                    <option value="Москва">Москва</option>
+-                    <option value="Красноярск">Красноярск</option>
+-                    <option value="Казань">Казань</option>
++                    <option value="">Nepasirinkta</option>
++                    <option value="Vilnius">Vilnius</option>
++                    <option value="Kaunas">Kaunas</option>
++                    <option value="Klaipėda">Klaipėda</option>
+                 </select>
+             </div>
+             <div class="form-group col-md-10">
+-                <label for="searchWord">Поиск по объявлениям</label>
++                <label for="searchWord">Paieška</label>
+                 <input type="text" name="searchWord" <#if searchWord??>value="${searchWord}"</#if> class="form-control"
+                        id="searchWord">
+             </div>
+-            <button style="width: 100%" type="submit" class="btn btn-dark">Поиск</button>
++            <button style="width: 100%" type="submit" class="btn btn-dark">Ieškoti</button>
+         </div>
+     </form>
+     <hr>
+@@ -38,7 +38,7 @@
+                 </div>
+             </a>
+         <#else>
+-            <h1 style="text-align: center">Не найдено</h1>
++            <h1 style="text-align: center">Nerasta</h1>
+         </#list>
+     </div>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/user-info.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template userByPrincipal>\r\n    <h1 style=\"text-align: center\">Информация о пользователе</h1>\r\n    <hr>\r\n    <div style=\"text-align: center\">\r\n            <img src=\"/static/images/avatar.png\"\r\n                 style=\"border:2px solid black; border-radius: 20px\" height=\"120\">\r\n        <br>\r\n        <br>\r\n        <h2>${user.name}</h2>\r\n        <br>\r\n        Номер телефона: <b>${user.phoneNumber}</b>\r\n    </div>\r\n    <br>\r\n    <hr>\r\n    <h1 style=\"text-align: center\">Товары пользователя ${user.name}</h1>\r\n    <br>\r\n    <div class=\"card-columns\">\r\n        <#list products as product>\r\n            <a href=\"/product/${product.id}\" class=\"product-link\">\r\n                <div class=\"card text-white bg-dark my-3 product\">\r\n\r\n                    <img src=\"/images/${product.previewImageId}\"\r\n                         class=\"card-img-top\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title\">${product.title}</h5>\r\n                        <p class=\"card-text\">${product.price} ₽</p>\r\n                    </div>\r\n                    <div class=\"card-footer\">\r\n                        ${product.user.name}\r\n                    </div>\r\n                </div>\r\n            </a>\r\n        <#else>\r\n            <h1 style=\"text-align: center\">Не найдено</h1>\r\n        </#list>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/user-info.ftlh b/target/classes/templates/user-info.ftlh
+--- a/target/classes/templates/user-info.ftlh	
++++ b/target/classes/templates/user-info.ftlh	
+@@ -1,6 +1,6 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template userByPrincipal>
+-    <h1 style="text-align: center">Информация о пользователе</h1>
++    <h1 style="text-align: center">Vartotojo informacija</h1>
+     <hr>
+     <div style="text-align: center">
+             <img src="/static/images/avatar.png"
+@@ -9,11 +9,11 @@
+         <br>
+         <h2>${user.name}</h2>
+         <br>
+-        Номер телефона: <b>${user.phoneNumber}</b>
++        Telefonas: <b>${user.phoneNumber}</b>
+     </div>
+     <br>
+     <hr>
+-    <h1 style="text-align: center">Товары пользователя ${user.name}</h1>
++    <h1 style="text-align: center">Vartotojo Autoservisai ${user.name}</h1>
+     <br>
+     <div class="card-columns">
+         <#list products as product>
+@@ -32,7 +32,7 @@
+                 </div>
+             </a>
+         <#else>
+-            <h1 style="text-align: center">Не найдено</h1>
++            <h1 style="text-align: center">Nerasta</h1>
+         </#list>
+     </div>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/product-info.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n        <ol class=\"carousel-indicators\">\r\n            <#list images as image>\r\n                <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"\"></li>\r\n            </#list>\r\n        </ol>\r\n        <div class=\"carousel-inner\">\r\n            <#list images as image>\r\n                <div class=\"carousel-item <#if image.previewImage>active</#if>\">\r\n                    <svg class=\"bd-placeholder-img\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"\r\n                         role=\"img\" aria-label=\" :  \" preserveAspectRatio=\"xMidYMid slice\" focusable=\"false\">\r\n                        <title></title>\r\n                        <rect width=\"100%\" height=\"100%\" fill=\"#777\"></rect>\r\n                        <text x=\"50%\" y=\"50%\" fill=\"#777\" dy=\".3em\"></text>\r\n                    </svg>\r\n\r\n                    <div class=\"container\">\r\n                        <div class=\"carousel-caption\">\r\n                            <a href=\"/images/${image.id}\">\r\n                                <img class=\"product\" style=\"height: 100px\" src=\"/images/${image.id}\">\r\n                            </a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </#list>\r\n\r\n        </div>\r\n        <a class=\"carousel-control-prev\" href=\"#myCarousel\" role=\"button\" data-slide=\"prev\">\r\n            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n            <span class=\"sr-only\">Previous</span>\r\n        </a>\r\n        <a class=\"carousel-control-next\" href=\"#myCarousel\" role=\"button\" data-slide=\"next\">\r\n            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n            <span class=\"sr-only\">Next</span>\r\n        </a>\r\n    </div>\r\n    <hr>\r\n    <p><h1 style=\"text-align: center\">${product.title} | ${product.price} ₽</h1></p>\r\n    <p style=\"text-align: center\">${product.description}</p>\r\n    <p style=\"text-align: center\">Номер телефона продавца: <b>${authorProduct.phoneNumber}</b></p>\r\n\r\n    <hr>\r\n    <p style=\"text-align: center\">\r\n        <a href=\"/user/${authorProduct.id}\">\r\n            <img src=\"/static/images/avatar.png\" alt=\"mdo\" width=\"32\" height=\"32\" class=\"rounded-circle\"> ${authorProduct.name}\r\n        </a>\r\n    </p>\r\n\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/product-info.ftlh b/target/classes/templates/product-info.ftlh
+--- a/target/classes/templates/product-info.ftlh	
++++ b/target/classes/templates/product-info.ftlh	
+@@ -39,7 +39,7 @@
+     <hr>
+     <p><h1 style="text-align: center">${product.title} | ${product.price} ₽</h1></p>
+     <p style="text-align: center">${product.description}</p>
+-    <p style="text-align: center">Номер телефона продавца: <b>${authorProduct.phoneNumber}</b></p>
++    <p style="text-align: center">Telefonas: <b>${authorProduct.phoneNumber}</b></p>
+ 
+     <hr>
+     <p style="text-align: center">
+Index: target/classes/templates/registration.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Регистрация</h1>\r\n    <hr>\r\n    <form action=\"/registration\" method=\"post\">\r\n        <div class=\"form-group\">\r\n            <label for=\"name\">Имя пользователя</label>\r\n            <input type=\"text\" class=\"form-control\" required id=\"name\" name=\"name\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Электронная почта</label>\r\n            <input type=\"email\" class=\"form-control\" id=\"email\" required name=\"email\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"phoneNumber\">Номер телефона</label>\r\n            <input type=\"text\" class=\"form-control\" id=\"phoneNumber\" required name=\"phoneNumber\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Пароль</label>\r\n            <input type=\"password\" class=\"form-control\" id=\"password\" required name=\"password\">\r\n        </div>\r\n        <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\">\r\n        <button type=\"submit\" style=\"width: 100%\" class=\"btn btn-dark\">Зарегистрироваться</button>\r\n    </form>\r\n    <#if errorMessage??>\r\n        <h2 style=\"color: red\">${errorMessage}</h2>\r\n    </#if>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/registration.ftlh b/target/classes/templates/registration.ftlh
+--- a/target/classes/templates/registration.ftlh	
++++ b/target/classes/templates/registration.ftlh	
+@@ -1,26 +1,26 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Регистрация</h1>
++    <h1 style="text-align: center">Registracija</h1>
+     <hr>
+     <form action="/registration" method="post">
+         <div class="form-group">
+-            <label for="name">Имя пользователя</label>
++            <label for="name">Vardas</label>
+             <input type="text" class="form-control" required id="name" name="name">
+         </div>
+         <div class="form-group">
+-            <label for="email">Электронная почта</label>
++            <label for="email">Elektroninis paštas</label>
+             <input type="email" class="form-control" id="email" required name="email">
+         </div>
+         <div class="form-group">
+-            <label for="phoneNumber">Номер телефона</label>
++            <label for="phoneNumber">Telefonas</label>
+             <input type="text" class="form-control" id="phoneNumber" required name="phoneNumber">
+         </div>
+         <div class="form-group">
+-            <label for="password">Пароль</label>
++            <label for="password">Slaptažodis</label>
+             <input type="password" class="form-control" id="password" required name="password">
+         </div>
+         <input type="hidden" name="_csrf" value="${_csrf.token}">
+-        <button type="submit" style="width: 100%" class="btn btn-dark">Зарегистрироваться</button>
++        <button type="submit" style="width: 100%" class="btn btn-dark">Registruotis</button>
+     </form>
+     <#if errorMessage??>
+         <h2 style="color: red">${errorMessage}</h2>
+Index: target/classes/templates/user-edit.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n<h1 style=\"text-align: center\">Редактирование пользователя ${user.name}</h1><hr>\r\n<form action=\"/admin/user/edit\" method=\"post\">\r\n    <#list roles as role>\r\n        <div>\r\n            <label><input type=\"checkbox\" name=\"${role}\" ${user.roles?seq_contains(role)?string(\"checked\", \"\")}>${role}</label>\r\n        </div>\r\n    </#list>\r\n    <input type=\"hidden\" value=\"${user.id}\" name=\"userId\">\r\n    <input type=\"hidden\" value=\"${_csrf.token}\" name=\"_csrf\">\r\n    <button type=\"submit\" class=\"btn btn-dark\">Сохранить</button>\r\n</form>\r\n\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/user-edit.ftlh b/target/classes/templates/user-edit.ftlh
+--- a/target/classes/templates/user-edit.ftlh	
++++ b/target/classes/templates/user-edit.ftlh	
+@@ -1,6 +1,6 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-<h1 style="text-align: center">Редактирование пользователя ${user.name}</h1><hr>
++<h1 style="text-align: center">Vartotojo redagavimas ${user.name}</h1><hr>
+ <form action="/admin/user/edit" method="post">
+     <#list roles as role>
+         <div>
+@@ -9,7 +9,7 @@
+     </#list>
+     <input type="hidden" value="${user.id}" name="userId">
+     <input type="hidden" value="${_csrf.token}" name="_csrf">
+-    <button type="submit" class="btn btn-dark">Сохранить</button>
++    <button type="submit" class="btn btn-dark">Išsaugoti</button>
+ </form>
+ 
+ </@t.template>
+\ No newline at end of file
