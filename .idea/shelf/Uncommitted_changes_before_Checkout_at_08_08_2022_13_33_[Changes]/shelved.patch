@@ -1,0 +1,395 @@
+Index: target/classes/templates/my-products.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Мои товары</h1>\r\n    <hr>\r\n    <a class=\"btn btn-dark mt-3 mb-3\" style=\"text-align: center; width: 100%\"\r\n       data-toggle=\"collapse\" href=\"#collapseExample\" role=\"button\"\r\n       aria-expanded=\"true\" aria-controls=\"collapseExample\">\r\n        Добавить новый товар\r\n    </a>\r\n    <div class=\"collapse mb-3\" id=\"collapseExample\" style=\"\">\r\n        <form action=\"/product/create\" method=\"post\" enctype=\"multipart/form-data\">\r\n            <div class=\"form-group\">\r\n                <label for=\"productName\">Название товара</label>\r\n                <input type=\"text\" required class=\"form-control\"\r\n                       id=\"productName\" name=\"title\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"price\">Цена товара</label>\r\n                <div class=\"input-group mb-3\">\r\n                    <input type=\"number\" required class=\"form-control\" id=\"price\" name=\"price\">\r\n                    <div class=\"input-group-append\">\r\n                        <span class=\"input-group-text\">₽</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"searchCity\">Город</label>\r\n                <select id=\"searchCity\" required name=\"city\" class=\"form-control\">\r\n                    <option value=\"\">Город не выбран</option>\r\n\r\n                    <option value=\"Москва\">Москва</option>\r\n                    <option value=\"Красноярск\">Красноярск</option>\r\n                    <option value=\"Казань\">Казань</option>\r\n\r\n                </select>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"description\">Описание товара</label>\r\n                <textarea required class=\"form-control\" id=\"description\" name=\"description\"></textarea>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <div class=\"custom-file\">\r\n                    <input required type=\"file\" name=\"file1\" id=\"file1\">\r\n                    <label class=\"custom-file-label\" for=\"file1\">Первая фотография к товару</label>\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <div class=\"custom-file\">\r\n                    <input type=\"file\" name=\"file2\" id=\"file2\">\r\n                    <label class=\"custom-file-label\" for=\"file2\">Вторая фотография к товару</label>\r\n                </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <div class=\"custom-file\">\r\n                    <input type=\"file\" name=\"file3\" id=\"file3\">\r\n                    <label class=\"custom-file-label\" for=\"file3\">Третья фотография к товару</label>\r\n                </div>\r\n            </div>\r\n            <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\"/>\r\n\r\n            <button type=\"submit\" style=\"width: 100%\" class=\"btn btn-dark\">Добавить</button>\r\n        </form>\r\n    </div>\r\n    <div class=\"card-columns\">\r\n        <#list products as product>\r\n            <a href=\"/product/${product.id}\" class=\"product-link\">\r\n                <div class=\"card text-white bg-dark my-3 product\">\r\n                    <div class=\"card-top\">\r\n                        <form action=\"/product/delete/${product.id}\" method=\"post\">\r\n                            <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\"/>\r\n                            <button type=\"submit\" class=\"btn btn-danger m-3\">\r\n                                Удалить\r\n                            </button>\r\n                        </form>\r\n                    </div>\r\n                    <img src=\"/images/${product.previewImageId}\"\r\n                         class=\"card-img-top\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title\">${product.title}</h5>\r\n                        <p class=\"card-text\">${product.price} ₽</p>\r\n                    </div>\r\n                    <div class=\"card-footer\">\r\n                        ${product.city}\r\n                    </div>\r\n                </div>\r\n            </a>\r\n        <#else>\r\n            <h1 style=\"text-align: center\">Не найдено</h1>\r\n        </#list>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/my-products.ftlh b/target/classes/templates/my-products.ftlh
+--- a/target/classes/templates/my-products.ftlh	
++++ b/target/classes/templates/my-products.ftlh	
+@@ -1,64 +1,64 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Мои товары</h1>
++    <h1 style="text-align: center">Mano autoservisai</h1>
+     <hr>
+     <a class="btn btn-dark mt-3 mb-3" style="text-align: center; width: 100%"
+        data-toggle="collapse" href="#collapseExample" role="button"
+        aria-expanded="true" aria-controls="collapseExample">
+-        Добавить новый товар
++        Pridėti Autoservisą
+     </a>
+     <div class="collapse mb-3" id="collapseExample" style="">
+         <form action="/product/create" method="post" enctype="multipart/form-data">
+             <div class="form-group">
+-                <label for="productName">Название товара</label>
++                <label for="productName">Autoserviso pavadinimas</label>
+                 <input type="text" required class="form-control"
+                        id="productName" name="title">
+             </div>
+             <div class="form-group">
+-                <label for="price">Цена товара</label>
++                <label for="price">Autoserviso Įvertinimas</label>
+                 <div class="input-group mb-3">
+                     <input type="number" required class="form-control" id="price" name="price">
+                     <div class="input-group-append">
+-                        <span class="input-group-text">₽</span>
++                        <span class="input-group-text">balai</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group">
+-                <label for="searchCity">Город</label>
++                <label for="searchCity">Miestas</label>
+                 <select id="searchCity" required name="city" class="form-control">
+-                    <option value="">Город не выбран</option>
++                    <option value="">Nepasirinktas miestas</option>
+ 
+-                    <option value="Москва">Москва</option>
+-                    <option value="Красноярск">Красноярск</option>
+-                    <option value="Казань">Казань</option>
++                    <option value="Vilnius">Vilnius</option>
++                    <option value="Kaunas">Kaunas</option>
++                    <option value="Klaipėda">Klaipėda</option>
+ 
+                 </select>
+             </div>
+             <div class="form-group">
+-                <label for="description">Описание товара</label>
++                <label for="description">Specializacija</label>
+                 <textarea required class="form-control" id="description" name="description"></textarea>
+             </div>
+             <div class="form-group">
+                 <div class="custom-file">
+                     <input required type="file" name="file1" id="file1">
+-                    <label class="custom-file-label" for="file1">Первая фотография к товару</label>
++                    <label class="custom-file-label" for="file1">Foto1</label>
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="custom-file">
+                     <input type="file" name="file2" id="file2">
+-                    <label class="custom-file-label" for="file2">Вторая фотография к товару</label>
++                    <label class="custom-file-label" for="file2">Foto2</label>
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="custom-file">
+                     <input type="file" name="file3" id="file3">
+-                    <label class="custom-file-label" for="file3">Третья фотография к товару</label>
++                    <label class="custom-file-label" for="file3">Foto3</label>
+                 </div>
+             </div>
+             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+ 
+-            <button type="submit" style="width: 100%" class="btn btn-dark">Добавить</button>
++            <button type="submit" style="width: 100%" class="btn btn-dark">Pridėti</button>
+         </form>
+     </div>
+     <div class="card-columns">
+@@ -69,7 +69,7 @@
+                         <form action="/product/delete/${product.id}" method="post">
+                             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                             <button type="submit" class="btn btn-danger m-3">
+-                                Удалить
++                                Pašalinti
+                             </button>
+                         </form>
+                     </div>
+@@ -85,7 +85,7 @@
+                 </div>
+             </a>
+         <#else>
+-            <h1 style="text-align: center">Не найдено</h1>
++            <h1 style="text-align: center">Nerasta</h1>
+         </#list>
+     </div>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/login.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Авторизация</h1>\r\n    <hr>\r\n    <form action=\"/login \" method=\"post\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Электронная почта</label>\r\n            <input type=\"email\" class=\"form-control <#if RequestParameters.error??>is-invalid</#if>\" id=\"email\" name=\"username\">\r\n            <div id=\"email\" class=\"invalid-feedback\">\r\n                Неверныя электронная почта\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Пароль</label>\r\n            <input type=\"password\" class=\"form-control <#if RequestParameters.error??>is-invalid</#if>\" id=\"password\" name=\"password\">\r\n            <div id=\"password\" class=\"invalid-feedback\">\r\n                Неверный пароль\r\n            </div>\r\n        </div>\r\n        <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\">\r\n        <button type=\"submit\" style=\"width: 100%\" class=\"btn btn-dark\">Войти</button>\r\n    </form>\r\n    <hr>\r\n    <h2>Нет аккаунта BUYSELL? <a href=\"/registration\">Зарегистрируйся!</a></h2>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/login.ftlh b/target/classes/templates/login.ftlh
+--- a/target/classes/templates/login.ftlh	
++++ b/target/classes/templates/login.ftlh	
+@@ -1,25 +1,25 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Авторизация</h1>
++    <h1 style="text-align: center">Autorizacija</h1>
+     <hr>
+     <form action="/login " method="post">
+         <div class="form-group">
+-            <label for="email">Электронная почта</label>
++            <label for="email">Elektroninis paštas </label>
+             <input type="email" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="email" name="username">
+             <div id="email" class="invalid-feedback">
+-                Неверныя электронная почта
++                Neteisingas el. paštas
+             </div>
+         </div>
+         <div class="form-group">
+-            <label for="password">Пароль</label>
++            <label for="password">Slaptažodis</label>
+             <input type="password" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="password" name="password">
+             <div id="password" class="invalid-feedback">
+                 Неверный пароль
+             </div>
+         </div>
+         <input type="hidden" name="_csrf" value="${_csrf.token}">
+-        <button type="submit" style="width: 100%" class="btn btn-dark">Войти</button>
++        <button type="submit" style="width: 100%" class="btn btn-dark">Įeiti</button>
+     </form>
+     <hr>
+-    <h2>Нет аккаунта BUYSELL? <a href="/registration">Зарегистрируйся!</a></h2>
++    <h2>Nėra paskyros AUTOSERVISAI ? <a href="/registration">Registruotis!</a></h2>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/profile.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Личный кабинет</h1>\r\n    <hr>\r\n    <br>\r\n    <div style=\"text-align: center\">\r\n        <img src=\"/static/images/avatar.png\"\r\n             style=\"border:2px solid black; border-radius: 20px\" height=\"120\">\r\n        <br>\r\n        <br>\r\n        <h2>${user.name}</h2>\r\n        <br>\r\n        Электоронная почта: <b>${user.email}</b>\r\n        <br>\r\n        Номер телефона: <b>${user.phoneNumber}</b>\r\n        <br>\r\n        <br>\r\n        <#if user.isAdmin()>\r\n            <a class=\"btn btn-dark mb-3\" style=\"text-align: center; width: 100%\"\r\n               href=\"/admin\">\r\n                Панель администратора\r\n            </a><br>\r\n        </#if>\r\n        <a class=\"btn btn-dark mb-3\" style=\"text-align: center; width: 100%\"\r\n           href=\"/my/products\">\r\n            Мои товары\r\n        </a>\r\n        <form action=\"/logout\" method=\"post\">\r\n            <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\"/>\r\n            <button type=\"submit\" style=\"text-align: center; width: 100%\" class=\"btn btn-danger mb-2\">\r\n                Выйти из аккаунта\r\n            </button>\r\n        </form>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/profile.ftlh b/target/classes/templates/profile.ftlh
+--- a/target/classes/templates/profile.ftlh	
++++ b/target/classes/templates/profile.ftlh	
+@@ -18,7 +18,7 @@
+         <#if user.isAdmin()>
+             <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
+                href="/admin">
+-                Панель администратора
++                Administratoriaus kabinetas
+             </a><br>
+         </#if>
+         <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
+@@ -28,7 +28,7 @@
+         <form action="/logout" method="post">
+             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+             <button type="submit" style="text-align: center; width: 100%" class="btn btn-danger mb-2">
+-                Выйти из аккаунта
++                Išeiti iš kabineto
+             </button>
+         </form>
+     </div>
+Index: target/classes/templates/admin.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    `<h1 style=\"text-align: center\">Панель администратора</h1><hr>\r\n    <table class=\"table table-hover table-dark\">\r\n        <tr>\r\n            <th scope=\"col\">Email</th>\r\n            <th scope=\"col\">Номер телефона</th>\r\n            <th scope=\"col\">Активность</th>\r\n            <th scope=\"col\">Роли</th>\r\n            <th scope=\"col\">Бан</th>\r\n            <th scope=\"col\">Редактирование</th>\r\n            <th scope=\"col\">Подробная информация</th>\r\n        </tr>\r\n        <#list users as user>\r\n            <tr>\r\n                <th>${user.email}</th>\r\n                <th>${user.phoneNumber}</th>\r\n                <th><#if user.active>true<#else>false</#if></th>\r\n                <th><#list user.roles as role>${role}</#list></th>\r\n                <th>\r\n                    <form action=\"/admin/user/ban/${user.id}\" method=\"post\">\r\n                        <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\">\r\n                        <input type=\"submit\" class=\"btn btn-light\" value=\"Бан\">\r\n                    </form>\r\n                </th>\r\n                <th><a href=\"/admin/user/edit/${user.id}\">Редактировние</a></th>\r\n                <th><a href=\"/user/${user.id}\">Подробная информация</a></th>\r\n            </tr>\r\n        <#else>\r\n            <h3>Пользователей нет</h3>\r\n        </#list>\r\n    </table>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/admin.ftlh b/target/classes/templates/admin.ftlh
+--- a/target/classes/templates/admin.ftlh	
++++ b/target/classes/templates/admin.ftlh	
+@@ -1,15 +1,15 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    `<h1 style="text-align: center">Панель администратора</h1><hr>
++    `<h1 style="text-align: center">Administratoriaus kabinetas</h1><hr>
+     <table class="table table-hover table-dark">
+         <tr>
+             <th scope="col">Email</th>
+-            <th scope="col">Номер телефона</th>
+-            <th scope="col">Активность</th>
+-            <th scope="col">Роли</th>
+-            <th scope="col">Бан</th>
+-            <th scope="col">Редактирование</th>
+-            <th scope="col">Подробная информация</th>
++            <th scope="col">Telefonas</th>
++            <th scope="col">Aktyvumas</th>
++            <th scope="col">Role</th>
++            <th scope="col">Ban</th>
++            <th scope="col">Redagavimas</th>
++            <th scope="col">Išsami informacija</th>
+         </tr>
+         <#list users as user>
+             <tr>
+@@ -23,11 +23,11 @@
+                         <input type="submit" class="btn btn-light" value="Бан">
+                     </form>
+                 </th>
+-                <th><a href="/admin/user/edit/${user.id}">Редактировние</a></th>
+-                <th><a href="/user/${user.id}">Подробная информация</a></th>
++                <th><a href="/admin/user/edit/${user.id}">Redagavimas</a></th>
++                <th><a href="/user/${user.id}">Išsami informacija</a></th>
+             </tr>
+         <#else>
+-            <h3>Пользователей нет</h3>
++            <h3>Vartotojų nėra</h3>
+         </#list>
+     </table>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/user-info.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template userByPrincipal>\r\n    <h1 style=\"text-align: center\">Информация о пользователе</h1>\r\n    <hr>\r\n    <div style=\"text-align: center\">\r\n            <img src=\"/static/images/avatar.png\"\r\n                 style=\"border:2px solid black; border-radius: 20px\" height=\"120\">\r\n        <br>\r\n        <br>\r\n        <h2>${user.name}</h2>\r\n        <br>\r\n        Номер телефона: <b>${user.phoneNumber}</b>\r\n    </div>\r\n    <br>\r\n    <hr>\r\n    <h1 style=\"text-align: center\">Товары пользователя ${user.name}</h1>\r\n    <br>\r\n    <div class=\"card-columns\">\r\n        <#list products as product>\r\n            <a href=\"/product/${product.id}\" class=\"product-link\">\r\n                <div class=\"card text-white bg-dark my-3 product\">\r\n\r\n                    <img src=\"/images/${product.previewImageId}\"\r\n                         class=\"card-img-top\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title\">${product.title}</h5>\r\n                        <p class=\"card-text\">${product.price} ₽</p>\r\n                    </div>\r\n                    <div class=\"card-footer\">\r\n                        ${product.user.name}\r\n                    </div>\r\n                </div>\r\n            </a>\r\n        <#else>\r\n            <h1 style=\"text-align: center\">Не найдено</h1>\r\n        </#list>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/user-info.ftlh b/target/classes/templates/user-info.ftlh
+--- a/target/classes/templates/user-info.ftlh	
++++ b/target/classes/templates/user-info.ftlh	
+@@ -1,6 +1,6 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template userByPrincipal>
+-    <h1 style="text-align: center">Информация о пользователе</h1>
++    <h1 style="text-align: center">Vartotojo informacija</h1>
+     <hr>
+     <div style="text-align: center">
+             <img src="/static/images/avatar.png"
+@@ -9,11 +9,11 @@
+         <br>
+         <h2>${user.name}</h2>
+         <br>
+-        Номер телефона: <b>${user.phoneNumber}</b>
++        Telefonas: <b>${user.phoneNumber}</b>
+     </div>
+     <br>
+     <hr>
+-    <h1 style="text-align: center">Товары пользователя ${user.name}</h1>
++    <h1 style="text-align: center">Vartotojo Autoservisai ${user.name}</h1>
+     <br>
+     <div class="card-columns">
+         <#list products as product>
+@@ -32,7 +32,7 @@
+                 </div>
+             </a>
+         <#else>
+-            <h1 style="text-align: center">Не найдено</h1>
++            <h1 style="text-align: center">Nerasta</h1>
+         </#list>
+     </div>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/products.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Поиск товаров</h1><hr>\r\n    <form method=\"get\" action=\"/\">\r\n        <div class=\"form-row\">\r\n            <div class=\"form-group col-md-2\">\r\n                <label for=\"searchCity\">Город</label>\r\n                <select id=\"searchCity\" class=\"form-control\">\r\n                    <option value=\"\">Город не выбран</option>\r\n                    <option value=\"Москва\">Москва</option>\r\n                    <option value=\"Красноярск\">Красноярск</option>\r\n                    <option value=\"Казань\">Казань</option>\r\n                </select>\r\n            </div>\r\n            <div class=\"form-group col-md-10\">\r\n                <label for=\"searchWord\">Поиск по объявлениям</label>\r\n                <input type=\"text\" name=\"searchWord\" <#if searchWord??>value=\"${searchWord}\"</#if> class=\"form-control\"\r\n                       id=\"searchWord\">\r\n            </div>\r\n            <button style=\"width: 100%\" type=\"submit\" class=\"btn btn-dark\">Поиск</button>\r\n        </div>\r\n    </form>\r\n    <hr>\r\n    <div class=\"card-columns\">\r\n        <#list products as product>\r\n            <a href=\"/product/${product.id}\" class=\"product-link\">\r\n                <div class=\"card text-white bg-dark my-3 product\">\r\n\r\n                    <img src=\"/images/${product.previewImageId}\"\r\n                         class=\"card-img-top\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title\">${product.title}</h5>\r\n                        <p class=\"card-text\">${product.price} ₽</p>\r\n                    </div>\r\n                    <div class=\"card-footer\">\r\n                        ${product.city}\r\n                    </div>\r\n                </div>\r\n            </a>\r\n        <#else>\r\n            <h1 style=\"text-align: center\">Не найдено</h1>\r\n        </#list>\r\n    </div>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/products.ftlh b/target/classes/templates/products.ftlh
+--- a/target/classes/templates/products.ftlh	
++++ b/target/classes/templates/products.ftlh	
+@@ -1,23 +1,23 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Поиск товаров</h1><hr>
++    <h1 style="text-align: center">Autoservisų paieška</h1><hr>
+     <form method="get" action="/">
+         <div class="form-row">
+             <div class="form-group col-md-2">
+-                <label for="searchCity">Город</label>
++                <label for="searchCity">Miestas</label>
+                 <select id="searchCity" class="form-control">
+-                    <option value="">Город не выбран</option>
+-                    <option value="Москва">Москва</option>
+-                    <option value="Красноярск">Красноярск</option>
+-                    <option value="Казань">Казань</option>
++                    <option value="">Nepasirinkta</option>
++                    <option value="Vilnius">Vilnius</option>
++                    <option value="Kaunas">Kaunas</option>
++                    <option value="Klaipėda">Klaipėda</option>
+                 </select>
+             </div>
+             <div class="form-group col-md-10">
+-                <label for="searchWord">Поиск по объявлениям</label>
++                <label for="searchWord">Paieška</label>
+                 <input type="text" name="searchWord" <#if searchWord??>value="${searchWord}"</#if> class="form-control"
+                        id="searchWord">
+             </div>
+-            <button style="width: 100%" type="submit" class="btn btn-dark">Поиск</button>
++            <button style="width: 100%" type="submit" class="btn btn-dark">Ieškoti</button>
+         </div>
+     </form>
+     <hr>
+@@ -38,7 +38,7 @@
+                 </div>
+             </a>
+         <#else>
+-            <h1 style="text-align: center">Не найдено</h1>
++            <h1 style="text-align: center">Nerasta</h1>
+         </#list>
+     </div>
+ </@t.template>
+\ No newline at end of file
+Index: target/classes/templates/registration.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <h1 style=\"text-align: center\">Регистрация</h1>\r\n    <hr>\r\n    <form action=\"/registration\" method=\"post\">\r\n        <div class=\"form-group\">\r\n            <label for=\"name\">Имя пользователя</label>\r\n            <input type=\"text\" class=\"form-control\" required id=\"name\" name=\"name\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Электронная почта</label>\r\n            <input type=\"email\" class=\"form-control\" id=\"email\" required name=\"email\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"phoneNumber\">Номер телефона</label>\r\n            <input type=\"text\" class=\"form-control\" id=\"phoneNumber\" required name=\"phoneNumber\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Пароль</label>\r\n            <input type=\"password\" class=\"form-control\" id=\"password\" required name=\"password\">\r\n        </div>\r\n        <input type=\"hidden\" name=\"_csrf\" value=\"${_csrf.token}\">\r\n        <button type=\"submit\" style=\"width: 100%\" class=\"btn btn-dark\">Зарегистрироваться</button>\r\n    </form>\r\n    <#if errorMessage??>\r\n        <h2 style=\"color: red\">${errorMessage}</h2>\r\n    </#if>\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/registration.ftlh b/target/classes/templates/registration.ftlh
+--- a/target/classes/templates/registration.ftlh	
++++ b/target/classes/templates/registration.ftlh	
+@@ -1,26 +1,26 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-    <h1 style="text-align: center">Регистрация</h1>
++    <h1 style="text-align: center">Registracija</h1>
+     <hr>
+     <form action="/registration" method="post">
+         <div class="form-group">
+-            <label for="name">Имя пользователя</label>
++            <label for="name">Vardas</label>
+             <input type="text" class="form-control" required id="name" name="name">
+         </div>
+         <div class="form-group">
+-            <label for="email">Электронная почта</label>
++            <label for="email">Elektroninis paštas</label>
+             <input type="email" class="form-control" id="email" required name="email">
+         </div>
+         <div class="form-group">
+-            <label for="phoneNumber">Номер телефона</label>
++            <label for="phoneNumber">Telefonas</label>
+             <input type="text" class="form-control" id="phoneNumber" required name="phoneNumber">
+         </div>
+         <div class="form-group">
+-            <label for="password">Пароль</label>
++            <label for="password">Slaptažodis</label>
+             <input type="password" class="form-control" id="password" required name="password">
+         </div>
+         <input type="hidden" name="_csrf" value="${_csrf.token}">
+-        <button type="submit" style="width: 100%" class="btn btn-dark">Зарегистрироваться</button>
++        <button type="submit" style="width: 100%" class="btn btn-dark">Registruotis</button>
+     </form>
+     <#if errorMessage??>
+         <h2 style="color: red">${errorMessage}</h2>
+Index: target/classes/templates/product-info.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n    <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n        <ol class=\"carousel-indicators\">\r\n            <#list images as image>\r\n                <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"\"></li>\r\n            </#list>\r\n        </ol>\r\n        <div class=\"carousel-inner\">\r\n            <#list images as image>\r\n                <div class=\"carousel-item <#if image.previewImage>active</#if>\">\r\n                    <svg class=\"bd-placeholder-img\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"\r\n                         role=\"img\" aria-label=\" :  \" preserveAspectRatio=\"xMidYMid slice\" focusable=\"false\">\r\n                        <title></title>\r\n                        <rect width=\"100%\" height=\"100%\" fill=\"#777\"></rect>\r\n                        <text x=\"50%\" y=\"50%\" fill=\"#777\" dy=\".3em\"></text>\r\n                    </svg>\r\n\r\n                    <div class=\"container\">\r\n                        <div class=\"carousel-caption\">\r\n                            <a href=\"/images/${image.id}\">\r\n                                <img class=\"product\" style=\"height: 100px\" src=\"/images/${image.id}\">\r\n                            </a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </#list>\r\n\r\n        </div>\r\n        <a class=\"carousel-control-prev\" href=\"#myCarousel\" role=\"button\" data-slide=\"prev\">\r\n            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n            <span class=\"sr-only\">Previous</span>\r\n        </a>\r\n        <a class=\"carousel-control-next\" href=\"#myCarousel\" role=\"button\" data-slide=\"next\">\r\n            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n            <span class=\"sr-only\">Next</span>\r\n        </a>\r\n    </div>\r\n    <hr>\r\n    <p><h1 style=\"text-align: center\">${product.title} | ${product.price} ₽</h1></p>\r\n    <p style=\"text-align: center\">${product.description}</p>\r\n    <p style=\"text-align: center\">Номер телефона продавца: <b>${authorProduct.phoneNumber}</b></p>\r\n\r\n    <hr>\r\n    <p style=\"text-align: center\">\r\n        <a href=\"/user/${authorProduct.id}\">\r\n            <img src=\"/static/images/avatar.png\" alt=\"mdo\" width=\"32\" height=\"32\" class=\"rounded-circle\"> ${authorProduct.name}\r\n        </a>\r\n    </p>\r\n\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/product-info.ftlh b/target/classes/templates/product-info.ftlh
+--- a/target/classes/templates/product-info.ftlh	
++++ b/target/classes/templates/product-info.ftlh	
+@@ -39,7 +39,7 @@
+     <hr>
+     <p><h1 style="text-align: center">${product.title} | ${product.price} ₽</h1></p>
+     <p style="text-align: center">${product.description}</p>
+-    <p style="text-align: center">Номер телефона продавца: <b>${authorProduct.phoneNumber}</b></p>
++    <p style="text-align: center">Telefonas: <b>${authorProduct.phoneNumber}</b></p>
+ 
+     <hr>
+     <p style="text-align: center">
+Index: target/classes/templates/user-edit.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><#import \"blocks/template.ftlh\" as t>\r\n<@t.template user>\r\n<h1 style=\"text-align: center\">Редактирование пользователя ${user.name}</h1><hr>\r\n<form action=\"/admin/user/edit\" method=\"post\">\r\n    <#list roles as role>\r\n        <div>\r\n            <label><input type=\"checkbox\" name=\"${role}\" ${user.roles?seq_contains(role)?string(\"checked\", \"\")}>${role}</label>\r\n        </div>\r\n    </#list>\r\n    <input type=\"hidden\" value=\"${user.id}\" name=\"userId\">\r\n    <input type=\"hidden\" value=\"${_csrf.token}\" name=\"_csrf\">\r\n    <button type=\"submit\" class=\"btn btn-dark\">Сохранить</button>\r\n</form>\r\n\r\n</@t.template>
+===================================================================
+diff --git a/target/classes/templates/user-edit.ftlh b/target/classes/templates/user-edit.ftlh
+--- a/target/classes/templates/user-edit.ftlh	
++++ b/target/classes/templates/user-edit.ftlh	
+@@ -1,6 +1,6 @@
+ <#import "blocks/template.ftlh" as t>
+ <@t.template user>
+-<h1 style="text-align: center">Редактирование пользователя ${user.name}</h1><hr>
++<h1 style="text-align: center">Vartotojo redagavimas ${user.name}</h1><hr>
+ <form action="/admin/user/edit" method="post">
+     <#list roles as role>
+         <div>
+@@ -9,7 +9,7 @@
+     </#list>
+     <input type="hidden" value="${user.id}" name="userId">
+     <input type="hidden" value="${_csrf.token}" name="_csrf">
+-    <button type="submit" class="btn btn-dark">Сохранить</button>
++    <button type="submit" class="btn btn-dark">Išsaugoti</button>
+ </form>
+ 
+ </@t.template>
+\ No newline at end of file

@@ -1,0 +1,1100 @@
+Index: src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java b/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java
+deleted file mode 100644
+--- a/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java	
++++ /dev/null	
+@@ -1,18 +0,0 @@
+-package lt.autoservis.u5.controller;
+-
+-import lt.autoservis.u5.model.repository.RoleRepository;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.web.bind.annotation.GetMapping;
+-import org.springframework.web.bind.annotation.RestController;
+-
+-@RestController
+-public class VartotojuRolesControler {
+-
+-    @Autowired
+-    RoleRepository roleRepository;
+-
+-    @GetMapping("test/vartotojuRoles")
+-    String testinisVartotojuRoles() {
+-        return "puslapis vartotoju roles veikia";
+-    }
+-}
+Index: src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java b/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java
+deleted file mode 100644
+--- a/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java	
++++ /dev/null	
+@@ -1,44 +0,0 @@
+-package lt.autoservis.u5.security;
+-
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+-import org.springframework.security.core.userdetails.User;
+-import org.springframework.security.core.userdetails.UserDetails;
+-import org.springframework.security.core.userdetails.UserDetailsService;
+-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+-
+-@Configuration
+-@EnableWebSecurity
+-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+-
+-    @Override
+-    protected void configure(HttpSecurity http) throws Exception {
+-        http
+-                .authorizeRequests()
+-                .antMatchers("/", "/home").permitAll()
+-                .anyRequest().authenticated()
+-                .and()
+-                .formLogin()
+-                .loginPage("/login")
+-                .permitAll()
+-                .and()
+-                .logout()
+-                .permitAll();
+-
+-    }
+-
+-    @Bean
+-    public UserDetailsService userDetailsService() {
+-        UserDetails user =
+-                User.withDefaultPasswordEncoder()
+-                        .username("grmt")
+-                        .password("grmt123")
+-                        .roles("ADMIN")
+-                        .build();
+-
+-        return new InMemoryUserDetailsManager(user);
+-    }
+-}
+\ No newline at end of file
+Index: src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java b/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java
+deleted file mode 100644
+--- a/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java	
++++ /dev/null	
+@@ -1,93 +0,0 @@
+-package lt.autoservis.u5.Component;
+-
+-import lt.autoservis.u5.model.entity.Privilegijos;
+-import lt.autoservis.u5.model.entity.Role;
+-import lt.autoservis.u5.model.entity.Vartotojas;
+-import lt.autoservis.u5.model.repository.PrivilegijosRepository;
+-import lt.autoservis.u5.model.repository.RoleRepository;
+-import lt.autoservis.u5.model.repository.VartotojasRepository;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.context.ApplicationListener;
+-import org.springframework.context.event.ContextRefreshedEvent;
+-import org.springframework.stereotype.Component;
+-
+-import javax.transaction.Transactional;
+-import java.util.HashSet;
+-import java.util.Set;
+-
+-@Component
+-public class SetupDataLoader implements
+-        ApplicationListener<ContextRefreshedEvent>{
+-
+-
+-        boolean alreadySetup = false;
+-
+-        @Autowired
+-        private VartotojasRepository vartotojuRepozitorija;
+-
+-        @Autowired
+-        private RoleRepository roleRepository;
+-
+-        @Autowired
+-        private PrivilegijosRepository privilegijosRepository;
+-
+-   /*     @Autowired
+-        private BCryptPasswordEncoder passwordEncoder;*/
+-
+-        @Override
+-        @Transactional
+-        public void onApplicationEvent(ContextRefreshedEvent event) {
+-
+-        if (alreadySetup)
+-             return;
+-        Privilegijos readPrivilegijos
+-                = createPrivilegeIfNotFound("READ_PRIVILEGE");
+-        Privilegijos writePrivilege
+-                = createPrivilegeIfNotFound("WRITE_PRIVILEGE");
+-
+-        Set<Privilegijos> adminoPriviliegijos = new HashSet<>();
+-        adminoPriviliegijos.add(readPrivilegijos);
+-        adminoPriviliegijos.add(writePrivilege);
+-
+-        Set<Privilegijos> vartotojoPrivilegijos = new HashSet<>();
+-        vartotojoPrivilegijos.add(readPrivilegijos);
+-
+-        createRoleIfNotFound("ROLE_ADMIN", adminoPriviliegijos);
+-        createRoleIfNotFound("ROLE_USER", vartotojoPrivilegijos);
+-
+-        Role adminRole = roleRepository.findByName("ROLE_ADMIN");
+-        Set<Role> hashSet = new HashSet<Role>();
+-        hashSet.add (adminRole);
+-        Vartotojas vartotojas = new Vartotojas();
+-        vartotojas.setUsername("Test");
+-        vartotojas.setPassword("test");
+-//        vartotojas.setVartotojoRole (hashSet);
+-        vartotojas.setEnabled(true);
+-        vartotojuRepozitorija.save(vartotojas);
+-
+-        alreadySetup = true;
+-
+-    }
+-
+-     @Transactional
+-     Privilegijos createPrivilegeIfNotFound(String name) {
+-
+-          Privilegijos privilegijos = privilegijosRepository.findByName(name);
+-          if (privilegijos == null) {
+-               privilegijos = new Privilegijos(name);
+-               privilegijosRepository.save(privilegijos);
+-          }
+-          return privilegijos;
+-     }
+-    @Transactional
+-    Role createRoleIfNotFound (String name, Set<Privilegijos> privilegijos) {
+-
+-        Role role = roleRepository.findByName(name);
+-        if (role == null) {
+-            role = new Role(name);
+-            role.setPrivilegijuRoles(privilegijos);
+-            roleRepository.save(role);
+-        }
+-        return role;
+-    }
+-   }
+Index: src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java b/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java
+deleted file mode 100644
+--- a/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java	
++++ /dev/null	
+@@ -1,70 +0,0 @@
+-package lt.autoservis.u5.model.entity;
+-
+-import com.fasterxml.jackson.annotation.JsonIgnore;
+-
+-import javax.persistence.*;
+-import java.util.Set;
+-
+-@Entity
+-public class Privilegijos {
+-
+-    @Id
+-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+-    private Long id;
+-    private String name;
+-
+-    @JsonIgnore
+-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+-    @JoinTable(
+-            name = "role_privilegija",
+-            joinColumns = @JoinColumn(name = "privilegija_id"),
+-            inverseJoinColumns = @JoinColumn(name = "role_id")
+-    )
+-    private Set<Role> rolesPrivilegijos;
+-
+-    public Privilegijos() {
+-    }
+-
+-    public Privilegijos(Long id, String name, Set<Role> rolesPrivilegijos) {
+-        this.id = id;
+-        this.name = name;
+-        this.rolesPrivilegijos = rolesPrivilegijos;
+-    }
+-
+-    public Privilegijos(String name) {
+-
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    public void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public Set<Role> getRolesPrivilegijos() {
+-        return rolesPrivilegijos;
+-    }
+-
+-    public void setRolesPrivilegijos(Set<Role> rolesPrivilegijos) {
+-        this.rolesPrivilegijos = rolesPrivilegijos;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "Privilegijos{" +
+-                "id=" + id +
+-                ", name='" + name + '\'' +
+-                ", rolesPrivilegijos=" + rolesPrivilegijos +
+-                '}';
+-    }
+-}
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.datasource.url=jdbc:mysql://sql504.main-hosting.eu/u355634419_autoservis2?server Timezone=UTC&characterEncoding=utf8\r\nspring.datasource.username=u355634419_gerimantas\r\nspring.datasource.password=Ziedas+1\r\nspring.flyway.check-location = false\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect\r\nspring.jpa.hibernate.ddl-auto=update\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	
++++ b/src/main/resources/application.properties	
+@@ -6,5 +6,11 @@
+ spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+ spring.jpa.hibernate.ddl-auto=update
+ 
++spring.freemarker.expose-request-attributes=true
++spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
++
++spring.session.jdbc.initialize-schema=always
++spring.session.jdbc.table-name=SPRING_SESSION
++
+ 
+ 
+Index: src/main/java/lt/autoservis/u5/model/entity/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/model/entity/User.java b/src/main/java/lt/autoservis/u5/model/entity/User.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/model/entity/User.java	
+@@ -0,0 +1,177 @@
++package lt.autoservis.u5.model.entity;
++
++import org.springframework.security.core.GrantedAuthority;
++import org.springframework.security.core.userdetails.UserDetails;
++
++import javax.persistence.*;
++import javax.validation.constraints.Email;
++import javax.validation.constraints.NotBlank;
++import java.util.Collection;
++import java.util.HashSet;
++import java.util.Objects;
++import java.util.Set;
++
++@Entity
++@Table(name = "usr")
++public class User implements UserDetails {
++    @Id
++    @GeneratedValue(strategy = GenerationType.AUTO)
++    private Long id;
++    @NotBlank(message = "Username cannot be empty")
++    private String username;
++    @NotBlank(message = "Password cannot be empty")
++    private String password;
++    private boolean active;
++
++    @Email(message = "Email is not correct")
++    @NotBlank(message = "Email cannot be empty")
++    private String email;
++    private String activationCode;
++
++    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
++    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
++    @Enumerated(EnumType.STRING)
++    private Set<Role> roles;
++
++    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
++    private Set<Message> messages;
++
++    @ManyToMany
++    @JoinTable(
++            name = "user_subscriptions",
++            joinColumns = { @JoinColumn(name = "channel_id") },
++            inverseJoinColumns = { @JoinColumn(name = "subscriber_id") }
++    )
++    private Set<User> subscribers = new HashSet<>();
++
++    @ManyToMany
++    @JoinTable(
++            name = "user_subscriptions",
++            joinColumns = { @JoinColumn(name = "subscriber_id") },
++            inverseJoinColumns = { @JoinColumn(name = "channel_id") }
++    )
++    private Set<User> subscriptions = new HashSet<>();
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (o == null || getClass() != o.getClass()) return false;
++        User user = (User) o;
++        return Objects.equals(id, user.id);
++    }
++
++    @Override
++    public int hashCode() {
++
++        return Objects.hash(id);
++    }
++
++    public boolean isAdmin() {
++        return roles.contains(Role.ADMIN);
++    }
++
++    public Long getId() {
++        return id;
++    }
++
++    public void setId(Long id) {
++        this.id = id;
++    }
++
++    public String getUsername() {
++        return username;
++    }
++
++    @Override
++    public boolean isAccountNonExpired() {
++        return true;
++    }
++
++    @Override
++    public boolean isAccountNonLocked() {
++        return true;
++    }
++
++    @Override
++    public boolean isCredentialsNonExpired() {
++        return true;
++    }
++
++    @Override
++    public boolean isEnabled() {
++        return isActive();
++    }
++
++    public void setUsername(String username) {
++        this.username = username;
++    }
++
++    @Override
++    public Collection<? extends GrantedAuthority> getAuthorities() {
++        return getRoles();
++    }
++
++    public String getPassword() {
++        return password;
++    }
++
++    public void setPassword(String password) {
++        this.password = password;
++    }
++
++    public boolean isActive() {
++        return active;
++    }
++
++    public void setActive(boolean active) {
++        this.active = active;
++    }
++
++    public Set<Role> getRoles() {
++        return roles;
++    }
++
++    public void setRoles(Set<Role> roles) {
++        this.roles = roles;
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getActivationCode() {
++        return activationCode;
++    }
++
++    public void setActivationCode(String activationCode) {
++        this.activationCode = activationCode;
++    }
++
++    public Set<Message> getMessages() {
++        return messages;
++    }
++
++    public void setMessages(Set<Message> messages) {
++        this.messages = messages;
++    }
++
++    public Set<User> getSubscribers() {
++        return subscribers;
++    }
++
++    public void setSubscribers(Set<User> subscribers) {
++        this.subscribers = subscribers;
++    }
++
++    public Set<User> getSubscriptions() {
++        return subscriptions;
++    }
++
++    public void setSubscriptions(Set<User> subscriptions) {
++        this.subscriptions = subscriptions;
++    }
++}
+Index: src/main/java/lt/autoservis/u5/model/repository/UserRepo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/model/repository/UserRepo.java b/src/main/java/lt/autoservis/u5/model/repository/UserRepo.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/model/repository/UserRepo.java	
+@@ -0,0 +1,10 @@
++package lt.autoservis.u5.model.repository;
++
++import lt.autoservis.u5.model.entity.User;
++import org.springframework.data.jpa.repository.JpaRepository;
++
++public interface UserRepo extends JpaRepository<User, Long> {
++    User findByUsername(String username);
++
++    User findByActivationCode(String code);
++}
+Index: src/main/java/lt/autoservis/u5/controller/UserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/controller/UserController.java b/src/main/java/lt/autoservis/u5/controller/UserController.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/controller/UserController.java	
+@@ -0,0 +1,106 @@
++package lt.autoservis.u5.controller;
++
++import lt.autoservis.u5.model.entity.Role;
++import lt.autoservis.u5.model.entity.User;
++import lt.autoservis.u5.service.UserSevice;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.security.access.prepost.PreAuthorize;
++import org.springframework.security.core.annotation.AuthenticationPrincipal;
++import org.springframework.stereotype.Controller;
++import org.springframework.ui.Model;
++import org.springframework.web.bind.annotation.*;
++
++import java.util.Map;
++
++@Controller
++@RequestMapping("/user")
++public class UserController {
++    @Autowired
++    private UserSevice userSevice;
++
++    @PreAuthorize("hasAuthority('ADMIN')")
++    @GetMapping
++    public String userList(Model model) {
++        model.addAttribute("users", userSevice.findAll());
++
++        return "userList";
++    }
++
++    @PreAuthorize("hasAuthority('ADMIN')")
++    @GetMapping("{user}")
++    public String userEditForm(@PathVariable User user, Model model) {
++        model.addAttribute("user", user);
++        model.addAttribute("roles", Role.values());
++
++        return "userEdit";
++    }
++
++    @PreAuthorize("hasAuthority('ADMIN')")
++    @PostMapping
++    public String userSave(
++            @RequestParam String username,
++            @RequestParam Map<String, String> form,
++            @RequestParam("userId") User user
++    ) {
++        userSevice.saveUser(user, username, form);
++
++        return "redirect:/user";
++    }
++
++    @GetMapping("profile")
++    public String getProfile(Model model, @AuthenticationPrincipal User user) {
++        model.addAttribute("username", user.getUsername());
++        model.addAttribute("email", user.getEmail());
++
++        return "profile";
++    }
++
++    @PostMapping("profile")
++    public String updateProfile(
++            @AuthenticationPrincipal User user,
++            @RequestParam String password,
++            @RequestParam String email
++    ) {
++        userSevice.updateProfile(user, password, email);
++
++        return "redirect:/user/profile";
++    }
++
++    @GetMapping("subscribe/{user}")
++    public String subscribe(
++            @AuthenticationPrincipal User currentUser,
++            @PathVariable User user
++    ) {
++        userSevice.subscribe(currentUser, user);
++
++        return "redirect:/user-messages/" + user.getId();
++    }
++
++    @GetMapping("unsubscribe/{user}")
++    public String unsubscribe(
++            @AuthenticationPrincipal User currentUser,
++            @PathVariable User user
++    ) {
++        userSevice.unsubscribe(currentUser, user);
++
++        return "redirect:/user-messages/" + user.getId();
++    }
++
++    @GetMapping("{type}/{user}/list")
++    public String userList(
++            Model model,
++            @PathVariable User user,
++            @PathVariable String type
++    ) {
++        model.addAttribute("userChannel", user);
++        model.addAttribute("type", type);
++
++        if ("subscriptions".equals(type)) {
++            model.addAttribute("users", user.getSubscriptions());
++        } else {
++            model.addAttribute("users", user.getSubscribers());
++        }
++
++        return "subscriptions";
++    }
++}
+Index: src/main/java/lt/autoservis/u5/service/MailSender.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/service/MailSender.java b/src/main/java/lt/autoservis/u5/service/MailSender.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/service/MailSender.java	
+@@ -0,0 +1,28 @@
++package lt.autoservis.u5.service;
++
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.beans.factory.annotation.Value;
++import org.springframework.mail.SimpleMailMessage;
++import org.springframework.mail.javamail.JavaMailSender;
++import org.springframework.stereotype.Service;
++
++@Service
++public class MailSender {
++    @Autowired
++    private JavaMailSender mailSender;
++
++    @Value("${spring.mail.username}")
++    private String username;
++
++
++    public void send(String emailTo, String subject, String message) {
++        SimpleMailMessage mailMessage = new SimpleMailMessage();
++
++        mailMessage.setFrom(username);
++        mailMessage.setTo(emailTo);
++        mailMessage.setSubject(subject);
++        mailMessage.setText(message);
++
++        mailSender.send(mailMessage);
++    }
++}
+Index: src/main/java/lt/autoservis/u5/service/UserSevice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/service/UserSevice.java b/src/main/java/lt/autoservis/u5/service/UserSevice.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/service/UserSevice.java	
+@@ -0,0 +1,148 @@
++package lt.autoservis.u5.service;
++
++import com.example.sweater.domain.Role;
++import com.example.sweater.domain.User;
++import lt.autoservis.u5.model.repository.UserRepo;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.beans.factory.annotation.Value;
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.security.core.userdetails.UserDetailsService;
++import org.springframework.security.core.userdetails.UsernameNotFoundException;
++import org.springframework.security.crypto.password.PasswordEncoder;
++import org.springframework.stereotype.Service;
++import org.springframework.util.StringUtils;
++
++import java.util.*;
++import java.util.stream.Collectors;
++
++@Service
++public class UserSevice implements UserDetailsService {
++    @Autowired
++    private UserRepo userRepo;
++
++    @Autowired
++    private MailSender mailSender;
++
++    @Autowired
++    private PasswordEncoder passwordEncoder;
++
++    @Value("${hostname}")
++    private String hostname;
++
++    @Override
++    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
++        User user = userRepo.findByUsername(username);
++
++        if (user == null) {
++            throw new UsernameNotFoundException("User not found");
++        }
++
++        return user;
++    }
++
++    public boolean addUser(User user) {
++        User userFromDb = userRepo.findByUsername(user.getUsername());
++
++        if (userFromDb != null) {
++            return false;
++        }
++
++        user.setActive(true);
++        user.setRoles(Collections.singleton(Role.USER));
++        user.setActivationCode(UUID.randomUUID().toString());
++        user.setPassword(passwordEncoder.encode(user.getPassword()));
++
++        userRepo.save(user);
++
++        sendMessage(user);
++
++        return true;
++    }
++
++    private void sendMessage(User user) {
++        if (!StringUtils.isEmpty(user.getEmail())) {
++            String message = String.format(
++                    "Hello, %s! \n" +
++                            "Welcome to Sweater. Please, visit next link: http://%s/activate/%s",
++                    user.getUsername(),
++                    hostname,
++                    user.getActivationCode()
++            );
++
++            mailSender.send(user.getEmail(), "Activation code", message);
++        }
++    }
++
++    public boolean activateUser(String code) {
++        User user = userRepo.findByActivationCode(code);
++
++        if (user == null) {
++            return false;
++        }
++
++        user.setActivationCode(null);
++
++        userRepo.save(user);
++
++        return true;
++    }
++
++    public List<User> findAll() {
++        return userRepo.findAll();
++    }
++
++    public void saveUser(User user, String username, Map<String, String> form) {
++        user.setUsername(username);
++
++        Set<String> roles = Arrays.stream(Role.values())
++                .map(Role::name)
++                .collect(Collectors.toSet());
++
++        user.getRoles().clear();
++
++        for (String key : form.keySet()) {
++            if (roles.contains(key)) {
++                user.getRoles().add(Role.valueOf(key));
++            }
++        }
++
++        userRepo.save(user);
++    }
++
++    public void updateProfile(User user, String password, String email) {
++        String userEmail = user.getEmail();
++
++        boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
++                (userEmail != null && !userEmail.equals(email));
++
++        if (isEmailChanged) {
++            user.setEmail(email);
++
++            if (!StringUtils.isEmpty(email)) {
++                user.setActivationCode(UUID.randomUUID().toString());
++            }
++        }
++
++        if (!StringUtils.isEmpty(password)) {
++            user.setPassword(password);
++        }
++
++        userRepo.save(user);
++
++        if (isEmailChanged) {
++            sendMessage(user);
++        }
++    }
++
++    public void subscribe(User currentUser, User user) {
++        user.getSubscribers().add(currentUser);
++
++        userRepo.save(user);
++    }
++
++    public void unsubscribe(User currentUser, User user) {
++        user.getSubscribers().remove(currentUser);
++
++        userRepo.save(user);
++    }
++}
+Index: src/main/java/lt/autoservis/u5/service/MessageService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/service/MessageService.java b/src/main/java/lt/autoservis/u5/service/MessageService.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/service/MessageService.java	
+@@ -0,0 +1,27 @@
++package lt.autoservis.u5.service;
++
++import com.example.sweater.domain.User;
++import com.example.sweater.domain.dto.MessageDto;
++import com.example.sweater.repos.MessageRepo;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.data.domain.Page;
++import org.springframework.data.domain.Pageable;
++import org.springframework.stereotype.Service;
++
++@Service
++public class MessageService {
++    @Autowired
++    private MessageRepo messageRepo;
++
++    public Page<MessageDto> messageList(Pageable pageable, String filter, User user) {
++        if (filter != null && !filter.isEmpty()) {
++            return messageRepo.findByTag(filter, pageable, user);
++        } else {
++            return messageRepo.findAll(pageable, user);
++        }
++    }
++
++    public Page<MessageDto> messageListForUser(Pageable pageable, User currentUser, User author) {
++        return messageRepo.findByUser(pageable, author, currentUser);
++    }
++}
+Index: src/main/java/lt/autoservis/u5/controller/ControllerUtils.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/controller/ControllerUtils.java b/src/main/java/lt/autoservis/u5/controller/ControllerUtils.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/controller/ControllerUtils.java	
+@@ -0,0 +1,18 @@
++package lt.autoservis.u5.controller;
++
++import org.springframework.validation.BindingResult;
++import org.springframework.validation.FieldError;
++
++import java.util.Map;
++import java.util.stream.Collector;
++import java.util.stream.Collectors;
++
++public class ControllerUtils {
++    static Map<String, String> getErrors(BindingResult bindingResult) {
++        Collector<FieldError, ?, Map<String, String>> collector = Collectors.toMap(
++                fieldError -> fieldError.getField() + "Error",
++                FieldError::getDefaultMessage
++        );
++        return bindingResult.getFieldErrors().stream().collect(collector);
++    }
++}
+Index: src/main/java/lt/autoservis/u5/config/WebSecurityConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/config/WebSecurityConfig.java b/src/main/java/lt/autoservis/u5/config/WebSecurityConfig.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/config/WebSecurityConfig.java	
+@@ -0,0 +1,45 @@
++package lt.autoservis.u5.config;
++
++import lt.autoservis.u5.service.UserSevice;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
++import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
++import org.springframework.security.config.annotation.web.builders.HttpSecurity;
++import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
++import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
++import org.springframework.security.crypto.password.PasswordEncoder;
++
++@Configuration
++@EnableWebSecurity
++@EnableGlobalMethodSecurity(prePostEnabled = true)
++public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
++    @Autowired
++    private UserSevice userSevice;
++
++    @Autowired
++    private PasswordEncoder passwordEncoder;
++
++    @Override
++    protected void configure(HttpSecurity http) throws Exception {
++        http
++                .authorizeRequests()
++                    .antMatchers("/", "/registration", "/static/**", "/activate/*").permitAll()
++                    .anyRequest().authenticated()
++                .and()
++                    .formLogin()
++                    .loginPage("/login")
++                    .permitAll()
++                .and()
++                    .rememberMe()
++                .and()
++                    .logout()
++                    .permitAll();
++    }
++
++    @Override
++    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
++        auth.userDetailsService(userSevice)
++                .passwordEncoder(passwordEncoder);
++    }
++}
+Index: src/main/java/lt/autoservis/u5/config/EncriptionConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/config/EncriptionConfig.java b/src/main/java/lt/autoservis/u5/config/EncriptionConfig.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/lt/autoservis/u5/config/EncriptionConfig.java	
+@@ -0,0 +1,14 @@
++package lt.autoservis.u5.config;
++
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
++import org.springframework.security.crypto.password.PasswordEncoder;
++
++@Configuration
++public class EncriptionConfig {
++    @Bean
++    public PasswordEncoder getPasswordEncoder() {
++        return new BCryptPasswordEncoder(8);
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"klaida 'flywayInitializer'\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/db/migration/init.sql\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/restservice/Greeting.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/restservice/GreetingController.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/restservice/RestServiceApplication.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/restservice/Greeting.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/restservice/GreetingController.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/restservice/RestServiceApplication.class\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"KotlinCodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"26ups2WWGLsnr2KKiVdPTRRt9pe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"exceleditor.install\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/resources/templates\" />\r\n    <property name=\"project.structure.last.edited\" value=\"SDKs\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"editor.preferences.import\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\templates\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\\lt\\autoservis\\u5\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\test\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\templates\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\\securingweb\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\test\\java\\lt\\autoservis\\u5\" />\r\n      <recent name=\"C:\\Users\\37065\\IdeaProjects\\Spring-boot\\u5\\src\\main\\resources\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"lt.autoservis.u5.security\" />\r\n      <recent name=\"lt.autoservis.u5.model.repository\" />\r\n      <recent name=\"lt.autoservis.u5.model.entity\" />\r\n      <recent name=\"lt.autoservis.u5.Component\" />\r\n      <recent name=\"lt.autoservis.u5.config\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Praktika5Application\">\r\n    <configuration name=\"Praktika5Application\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.autoservis.u5.Praktika5Application\" />\r\n      <module name=\"uzduotis_5_autoservisai\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.autoservis.u5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RestServiceApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"restservice.RestServiceApplication\" />\r\n      <module name=\"uzduotis_5_autoservisai\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"restservice.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Praktika5Application\" />\r\n        <item itemvalue=\"Application.RestServiceApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"\" />\r\n      <created>1648283533165</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1648283533165</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Prijungta duomenu baze: autoservis\">\r\n      <created>1648286984467</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648286984467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Sukurti paketai, entity - Autoservisai\">\r\n      <created>1648288376902</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648288376902</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\">\r\n      <created>1648333389280</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648333389280</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Pratestuota su Postman\">\r\n      <created>1648576393109</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648576393109</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Klaidos ieskom\">\r\n      <created>1649151287989</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649151287989</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"@JsonIgnore\">\r\n      <created>1649168460296</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649168460296</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Istaisyta autoservisai_id dubliavimo klaida\">\r\n      <created>1649324437241</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649324437241</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Sudeta adresai, telefonai, vartotojai, vertinimas\">\r\n      <created>1649366864899</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649366864899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Sudeti controleriai\">\r\n      <created>1649667941121</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649667941121</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Pratestuota su Thymeleaf (th), veikia\">\r\n      <created>1649765816218</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649765816218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Resursuose ideta autoservis.sql\">\r\n      <created>1649833798198</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649833798198</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00012\" summary=\"Specializaciju isvedimas\">\r\n      <created>1650369280875</created>\r\n      <option name=\"number\" value=\"LOCAL−00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00012\" />\r\n      <updated>1650369280875</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00013\" summary=\"Specializacijos ir autoservisai isvedimas\">\r\n      <created>1650371975531</created>\r\n      <option name=\"number\" value=\"LOCAL−00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00013\" />\r\n      <updated>1650371975531</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00014\" summary=\"Autoserviso idejimo klaida\">\r\n      <created>1650478345440</created>\r\n      <option name=\"number\" value=\"LOCAL−00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00014\" />\r\n      <updated>1650478345440</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00015\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650797572384</created>\r\n      <option name=\"number\" value=\"LOCAL−00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00015\" />\r\n      <updated>1650797572384</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00016\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650879752722</created>\r\n      <option name=\"number\" value=\"LOCAL−00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00016\" />\r\n      <updated>1650879752722</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00017\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650958187431</created>\r\n      <option name=\"number\" value=\"LOCAL−00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00017\" />\r\n      <updated>1650958187431</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00018\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959650312</created>\r\n      <option name=\"number\" value=\"LOCAL−00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00018\" />\r\n      <updated>1650959650312</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00019\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959972134</created>\r\n      <option name=\"number\" value=\"LOCAL−00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00019\" />\r\n      <updated>1650959972134</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00020\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650987829066</created>\r\n      <option name=\"number\" value=\"LOCAL−00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00020\" />\r\n      <updated>1650987829066</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00021\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650988072161</created>\r\n      <option name=\"number\" value=\"LOCAL−00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00021\" />\r\n      <updated>1650988072161</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Atnaujinta 06-26\">\r\n      <created>1656443671236</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656443671236</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Ikeltas projektas\">\r\n      <created>1656520009409</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656520009409</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"klaida 'flywayInitializer'\">\r\n      <created>1659453134728</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1659453134728</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"25\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Pradzia\" />\r\n    <MESSAGE value=\"Prijungta duomenu baze: autoservis\" />\r\n    <MESSAGE value=\"Sukurti paketai, entity - Autoservisai\" />\r\n    <MESSAGE value=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\" />\r\n    <MESSAGE value=\"Pratestuota su Postman\" />\r\n    <MESSAGE value=\"Klaidos ieskom\" />\r\n    <MESSAGE value=\"@JsonIgnore\" />\r\n    <MESSAGE value=\"Istaisyta autoservisai_id dubliavimo klaida\" />\r\n    <MESSAGE value=\"Sudeta adresai, telefonai, vartotojai, vertinimas\" />\r\n    <MESSAGE value=\"Sudeti controleriai\" />\r\n    <MESSAGE value=\"Pratestuota su Thymeleaf (th), veikia\" />\r\n    <MESSAGE value=\"Resursuose ideta autoservis.sql\" />\r\n    <MESSAGE value=\"Specializaciju isvedimas\" />\r\n    <MESSAGE value=\"Specializacijos ir autoservisai isvedimas\" />\r\n    <MESSAGE value=\"Autoserviso idejimo klaida\" />\r\n    <MESSAGE value=\"Prisijungta prie web serverio\" />\r\n    <MESSAGE value=\"Meistru sarasas ir pasirinkimo mygtukas\" />\r\n    <MESSAGE value=\"Atnaujinta 06-26\" />\r\n    <MESSAGE value=\"Ikeltas projektas\" />\r\n    <MESSAGE value=\"Klaida security daryme 'flywayInitializer'\" />\r\n    <MESSAGE value=\"klaida 'flywayInitializer'\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"klaida 'flywayInitializer'\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.StackOverflowError\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"org.hibernate.MappingException\" package=\"org.hibernate\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>\r\n          <line>41</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/workspace_xml$Praktika5Application.ic\" NAME=\"Praktika5Application Coverage Results\" MODIFIED=\"1659467021624\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>lt.autoservis.u5.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,15 +4,33 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="klaida 'flywayInitializer'">
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/init.sql" afterDir="false" />
++    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Sukurtas security5 branch'as">
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/EncriptionConfig.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/WebSecurityConfig.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/ControllerUtils.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/UserController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/User.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/UserRepo.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/service/MailSender.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/service/MessageService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/service/UserSevice.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/restservice/Greeting.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/restservice/GreetingController.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/restservice/RestServiceApplication.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/restservice/Greeting.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/restservice/GreetingController.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/restservice/RestServiceApplication.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/VartotojuRolesControler.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Role.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -34,10 +52,11 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="security2" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="ROOT_SYNC" value="DONT_SYNC" />
+   </component>
+   <component name="GitSEFilterConfiguration">
+     <file-type-list>
+@@ -92,7 +111,7 @@
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="exceleditor.install" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/lt/autoservis/u5" />
+     <property name="project.structure.last.edited" value="SDKs" />
+     <property name="project.structure.proportion" value="0.0" />
+     <property name="project.structure.side.proportion" value="0.0" />
+@@ -100,8 +119,8 @@
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
+@@ -114,17 +133,17 @@
+       <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
+-      <recent name="lt.autoservis.u5.security" />
+       <recent name="lt.autoservis.u5.model.repository" />
+       <recent name="lt.autoservis.u5.model.entity" />
+-      <recent name="lt.autoservis.u5.Component" />
++      <recent name="lt.autoservis.u5.controller" />
+       <recent name="lt.autoservis.u5.config" />
++      <recent name="lt.autoservis.u5.security" />
+     </key>
+   </component>
+   <component name="RunManager" selected="Application.Praktika5Application">
+     <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
+-      <module name="uzduotis_5_autoservisai" />
++      <module name="uzd_5_autoservisai-2" />
+       <extension name="coverage">
+         <pattern>
+           <option name="PATTERN" value="lt.autoservis.u5.*" />
+@@ -161,6 +180,7 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.Praktika5Application" />
+         <item itemvalue="Application.Praktika5Application" />
+         <item itemvalue="Application.RestServiceApplication" />
+       </list>
+@@ -333,7 +353,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1659453134728</updated>
+     </task>
+-    <option name="localTasksCounter" value="25" />
++    <task id="LOCAL-00025" summary="Sukurtas security5 branch'as">
++      <created>1659946295319</created>
++      <option name="number" value="00025" />
++      <option name="presentableId" value="LOCAL-00025" />
++      <option name="project" value="LOCAL" />
++      <updated>1659946295319</updated>
++    </task>
++    <option name="localTasksCounter" value="26" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -418,7 +445,8 @@
+     <MESSAGE value="Ikeltas projektas" />
+     <MESSAGE value="Klaida security daryme 'flywayInitializer'" />
+     <MESSAGE value="klaida 'flywayInitializer'" />
+-    <option name="LAST_COMMIT_MESSAGE" value="klaida 'flywayInitializer'" />
++    <MESSAGE value="Sukurtas security5 branch'as" />
++    <option name="LAST_COMMIT_MESSAGE" value="Sukurtas security5 branch'as" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.datasource.url=jdbc:mysql://sql504.main-hosting.eu/u355634419_autoservis2?server Timezone=UTC&characterEncoding=utf8\r\nspring.datasource.username=u355634419_gerimantas\r\nspring.datasource.password=Ziedas+1\r\nspring.flyway.check-location = false\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect\r\nspring.jpa.hibernate.ddl-auto=update\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	
++++ b/target/classes/application.properties	
+@@ -6,5 +6,11 @@
+ spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+ spring.jpa.hibernate.ddl-auto=update
+ 
++spring.freemarker.expose-request-attributes=true
++spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
++
++spring.session.jdbc.initialize-schema=always
++spring.session.jdbc.table-name=SPRING_SESSION
++
+ 
+ 
