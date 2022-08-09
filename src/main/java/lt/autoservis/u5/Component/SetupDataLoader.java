@@ -1,9 +1,6 @@
 package lt.autoservis.u5.Component;
 
-import lt.autoservis.u5.model.entity.Privilegijos;
-import lt.autoservis.u5.model.entity.Role;
 import lt.autoservis.u5.model.entity.Vartotojas;
-import lt.autoservis.u5.model.repository.PrivilegijosRepository;
 import lt.autoservis.u5.model.repository.RoleRepository;
 import lt.autoservis.u5.model.repository.VartotojasRepository;
 import org.springframework.beans.factory.annotation.Autowired;

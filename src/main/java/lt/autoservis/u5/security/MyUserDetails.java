@@ -1,6 +1,5 @@
 package lt.autoservis.u5.security;
 
-import lt.autoservis.u5.model.entity.Role;
 import lt.autoservis.u5.model.entity.Vartotojas;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
