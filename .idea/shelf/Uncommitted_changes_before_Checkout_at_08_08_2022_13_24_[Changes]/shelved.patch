@@ -1,0 +1,180 @@
+Index: src/main/java/lt/autoservis/u5/model/entity/Role.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.autoservis.u5.model.entity;\r\n\r\nimport com.fasterxml.jackson.annotation.JsonIgnore;\r\n\r\nimport javax.persistence.*;\r\nimport java.util.HashSet;\r\nimport java.util.Set;\r\n\r\n@Entity\r\npublic class Role {\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Integer id;\r\n    private String name;\r\n\r\n    @JsonIgnore\r\n    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)\r\n    @JoinTable(\r\n            name = \"role_privilegija\",\r\n            joinColumns = @JoinColumn(name = \"role_id\"),\r\n            inverseJoinColumns = @JoinColumn(name = \"privilegija_id\")\r\n    )\r\n    private Set<Privilegijos> privilegijuRoles = new HashSet<>();\r\n\r\n    public Role() {\r\n    }\r\n\r\n    public Role(Integer id, String name, Set<Privilegijos> privilegijuRoles) {\r\n        this.id = id;\r\n        this.name = name;\r\n        this.privilegijuRoles = privilegijuRoles;\r\n\r\n\r\n    }\r\n\r\n    public Role(String name) {\r\n\r\n    }\r\n\r\n    public Integer getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(Integer id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public void setName(String name) {\r\n        this.name = name;\r\n    }\r\n\r\n    public Set<Privilegijos> getPrivilegijuRoles() {\r\n        return privilegijuRoles;\r\n    }\r\n\r\n    public void setPrivilegijuRoles(Set<Privilegijos> privilegijuRoles) {\r\n        this.privilegijuRoles = privilegijuRoles;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Role{\" +\r\n                \"id=\" + id +\r\n                \", name='\" + name + '\\'' +\r\n                \", privilegijuRoles=\" + privilegijuRoles +\r\n                '}';\r\n    }\r\n}\r\n\r\n
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/model/entity/Role.java b/src/main/java/lt/autoservis/u5/model/entity/Role.java
+--- a/src/main/java/lt/autoservis/u5/model/entity/Role.java	
++++ b/src/main/java/lt/autoservis/u5/model/entity/Role.java	
+@@ -1,73 +1,12 @@
+ package lt.autoservis.u5.model.entity;
+ 
+-import com.fasterxml.jackson.annotation.JsonIgnore;
+-
+-import javax.persistence.*;
+-import java.util.HashSet;
+-import java.util.Set;
+-
+-@Entity
+-public class Role {
+-    @Id
+-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+-    private Integer id;
+-    private String name;
+-
+-    @JsonIgnore
+-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+-    @JoinTable(
+-            name = "role_privilegija",
+-            joinColumns = @JoinColumn(name = "role_id"),
+-            inverseJoinColumns = @JoinColumn(name = "privilegija_id")
+-    )
+-    private Set<Privilegijos> privilegijuRoles = new HashSet<>();
+-
+-    public Role() {
+-    }
+-
+-    public Role(Integer id, String name, Set<Privilegijos> privilegijuRoles) {
+-        this.id = id;
+-        this.name = name;
+-        this.privilegijuRoles = privilegijuRoles;
+-
+-
+-    }
+-
+-    public Role(String name) {
+-
+-    }
+-
+-    public Integer getId() {
+-        return id;
+-    }
++import org.springframework.security.core.GrantedAuthority;
+ 
+-    public void setId(Integer id) {
+-        this.id = id;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public Set<Privilegijos> getPrivilegijuRoles() {
+-        return privilegijuRoles;
+-    }
+-
+-    public void setPrivilegijuRoles(Set<Privilegijos> privilegijuRoles) {
+-        this.privilegijuRoles = privilegijuRoles;
+-    }
++public enum Role implements GrantedAuthority {
++    USER, ADMIN;
+ 
+     @Override
+-    public String toString() {
+-        return "Role{" +
+-                "id=" + id +
+-                ", name='" + name + '\'' +
+-                ", privilegijuRoles=" + privilegijuRoles +
+-                '}';
++    public String getAuthority() {
++        return name();
+     }
+ }
+-
+Index: src/main/java/lt/autoservis/u5/config/MvcConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.autoservis.u5.config;\r\n\r\nimport org.springframework.context.annotation.Configuration;\r\nimport org.springframework.web.servlet.config.annotation.ViewControllerRegistry;\r\nimport org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\r\n\r\n@Configuration\r\npublic class MvcConfig implements WebMvcConfigurer {\r\n\r\n    public void addViewControllers(ViewControllerRegistry registry) {\r\n        registry.addViewController(\"/home\").setViewName(\"home\");\r\n        registry.addViewController(\"/\").setViewName(\"home\");\r\n        registry.addViewController(\"/hello\").setViewName(\"hello\");\r\n        registry.addViewController(\"/login\").setViewName(\"login\");\r\n    }\r\n}
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/config/MvcConfig.java b/src/main/java/lt/autoservis/u5/config/MvcConfig.java
+--- a/src/main/java/lt/autoservis/u5/config/MvcConfig.java	
++++ b/src/main/java/lt/autoservis/u5/config/MvcConfig.java	
+@@ -1,16 +1,34 @@
+ package lt.autoservis.u5.config;
+ 
++import org.springframework.beans.factory.annotation.Value;
++import org.springframework.context.annotation.Bean;
+ import org.springframework.context.annotation.Configuration;
++import org.springframework.web.client.RestTemplate;
++import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+ 
+ @Configuration
+ public class MvcConfig implements WebMvcConfigurer {
++    @Value("${upload.path}")
++    private String uploadPath;
++
++    @Bean
++    public RestTemplate getRestTemplate() {
++        return new RestTemplate();
++    }
+ 
+     public void addViewControllers(ViewControllerRegistry registry) {
+-        registry.addViewController("/home").setViewName("home");
+-        registry.addViewController("/").setViewName("home");
+-        registry.addViewController("/hello").setViewName("hello");
+         registry.addViewController("/login").setViewName("login");
+     }
+-}
+\ No newline at end of file
++
++    @Override
++    public void addResourceHandlers(ResourceHandlerRegistry registry) {
++        registry.addResourceHandler("/img/**")
++                .addResourceLocations("file://" + uploadPath + "/");
++        registry.addResourceHandler("/static/**")
++                .addResourceLocations("classpath:/static/");
++    }
++
++   
++}
+Index: src/main/java/lt/autoservis/u5/security/MyUserDetails.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.autoservis.u5.security;\r\n\r\nimport lt.autoservis.u5.model.entity.Role;\r\nimport lt.autoservis.u5.model.entity.Vartotojas;\r\nimport org.springframework.security.core.GrantedAuthority;\r\nimport org.springframework.security.core.authority.SimpleGrantedAuthority;\r\nimport org.springframework.security.core.userdetails.UserDetails;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Collection;\r\nimport java.util.List;\r\nimport java.util.Set;\r\n\r\npublic class MyUserDetails implements UserDetails {\r\n\r\n    private Vartotojas user;\r\n\r\n    public MyUserDetails(Vartotojas user) {\r\n        this.user = user;\r\n    }\r\n\r\n    @Override\r\n    public Collection<? extends GrantedAuthority> getAuthorities() {\r\n        Set<Role> roles = user.getRolesVartotoju();\r\n        List<SimpleGrantedAuthority> authorities = new ArrayList<>();\r\n\r\n        for (Role role : roles) {\r\n            authorities.add(new SimpleGrantedAuthority(role.getName()));\r\n        }\r\n\r\n        return authorities;\r\n    }\r\n\r\n    @Override\r\n    public String getPassword() {\r\n        return user.getPassword();\r\n    }\r\n\r\n    @Override\r\n    public String getUsername() {\r\n        return user.getUsername();\r\n    }\r\n\r\n    @Override\r\n    public boolean isAccountNonExpired() {\r\n        return true;\r\n    }\r\n\r\n    @Override\r\n    public boolean isAccountNonLocked() {\r\n        return true;\r\n    }\r\n\r\n    @Override\r\n    public boolean isCredentialsNonExpired() {\r\n        return true;\r\n    }\r\n\r\n    @Override\r\n    public boolean isEnabled() {\r\n        return user.isEnabled();\r\n    }\r\n\r\n}
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/security/MyUserDetails.java b/src/main/java/lt/autoservis/u5/security/MyUserDetails.java
+--- a/src/main/java/lt/autoservis/u5/security/MyUserDetails.java	
++++ b/src/main/java/lt/autoservis/u5/security/MyUserDetails.java	
+@@ -1,6 +1,5 @@
+ package lt.autoservis.u5.security;
+ 
+-import lt.autoservis.u5.model.entity.Role;
+ import lt.autoservis.u5.model.entity.Vartotojas;
+ import org.springframework.security.core.GrantedAuthority;
+ import org.springframework.security.core.authority.SimpleGrantedAuthority;
+Index: src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.autoservis.u5.model.repository;\r\n\r\nimport lt.autoservis.u5.model.entity.Role;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\nimport org.springframework.stereotype.Repository;\r\n\r\n@Repository\r\npublic interface RoleRepository extends JpaRepository<Role,Long> {\r\n    Role findById(long id);\r\n    Role findByName(String name);\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java b/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java
+--- a/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java	
++++ b/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java	
+@@ -1,6 +1,5 @@
+ package lt.autoservis.u5.model.repository;
+ 
+-import lt.autoservis.u5.model.entity.Role;
+ import org.springframework.data.jpa.repository.JpaRepository;
+ import org.springframework.stereotype.Repository;
+ 
+Index: src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.autoservis.u5.model.repository;\r\n\r\nimport lt.autoservis.u5.model.entity.Privilegijos;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\nimport org.springframework.stereotype.Repository;\r\n\r\n@Repository\r\npublic interface PrivilegijosRepository extends JpaRepository<Privilegijos, Long> {\r\n    Privilegijos findById(long id);\r\n    Privilegijos findByName(String name);\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java b/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java
+--- a/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java	
++++ b/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java	
+@@ -1,6 +1,5 @@
+ package lt.autoservis.u5.model.repository;
+ 
+-import lt.autoservis.u5.model.entity.Privilegijos;
+ import org.springframework.data.jpa.repository.JpaRepository;
+ import org.springframework.stereotype.Repository;
+ 

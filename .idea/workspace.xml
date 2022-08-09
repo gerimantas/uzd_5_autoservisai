@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Atnaujintas prisijungimas security2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/autoservis.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/u355634419_autoservis (1).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,11 +40,25 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="security2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -50,6 +75,9 @@
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
+  </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,33 +100,44 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="exceleditor.install" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5_web\src\main\resources\templates" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\securingweb" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test\java\lt\autoservis\u5" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="lt.autoservis.u5.controller" />
+      <recent name="lt.autoservis.u5.security" />
+      <recent name="lt.autoservis.u5.model.repository" />
+      <recent name="lt.autoservis.u5.model.entity" />
+      <recent name="lt.autoservis.u5.Component" />
+      <recent name="lt.autoservis.u5.config" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Praktika5Application">
     <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
-      <module name="uzd_5_autoservisai-2" />
+      <module name="uzduotis_5_autoservisai" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lt.autoservis.u5.*" />
@@ -109,9 +148,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RestServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="restservice.RestServiceApplication" />
+      <module name="uzduotis_5_autoservisai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Praktika5Application" />
+        <item itemvalue="Application.RestServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +339,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656520009409</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="klaida 'flywayInitializer'">
+      <created>1659453134728</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1659453134728</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Atnaujintas prisijungimas security2">
+      <created>1660030834776</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1660030834776</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,7 +417,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Pradzia" />
     <MESSAGE value="Prijungta duomenu baze: autoservis" />
     <MESSAGE value="Sukurti paketai, entity - Autoservisai" />
@@ -359,7 +436,10 @@
     <MESSAGE value="Meistru sarasas ir pasirinkimo mygtukas" />
     <MESSAGE value="Atnaujinta 06-26" />
     <MESSAGE value="Ikeltas projektas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ikeltas projektas" />
+    <MESSAGE value="Klaida security daryme 'flywayInitializer'" />
+    <MESSAGE value="klaida 'flywayInitializer'" />
+    <MESSAGE value="Atnaujintas prisijungimas security2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atnaujintas prisijungimas security2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -383,5 +463,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/workspace_xml$Praktika5Application.ic" NAME="Praktika5Application Coverage Results" MODIFIED="1659467021624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>lt.autoservis.u5.*</FILTER>
+    </SUITE>
   </component>
 </project>
