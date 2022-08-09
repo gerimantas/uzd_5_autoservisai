@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>Autoservisai</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
 
 </head>
 <body>
-<h1>Autoservisų sąrašas</h1>
+<div class="container">
+<h3>Autoservisų sąrašas</h3>
 <hr>
 
-<div th:each="autoservisai : ${visiAutoservisai}" class="list-group">
+ <div th:each="autoservisai : ${visiAutoservisai}" class="list-group">
     <a th:text="${autoservisai.getPavadinimas()}" th:href="@{/duomenys/autoservisai/(id=${autoservisai.getId()})}" class="list-group-item list-group-item-action"></a>
+</div>
 </div>
 </body>
 </html>
