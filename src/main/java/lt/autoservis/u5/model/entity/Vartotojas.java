@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @Entity
@@ -22,7 +23,7 @@ public class Vartotojas {
             joinColumns = @JoinColumn(name = "vartotojas_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private Set<Role> rolesVartotoju = new HashSet<>();
+    private Set<Role> roles = new HashSet<>();
 
 
     @ManyToMany
@@ -36,12 +37,12 @@ public class Vartotojas {
     public Vartotojas() {
     }
 
-    public Vartotojas(long id, String username, String password, boolean enabled, Set<Role> rolesVartotoju, Set<Vertinimas> vartotojuVertinimai) {
+    public Vartotojas(long id, String username, String password, boolean enabled, Set<Role> roles, Set<Vertinimas> vartotojuVertinimai) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.enabled = enabled;
-        this.rolesVartotoju = rolesVartotoju;
+        this.roles = roles;
         this.vartotojuVertinimai = vartotojuVertinimai;
     }
 
@@ -77,12 +78,12 @@ public class Vartotojas {
         this.enabled = enabled;
     }
 
-    public Set<Role> getRolesVartotoju() {
-        return rolesVartotoju;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public void setRolesVartotoju(Set<Role> rolesVartotoju) {
-        this.rolesVartotoju = rolesVartotoju;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public Set<Vertinimas> getVartotojuVertinimai() {
@@ -100,10 +101,13 @@ public class Vartotojas {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", enabled=" + enabled +
-                ", rolesVartotoju=" + rolesVartotoju +
+                ", roles=" + roles +
                 ", vartotojuVertinimai=" + vartotojuVertinimai +
                 '}';
     }
 
+    public Map<Object, Object> roles() {
+        return null;
+    }
 }
 

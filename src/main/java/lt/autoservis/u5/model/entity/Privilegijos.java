@@ -32,7 +32,6 @@ public class Privilegijos {
     }
 
     public Privilegijos(String name) {
-
     }
 
     public Long getId() {

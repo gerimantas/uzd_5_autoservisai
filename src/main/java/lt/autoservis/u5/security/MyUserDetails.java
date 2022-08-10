@@ -1,5 +1,6 @@
 package lt.autoservis.u5.security;
 
+import lt.autoservis.u5.model.entity.Role;
 import lt.autoservis.u5.model.entity.Vartotojas;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,7 +21,7 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<Role> roles = user.getRolesVartotoju();
+        Set<Role> roles = user.getRoles();
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
 
         for (Role role : roles) {

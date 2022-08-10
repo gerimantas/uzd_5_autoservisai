@@ -1,6 +1,9 @@
 package lt.autoservis.u5.Component;
 
+import lt.autoservis.u5.model.entity.Privilegijos;
+import lt.autoservis.u5.model.entity.Role;
 import lt.autoservis.u5.model.entity.Vartotojas;
+import lt.autoservis.u5.model.repository.PrivilegijosRepository;
 import lt.autoservis.u5.model.repository.RoleRepository;
 import lt.autoservis.u5.model.repository.VartotojasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,7 +61,7 @@ public class SetupDataLoader implements
         Vartotojas vartotojas = new Vartotojas();
         vartotojas.setUsername("Test");
         vartotojas.setPassword("test");
-//        vartotojas.setVartotojoRole (hashSet);
+        vartotojas.setRoles (hashSet);
         vartotojas.setEnabled(true);
         vartotojuRepozitorija.save(vartotojas);
 
@@ -79,12 +82,12 @@ public class SetupDataLoader implements
     @Transactional
     Role createRoleIfNotFound (String name, Set<Privilegijos> privilegijos) {
 
-        Role role = roleRepository.findByName(name);
-        if (role == null) {
-            role = new Role(name);
-            role.setPrivilegijuRoles(privilegijos);
-            roleRepository.save(role);
+        Role roles = roleRepository.findByName(name);
+        if (roles == null) {
+            roles = new Role(name);
+            roles.setPrivilegijuRoles(privilegijos);
+            roleRepository.save(roles);
         }
-        return role;
+        return roles;
     }
    }

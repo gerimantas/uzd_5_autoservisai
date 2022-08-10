@@ -4,21 +4,116 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Atnaujintas prisijungimas security2">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/autoservis.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" afterDir="false" />
+    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Padaryta navigacija">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/Meistrai.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/MeistraiControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/Vartotojas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/Vertinimas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/VertinimasControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/VertinimasRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/Meistrai.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/MeistraiControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/Vartotojas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/Vertinimas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/VertinimasControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/VertinimasRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_08_2022_08_00_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_08_2022_08_00__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_15_46_[Changes]/MvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_15_46_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_15_46__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Meistrai.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/MeistraiControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Vartotojas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Vertinimas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/VertinimasControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/VertinimasRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/Meistrai.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/MeistraiControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/Vartotojas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/Vertinimas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/VertinimasControler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/VertinimasRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]4/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]5/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/vartotojasService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/admin.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/blocks/template.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/login.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/my-products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/product-info.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/profile.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/registration.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/user-edit.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/user-info.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/autoservis.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/admin.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/blocks/template.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/login.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/my-products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/product-info.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/profile.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/registration.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/user-edit.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates3/user-info.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Privilegijos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Vartotojas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Vartotojas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ivertinti_meistra.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ivertinti_meistra.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/redaguotas_autoservisas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/redaguotas_autoservisas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_meistrai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visi_meistrai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/Component/SetupDataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/Component/SetupDataLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AutoservisaiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/SpecializacijaControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Privilegijos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Privilegijos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Vartotojas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Vartotojas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/MyUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/MyUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ivertinti_meistra.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ivertinti_meistra.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/redaguotas_autoservisas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/redaguotas_autoservisas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_meistrai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visi_meistrai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +151,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
@@ -105,7 +201,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="exceleditor.install" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.mvn/wrapper" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -113,25 +209,25 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\.mvn\wrapper" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates\blocks" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates3" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\template2" />
+      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\securingweb" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test\java\lt\autoservis\u5" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lt.autoservis.u5.services" />
       <recent name="lt.autoservis.u5.security" />
       <recent name="lt.autoservis.u5.model.repository" />
       <recent name="lt.autoservis.u5.model.entity" />
       <recent name="lt.autoservis.u5.Component" />
-      <recent name="lt.autoservis.u5.config" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Praktika5Application">
@@ -161,6 +257,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="templates in uzduotis_5_autoservisai" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="uzduotis_5_autoservisai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="templates.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="templates" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,6 +285,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Praktika5Application" />
+        <item itemvalue="JUnit.templates in uzduotis_5_autoservisai" />
         <item itemvalue="Application.RestServiceApplication" />
       </list>
     </recent_temporary>
@@ -353,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660030834776</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Atnaujinta duomenu baze">
+      <created>1660043762219</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1660043762219</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +557,10 @@
     <MESSAGE value="Klaida security daryme 'flywayInitializer'" />
     <MESSAGE value="klaida 'flywayInitializer'" />
     <MESSAGE value="Atnaujintas prisijungimas security2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atnaujintas prisijungimas security2" />
+    <MESSAGE value="Atnaujinta duomenu baze" />
+    <MESSAGE value="Veikia admin prisijungimas" />
+    <MESSAGE value="Padaryta navigacija" />
+    <option name="LAST_COMMIT_MESSAGE" value="Padaryta navigacija" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

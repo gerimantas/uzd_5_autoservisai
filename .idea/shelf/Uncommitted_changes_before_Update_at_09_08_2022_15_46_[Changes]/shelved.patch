@@ -1,0 +1,938 @@
+Index: src/main/java/lt/autoservis/u5/config/MvcConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.autoservis.u5.config;\r\n\r\nimport org.springframework.context.annotation.Configuration;\r\nimport org.springframework.web.servlet.config.annotation.ViewControllerRegistry;\r\nimport org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\r\n\r\n@Configuration\r\npublic class MvcConfig implements WebMvcConfigurer {\r\n\r\n    public void addViewControllers(ViewControllerRegistry registry) {\r\n        registry.addViewController(\"/home\").setViewName(\"home\");\r\n        registry.addViewController(\"/\").setViewName(\"home\");\r\n        registry.addViewController(\"/hello\").setViewName(\"hello\");\r\n        registry.addViewController(\"/login\").setViewName(\"login\");\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/config/MvcConfig.java b/src/main/java/lt/autoservis/u5/config/MvcConfig.java
+--- a/src/main/java/lt/autoservis/u5/config/MvcConfig.java	(revision 92eba656b9d55dc68a652366fb73c2f8700dd15f)
++++ b/src/main/java/lt/autoservis/u5/config/MvcConfig.java	(date 1660048477496)
+@@ -8,8 +8,7 @@
+ public class MvcConfig implements WebMvcConfigurer {
+ 
+     public void addViewControllers(ViewControllerRegistry registry) {
+-        registry.addViewController("/home").setViewName("home");
+-        registry.addViewController("/").setViewName("home");
++        registry.addViewController("/").setViewName("hello");
+         registry.addViewController("/hello").setViewName("hello");
+         registry.addViewController("/login").setViewName("login");
+     }
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.datasource.url=jdbc:mysql://sql504.main-hosting.eu/u355634419_autoservis?server Timezone=UTC&characterEncoding=utf8\r\nspring.datasource.username=u355634419_gerimantas\r\nspring.datasource.password=Ziedas+1\r\nspring.flyway.check-location = false\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect\r\nspring.jpa.hibernate.ddl-auto=update\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision 92eba656b9d55dc68a652366fb73c2f8700dd15f)
++++ b/src/main/resources/application.properties	(date 1660044684065)
+@@ -6,5 +6,11 @@
+ spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+ spring.jpa.hibernate.ddl-auto=update
+ 
++spring.freemarker.expose-request-attributes=true
++spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
++
++spring.session.jdbc.initialize-schema=always
++spring.session.jdbc.table-name=SPRING_SESSION
++
+ 
+ 
+Index: src/main/resources/templates3/blocks/template.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/blocks/template.ftlh b/src/main/resources/templates3/blocks/template.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818619)
++++ b/src/main/resources/templates3/blocks/template.ftlh	(date 1659820818619)
+@@ -0,0 +1,53 @@
++<#macro template user>
++    <!doctype html>
++    <html lang="ru">
++    <head>
++        <!-- Required meta tags -->
++        <meta charset="utf-8">
++        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
++        <link rel="stylesheet" href="/static/css/style.css">
++
++        <!-- Bootstrap CSS -->
++        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
++              integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
++              crossorigin="anonymous">
++
++        <title>BUYSELL</title>
++    </head>
++    <body>
++    <nav class="navbar navbar-dark bg-dark">
++        <div class="container-fluid">
++            <a href="/">
++                <span class="navbar-brand mb-0 h1">BUYSELL</span>
++            </a>
++            <#if user.email??>
++                <div class="dropdown text-end">
++                    <a href="/profile">
++                        <img src="/static/images/avatar.png" alt="mdo"
++                             width="32" height="32" class="rounded-circle">
++                    </a>
++                </div>
++            <#else>
++                <button class="btn btn-light my-2 my-sm-0" type="button"
++                        onclick="window.location.href = '/login'">
++                    Войти
++                </button>
++            </#if>
++        </div>
++    </nav>
++    <div class="container mt-4">
++        <#nested/>
++    </div>
++
++    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
++            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
++            crossorigin="anonymous"></script>
++    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
++            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
++            crossorigin="anonymous"></script>
++    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
++            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
++            crossorigin="anonymous"></script>
++    </body>
++    </html>
++</#macro>
+\ No newline at end of file
+Index: .mvn/wrapper/MavenWrapperDownloader.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.mvn/wrapper/MavenWrapperDownloader.java b/.mvn/wrapper/MavenWrapperDownloader.java
+new file mode 100644
+--- /dev/null	(date 1659295832944)
++++ b/.mvn/wrapper/MavenWrapperDownloader.java	(date 1659295832944)
+@@ -0,0 +1,117 @@
++/*
++ * Copyright 2007-present the original author or authors.
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      https://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++import java.net.*;
++import java.io.*;
++import java.nio.channels.*;
++import java.util.Properties;
++
++public class MavenWrapperDownloader {
++
++    private static final String WRAPPER_VERSION = "0.5.6";
++    /**
++     * Default URL to download the maven-wrapper.jar from, if no 'downloadUrl' is provided.
++     */
++    private static final String DEFAULT_DOWNLOAD_URL = "https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/"
++        + WRAPPER_VERSION + "/maven-wrapper-" + WRAPPER_VERSION + ".jar";
++
++    /**
++     * Path to the maven-wrapper.properties file, which might contain a downloadUrl property to
++     * use instead of the default one.
++     */
++    private static final String MAVEN_WRAPPER_PROPERTIES_PATH =
++            ".mvn/wrapper/maven-wrapper.properties";
++
++    /**
++     * Path where the maven-wrapper.jar will be saved to.
++     */
++    private static final String MAVEN_WRAPPER_JAR_PATH =
++            ".mvn/wrapper/maven-wrapper.jar";
++
++    /**
++     * Name of the property which should be used to override the default download url for the wrapper.
++     */
++    private static final String PROPERTY_NAME_WRAPPER_URL = "wrapperUrl";
++
++    public static void main(String args[]) {
++        System.out.println("- Downloader started");
++        File baseDirectory = new File(args[0]);
++        System.out.println("- Using base directory: " + baseDirectory.getAbsolutePath());
++
++        // If the maven-wrapper.properties exists, read it and check if it contains a custom
++        // wrapperUrl parameter.
++        File mavenWrapperPropertyFile = new File(baseDirectory, MAVEN_WRAPPER_PROPERTIES_PATH);
++        String url = DEFAULT_DOWNLOAD_URL;
++        if(mavenWrapperPropertyFile.exists()) {
++            FileInputStream mavenWrapperPropertyFileInputStream = null;
++            try {
++                mavenWrapperPropertyFileInputStream = new FileInputStream(mavenWrapperPropertyFile);
++                Properties mavenWrapperProperties = new Properties();
++                mavenWrapperProperties.load(mavenWrapperPropertyFileInputStream);
++                url = mavenWrapperProperties.getProperty(PROPERTY_NAME_WRAPPER_URL, url);
++            } catch (IOException e) {
++                System.out.println("- ERROR loading '" + MAVEN_WRAPPER_PROPERTIES_PATH + "'");
++            } finally {
++                try {
++                    if(mavenWrapperPropertyFileInputStream != null) {
++                        mavenWrapperPropertyFileInputStream.close();
++                    }
++                } catch (IOException e) {
++                    // Ignore ...
++                }
++            }
++        }
++        System.out.println("- Downloading from: " + url);
++
++        File outputFile = new File(baseDirectory.getAbsolutePath(), MAVEN_WRAPPER_JAR_PATH);
++        if(!outputFile.getParentFile().exists()) {
++            if(!outputFile.getParentFile().mkdirs()) {
++                System.out.println(
++                        "- ERROR creating output directory '" + outputFile.getParentFile().getAbsolutePath() + "'");
++            }
++        }
++        System.out.println("- Downloading to: " + outputFile.getAbsolutePath());
++        try {
++            downloadFileFromURL(url, outputFile);
++            System.out.println("Done");
++            System.exit(0);
++        } catch (Throwable e) {
++            System.out.println("- Error downloading");
++            e.printStackTrace();
++            System.exit(1);
++        }
++    }
++
++    private static void downloadFileFromURL(String urlString, File destination) throws Exception {
++        if (System.getenv("MVNW_USERNAME") != null && System.getenv("MVNW_PASSWORD") != null) {
++            String username = System.getenv("MVNW_USERNAME");
++            char[] password = System.getenv("MVNW_PASSWORD").toCharArray();
++            Authenticator.setDefault(new Authenticator() {
++                @Override
++                protected PasswordAuthentication getPasswordAuthentication() {
++                    return new PasswordAuthentication(username, password);
++                }
++            });
++        }
++        URL website = new URL(urlString);
++        ReadableByteChannel rbc;
++        rbc = Channels.newChannel(website.openStream());
++        FileOutputStream fos = new FileOutputStream(destination);
++        fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
++        fos.close();
++        rbc.close();
++    }
++
++}
+Index: src/main/resources/static/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/static/style.css b/src/main/resources/static/style.css
+new file mode 100644
+--- /dev/null	(date 1659292195560)
++++ b/src/main/resources/static/style.css	(date 1659292195560)
+@@ -0,0 +1,3 @@
++body {
++    color: #113;
++}
+\ No newline at end of file
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\t<modelVersion>4.0.0</modelVersion>\r\n\r\n\t<parent>\r\n\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\r\n\t\t<version>2.6.5</version>\r\n\t\t<relativePath/> <!-- lookup parent from repository -->\r\n\t</parent>\r\n\r\n\t<groupId>lt.autoservis</groupId>\r\n\t<artifactId>u5</artifactId>\r\n\t<version>0.0.1-SNAPSHOT</version>\r\n\r\n\t<name>praktika5</name>\r\n\t<description>Aplikacija, kurios pagalba automobilių servisų klientai randa informaciją apie automobilių remonto servisų meistrus bei juos įvertina</description>\r\n\r\n\t<properties>\r\n\t\t<java.version>11</java.version>\r\n\t</properties>\r\n\r\n\r\n\t<dependencies>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-data-jpa</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<!-- DataBase support -->\r\n\t\t<dependency>\r\n\t\t\t<groupId>mysql</groupId>\r\n\t\t\t<artifactId>mysql-connector-java</artifactId>\r\n\t\t\t<scope>runtime</scope>\r\n\t\t</dependency>\r\n\r\n\r\n\t\t<!-- security -->\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-security</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency>\r\n\t\t<groupId>org.springframework.security</groupId>\r\n\t\t<artifactId>spring-security-test</artifactId>\r\n\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t</dependencies>\r\n\r\n\t<build>\r\n\t\t<plugins>\r\n\t\t\t<plugin>\r\n\t\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\r\n\t\t\t</plugin>\r\n\t\t</plugins>\r\n\t</build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 92eba656b9d55dc68a652366fb73c2f8700dd15f)
++++ b/pom.xml	(date 1660047484868)
+@@ -41,6 +41,21 @@
+ 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+ 		</dependency>
+ 
++		<dependency>
++			<groupId>org.projectlombok</groupId>
++			<artifactId>lombok</artifactId>
++		</dependency>
++
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-freemarker</artifactId>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-devtools</artifactId>
++			<optional>true</optional>
++		</dependency>
++
+ 		<!-- DataBase support -->
+ 		<dependency>
+ 			<groupId>mysql</groupId>
+@@ -60,8 +75,32 @@
+ 		<artifactId>spring-security-test</artifactId>
+ 		<scope>test</scope>
+ 		</dependency>
++
++		<dependency>
++			<groupId>org.springframework.session</groupId>
++			<artifactId>spring-session-jdbc</artifactId>
++		</dependency>
++
++		<!-- JAXB -->
++		<dependency>
++			<groupId>javax.xml.bind</groupId>
++			<artifactId>jaxb-api</artifactId>
++			<version>2.3.0</version>
++		</dependency>
++		<dependency>
++			<groupId>com.sun.xml.bind</groupId>
++			<artifactId>jaxb-core</artifactId>
++			<version>2.3.0</version>
++		</dependency>
++		<dependency>
++			<groupId>com.sun.xml.bind</groupId>
++			<artifactId>jaxb-impl</artifactId>
++			<version>2.3.0</version>
++		</dependency>
++
+ 	</dependencies>
+ 
++
+ 	<build>
+ 		<plugins>
+ 			<plugin>
+Index: src/main/resources/templates3/admin.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/admin.ftlh b/src/main/resources/templates3/admin.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818619)
++++ b/src/main/resources/templates3/admin.ftlh	(date 1659820818619)
+@@ -0,0 +1,33 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++    `<h1 style="text-align: center">Панель администратора</h1><hr>
++    <table class="table table-hover table-dark">
++        <tr>
++            <th scope="col">Email</th>
++            <th scope="col">Номер телефона</th>
++            <th scope="col">Активность</th>
++            <th scope="col">Роли</th>
++            <th scope="col">Бан</th>
++            <th scope="col">Редактирование</th>
++            <th scope="col">Подробная информация</th>
++        </tr>
++        <#list users as user>
++            <tr>
++                <th>${user.email}</th>
++                <th>${user.phoneNumber}</th>
++                <th><#if user.active>true<#else>false</#if></th>
++                <th><#list user.roles as role>${role}</#list></th>
++                <th>
++                    <form action="/admin/user/ban/${user.id}" method="post">
++                        <input type="hidden" name="_csrf" value="${_csrf.token}">
++                        <input type="submit" class="btn btn-light" value="Бан">
++                    </form>
++                </th>
++                <th><a href="/admin/user/edit/${user.id}">Редактировние</a></th>
++                <th><a href="/user/${user.id}">Подробная информация</a></th>
++            </tr>
++        <#else>
++            <h3>Пользователей нет</h3>
++        </#list>
++    </table>
++</@t.template>
+\ No newline at end of file
+Index: src/main/resources/templates3/user-info.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/user-info.ftlh b/src/main/resources/templates3/user-info.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818621)
++++ b/src/main/resources/templates3/user-info.ftlh	(date 1659820818621)
+@@ -0,0 +1,38 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template userByPrincipal>
++    <h1 style="text-align: center">Информация о пользователе</h1>
++    <hr>
++    <div style="text-align: center">
++            <img src="/static/images/avatar.png"
++                 style="border:2px solid black; border-radius: 20px" height="120">
++        <br>
++        <br>
++        <h2>${user.name}</h2>
++        <br>
++        Номер телефона: <b>${user.phoneNumber}</b>
++    </div>
++    <br>
++    <hr>
++    <h1 style="text-align: center">Товары пользователя ${user.name}</h1>
++    <br>
++    <div class="card-columns">
++        <#list products as product>
++            <a href="/product/${product.id}" class="product-link">
++                <div class="card text-white bg-dark my-3 product">
++
++                    <img src="/images/${product.previewImageId}"
++                         class="card-img-top">
++                    <div class="card-body">
++                        <h5 class="card-title">${product.title}</h5>
++                        <p class="card-text">${product.price} ₽</p>
++                    </div>
++                    <div class="card-footer">
++                        ${product.user.name}
++                    </div>
++                </div>
++            </a>
++        <#else>
++            <h1 style="text-align: center">Не найдено</h1>
++        </#list>
++    </div>
++</@t.template>
+\ No newline at end of file
+Index: src/main/resources/templates3/user-edit.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/user-edit.ftlh b/src/main/resources/templates3/user-edit.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818621)
++++ b/src/main/resources/templates3/user-edit.ftlh	(date 1659820818621)
+@@ -0,0 +1,15 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++<h1 style="text-align: center">Редактирование пользователя ${user.name}</h1><hr>
++<form action="/admin/user/edit" method="post">
++    <#list roles as role>
++        <div>
++            <label><input type="checkbox" name="${role}" ${user.roles?seq_contains(role)?string("checked", "")}>${role}</label>
++        </div>
++    </#list>
++    <input type="hidden" value="${user.id}" name="userId">
++    <input type="hidden" value="${_csrf.token}" name="_csrf">
++    <button type="submit" class="btn btn-dark">Сохранить</button>
++</form>
++
++</@t.template>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"Atnaujintas prisijungimas security2\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/autoservis.sql\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/application.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/login.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/login.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/application.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/login.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/templates/login.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"security2\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/src/main/resources/application.properties\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/pom.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"KotlinCodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"26ups2WWGLsnr2KKiVdPTRRt9pe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"exceleditor.install\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/resources/templates\" />\r\n    <property name=\"project.structure.last.edited\" value=\"SDKs\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"editor.preferences.import\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\templates\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\\lt\\autoservis\\u5\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\test\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\resources\\templates\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\\securingweb\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\main\\java\" />\r\n      <recent name=\"C:\\Users\\37065\\OneDrive\\Desktop\\Programavimas\\u5_web\\src\\test\\java\\lt\\autoservis\\u5\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"lt.autoservis.u5.security\" />\r\n      <recent name=\"lt.autoservis.u5.model.repository\" />\r\n      <recent name=\"lt.autoservis.u5.model.entity\" />\r\n      <recent name=\"lt.autoservis.u5.Component\" />\r\n      <recent name=\"lt.autoservis.u5.config\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Praktika5Application\">\r\n    <configuration name=\"Praktika5Application\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.autoservis.u5.Praktika5Application\" />\r\n      <module name=\"uzduotis_5_autoservisai\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.autoservis.u5.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RestServiceApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"restservice.RestServiceApplication\" />\r\n      <module name=\"uzduotis_5_autoservisai\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"restservice.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Praktika5Application\" />\r\n        <item itemvalue=\"Application.RestServiceApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0ea92179-6416-4648-8b29-ddac217a6bb2\" name=\"Changes\" comment=\"\" />\r\n      <created>1648283533165</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1648283533165</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Prijungta duomenu baze: autoservis\">\r\n      <created>1648286984467</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648286984467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Sukurti paketai, entity - Autoservisai\">\r\n      <created>1648288376902</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648288376902</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\">\r\n      <created>1648333389280</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648333389280</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Pratestuota su Postman\">\r\n      <created>1648576393109</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1648576393109</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Klaidos ieskom\">\r\n      <created>1649151287989</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649151287989</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"@JsonIgnore\">\r\n      <created>1649168460296</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649168460296</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Istaisyta autoservisai_id dubliavimo klaida\">\r\n      <created>1649324437241</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649324437241</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Sudeta adresai, telefonai, vartotojai, vertinimas\">\r\n      <created>1649366864899</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649366864899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Sudeti controleriai\">\r\n      <created>1649667941121</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649667941121</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Pratestuota su Thymeleaf (th), veikia\">\r\n      <created>1649765816218</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649765816218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Resursuose ideta autoservis.sql\">\r\n      <created>1649833798198</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649833798198</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00012\" summary=\"Specializaciju isvedimas\">\r\n      <created>1650369280875</created>\r\n      <option name=\"number\" value=\"LOCAL−00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00012\" />\r\n      <updated>1650369280875</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00013\" summary=\"Specializacijos ir autoservisai isvedimas\">\r\n      <created>1650371975531</created>\r\n      <option name=\"number\" value=\"LOCAL−00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00013\" />\r\n      <updated>1650371975531</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00014\" summary=\"Autoserviso idejimo klaida\">\r\n      <created>1650478345440</created>\r\n      <option name=\"number\" value=\"LOCAL−00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00014\" />\r\n      <updated>1650478345440</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00015\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650797572384</created>\r\n      <option name=\"number\" value=\"LOCAL−00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00015\" />\r\n      <updated>1650797572384</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00016\" summary=\"Prisijungta prie web serverio\">\r\n      <created>1650879752722</created>\r\n      <option name=\"number\" value=\"LOCAL−00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00016\" />\r\n      <updated>1650879752722</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00017\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650958187431</created>\r\n      <option name=\"number\" value=\"LOCAL−00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00017\" />\r\n      <updated>1650958187431</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00018\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959650312</created>\r\n      <option name=\"number\" value=\"LOCAL−00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00018\" />\r\n      <updated>1650959650312</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00019\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650959972134</created>\r\n      <option name=\"number\" value=\"LOCAL−00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00019\" />\r\n      <updated>1650959972134</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00020\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650987829066</created>\r\n      <option name=\"number\" value=\"LOCAL−00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00020\" />\r\n      <updated>1650987829066</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00021\" summary=\"Meistru sarasas ir pasirinkimo mygtukas\">\r\n      <created>1650988072161</created>\r\n      <option name=\"number\" value=\"LOCAL−00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00021\" />\r\n      <updated>1650988072161</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Atnaujinta 06-26\">\r\n      <created>1656443671236</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656443671236</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Ikeltas projektas\">\r\n      <created>1656520009409</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656520009409</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"klaida 'flywayInitializer'\">\r\n      <created>1659453134728</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1659453134728</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"Atnaujintas prisijungimas security2\">\r\n      <created>1660030834776</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1660030834776</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"26\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"c4f46998-e62d-425e-b392-f50c13022d5c\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Pradzia\" />\r\n    <MESSAGE value=\"Prijungta duomenu baze: autoservis\" />\r\n    <MESSAGE value=\"Sukurti paketai, entity - Autoservisai\" />\r\n    <MESSAGE value=\"Sukurtos Autoservisu ir Kategoriju jungciu lenteles\" />\r\n    <MESSAGE value=\"Pratestuota su Postman\" />\r\n    <MESSAGE value=\"Klaidos ieskom\" />\r\n    <MESSAGE value=\"@JsonIgnore\" />\r\n    <MESSAGE value=\"Istaisyta autoservisai_id dubliavimo klaida\" />\r\n    <MESSAGE value=\"Sudeta adresai, telefonai, vartotojai, vertinimas\" />\r\n    <MESSAGE value=\"Sudeti controleriai\" />\r\n    <MESSAGE value=\"Pratestuota su Thymeleaf (th), veikia\" />\r\n    <MESSAGE value=\"Resursuose ideta autoservis.sql\" />\r\n    <MESSAGE value=\"Specializaciju isvedimas\" />\r\n    <MESSAGE value=\"Specializacijos ir autoservisai isvedimas\" />\r\n    <MESSAGE value=\"Autoserviso idejimo klaida\" />\r\n    <MESSAGE value=\"Prisijungta prie web serverio\" />\r\n    <MESSAGE value=\"Meistru sarasas ir pasirinkimo mygtukas\" />\r\n    <MESSAGE value=\"Atnaujinta 06-26\" />\r\n    <MESSAGE value=\"Ikeltas projektas\" />\r\n    <MESSAGE value=\"Klaida security daryme 'flywayInitializer'\" />\r\n    <MESSAGE value=\"klaida 'flywayInitializer'\" />\r\n    <MESSAGE value=\"Atnaujintas prisijungimas security2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Atnaujintas prisijungimas security2\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.StackOverflowError\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"org.hibernate.MappingException\" package=\"org.hibernate\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>\r\n          <line>41</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/workspace_xml$Praktika5Application.ic\" NAME=\"Praktika5Application Coverage Results\" MODIFIED=\"1659467021624\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>lt.autoservis.u5.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 92eba656b9d55dc68a652366fb73c2f8700dd15f)
++++ b/.idea/workspace.xml	(date 1660049168885)
+@@ -4,21 +4,26 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Atnaujintas prisijungimas security2">
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/autoservis.sql" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_07_2022_16_52__Changes_.xml" afterDir="false" />
++    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Atnaujinta duomenu baze">
++      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/admin.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/blocks/template.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/login.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/my-products.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/product-info.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/products.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/profile.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/registration.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/user-edit.ftlh" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates3/user-info.ftlh" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/config/MvcConfig.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/config/MvcConfig.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/PrivilegijosRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/model/repository/RoleRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai/src/main/java/lt/autoservis/u5/security/MyUserDetails.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -56,6 +61,7 @@
+   </component>
+   <component name="HighlightingSettingsPerFile">
+     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+@@ -105,7 +111,7 @@
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="exceleditor.install" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/.mvn/wrapper" />
+     <property name="project.structure.last.edited" value="SDKs" />
+     <property name="project.structure.proportion" value="0.0" />
+     <property name="project.structure.side.proportion" value="0.0" />
+@@ -113,18 +119,18 @@
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\.mvn\wrapper" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates\blocks" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates3" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\template2" />
++      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
+       <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\securingweb" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java" />
+-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\test\java\lt\autoservis\u5" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
+       <recent name="lt.autoservis.u5.security" />
+@@ -161,6 +167,20 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <configuration name="templates in uzduotis_5_autoservisai" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="uzduotis_5_autoservisai" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="templates.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="templates" />
++      <option name="TEST_OBJECT" value="package" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration default="true" type="JetRunConfigurationType">
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -175,6 +195,7 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.Praktika5Application" />
++        <item itemvalue="JUnit.templates in uzduotis_5_autoservisai" />
+         <item itemvalue="Application.RestServiceApplication" />
+       </list>
+     </recent_temporary>
+@@ -353,7 +374,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1660030834776</updated>
+     </task>
+-    <option name="localTasksCounter" value="26" />
++    <task id="LOCAL-00026" summary="Atnaujinta duomenu baze">
++      <created>1660043762219</created>
++      <option name="number" value="00026" />
++      <option name="presentableId" value="LOCAL-00026" />
++      <option name="project" value="LOCAL" />
++      <updated>1660043762219</updated>
++    </task>
++    <option name="localTasksCounter" value="27" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -439,7 +467,8 @@
+     <MESSAGE value="Klaida security daryme 'flywayInitializer'" />
+     <MESSAGE value="klaida 'flywayInitializer'" />
+     <MESSAGE value="Atnaujintas prisijungimas security2" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Atnaujintas prisijungimas security2" />
++    <MESSAGE value="Atnaujinta duomenu baze" />
++    <option name="LAST_COMMIT_MESSAGE" value="Atnaujinta duomenu baze" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: src/main/resources/templates3/registration.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/registration.ftlh b/src/main/resources/templates3/registration.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818621)
++++ b/src/main/resources/templates3/registration.ftlh	(date 1659820818621)
+@@ -0,0 +1,28 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++    <h1 style="text-align: center">Регистрация</h1>
++    <hr>
++    <form action="/registration" method="post">
++        <div class="form-group">
++            <label for="name">Имя пользователя</label>
++            <input type="text" class="form-control" required id="name" name="name">
++        </div>
++        <div class="form-group">
++            <label for="email">Электронная почта</label>
++            <input type="email" class="form-control" id="email" required name="email">
++        </div>
++        <div class="form-group">
++            <label for="phoneNumber">Номер телефона</label>
++            <input type="text" class="form-control" id="phoneNumber" required name="phoneNumber">
++        </div>
++        <div class="form-group">
++            <label for="password">Пароль</label>
++            <input type="password" class="form-control" id="password" required name="password">
++        </div>
++        <input type="hidden" name="_csrf" value="${_csrf.token}">
++        <button type="submit" style="width: 100%" class="btn btn-dark">Зарегистрироваться</button>
++    </form>
++    <#if errorMessage??>
++        <h2 style="color: red">${errorMessage}</h2>
++    </#if>
++</@t.template>
+\ No newline at end of file
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.datasource.url=jdbc:mysql://sql504.main-hosting.eu/u355634419_autoservis?server Timezone=UTC&characterEncoding=utf8\r\nspring.datasource.username=u355634419_gerimantas\r\nspring.datasource.password=Ziedas+1\r\nspring.flyway.check-location = false\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect\r\nspring.jpa.hibernate.ddl-auto=update\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	(revision 92eba656b9d55dc68a652366fb73c2f8700dd15f)
++++ b/target/classes/application.properties	(date 1660044721209)
+@@ -6,5 +6,11 @@
+ spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+ spring.jpa.hibernate.ddl-auto=update
+ 
++spring.freemarker.expose-request-attributes=true
++spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
++
++spring.session.jdbc.initialize-schema=always
++spring.session.jdbc.table-name=SPRING_SESSION
++
+ 
+ 
+Index: src/main/resources/templates3/profile.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/profile.ftlh b/src/main/resources/templates3/profile.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818620)
++++ b/src/main/resources/templates3/profile.ftlh	(date 1659820818620)
+@@ -0,0 +1,35 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++    <h1 style="text-align: center">Личный кабинет</h1>
++    <hr>
++    <br>
++    <div style="text-align: center">
++        <img src="/static/images/avatar.png"
++             style="border:2px solid black; border-radius: 20px" height="120">
++        <br>
++        <br>
++        <h2>${user.name}</h2>
++        <br>
++        Электоронная почта: <b>${user.email}</b>
++        <br>
++        Номер телефона: <b>${user.phoneNumber}</b>
++        <br>
++        <br>
++        <#if user.isAdmin()>
++            <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
++               href="/admin">
++                Панель администратора
++            </a><br>
++        </#if>
++        <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
++           href="/my/products">
++            Мои товары
++        </a>
++        <form action="/logout" method="post">
++            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
++            <button type="submit" style="text-align: center; width: 100%" class="btn btn-danger mb-2">
++                Выйти из аккаунта
++            </button>
++        </form>
++    </div>
++</@t.template>
+\ No newline at end of file
+Index: src/main/resources/templates3/products.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/products.ftlh b/src/main/resources/templates3/products.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818620)
++++ b/src/main/resources/templates3/products.ftlh	(date 1659820818620)
+@@ -0,0 +1,44 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++    <h1 style="text-align: center">Поиск товаров</h1><hr>
++    <form method="get" action="/">
++        <div class="form-row">
++            <div class="form-group col-md-2">
++                <label for="searchCity">Город</label>
++                <select id="searchCity" class="form-control">
++                    <option value="">Город не выбран</option>
++                    <option value="Москва">Москва</option>
++                    <option value="Красноярск">Красноярск</option>
++                    <option value="Казань">Казань</option>
++                </select>
++            </div>
++            <div class="form-group col-md-10">
++                <label for="searchWord">Поиск по объявлениям</label>
++                <input type="text" name="searchWord" <#if searchWord??>value="${searchWord}"</#if> class="form-control"
++                       id="searchWord">
++            </div>
++            <button style="width: 100%" type="submit" class="btn btn-dark">Поиск</button>
++        </div>
++    </form>
++    <hr>
++    <div class="card-columns">
++        <#list products as product>
++            <a href="/product/${product.id}" class="product-link">
++                <div class="card text-white bg-dark my-3 product">
++
++                    <img src="/images/${product.previewImageId}"
++                         class="card-img-top">
++                    <div class="card-body">
++                        <h5 class="card-title">${product.title}</h5>
++                        <p class="card-text">${product.price} ₽</p>
++                    </div>
++                    <div class="card-footer">
++                        ${product.city}
++                    </div>
++                </div>
++            </a>
++        <#else>
++            <h1 style="text-align: center">Не найдено</h1>
++        </#list>
++    </div>
++</@t.template>
+\ No newline at end of file
+Index: src/main/resources/templates3/product-info.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/product-info.ftlh b/src/main/resources/templates3/product-info.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818620)
++++ b/src/main/resources/templates3/product-info.ftlh	(date 1659820818620)
+@@ -0,0 +1,51 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++    <div id="myCarousel" class="carousel slide" data-ride="carousel">
++        <ol class="carousel-indicators">
++            <#list images as image>
++                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
++            </#list>
++        </ol>
++        <div class="carousel-inner">
++            <#list images as image>
++                <div class="carousel-item <#if image.previewImage>active</#if>">
++                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
++                         role="img" aria-label=" :  " preserveAspectRatio="xMidYMid slice" focusable="false">
++                        <title></title>
++                        <rect width="100%" height="100%" fill="#777"></rect>
++                        <text x="50%" y="50%" fill="#777" dy=".3em"></text>
++                    </svg>
++
++                    <div class="container">
++                        <div class="carousel-caption">
++                            <a href="/images/${image.id}">
++                                <img class="product" style="height: 100px" src="/images/${image.id}">
++                            </a>
++                        </div>
++                    </div>
++                </div>
++            </#list>
++
++        </div>
++        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
++            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
++            <span class="sr-only">Previous</span>
++        </a>
++        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
++            <span class="carousel-control-next-icon" aria-hidden="true"></span>
++            <span class="sr-only">Next</span>
++        </a>
++    </div>
++    <hr>
++    <p><h1 style="text-align: center">${product.title} | ${product.price} ₽</h1></p>
++    <p style="text-align: center">${product.description}</p>
++    <p style="text-align: center">Номер телефона продавца: <b>${authorProduct.phoneNumber}</b></p>
++
++    <hr>
++    <p style="text-align: center">
++        <a href="/user/${authorProduct.id}">
++            <img src="/static/images/avatar.png" alt="mdo" width="32" height="32" class="rounded-circle"> ${authorProduct.name}
++        </a>
++    </p>
++
++</@t.template>
+\ No newline at end of file
+Index: src/main/resources/templates3/my-products.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/my-products.ftlh b/src/main/resources/templates3/my-products.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818620)
++++ b/src/main/resources/templates3/my-products.ftlh	(date 1659820818620)
+@@ -0,0 +1,91 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++    <h1 style="text-align: center">Мои товары</h1>
++    <hr>
++    <a class="btn btn-dark mt-3 mb-3" style="text-align: center; width: 100%"
++       data-toggle="collapse" href="#collapseExample" role="button"
++       aria-expanded="true" aria-controls="collapseExample">
++        Добавить новый товар
++    </a>
++    <div class="collapse mb-3" id="collapseExample" style="">
++        <form action="/product/create" method="post" enctype="multipart/form-data">
++            <div class="form-group">
++                <label for="productName">Название товара</label>
++                <input type="text" required class="form-control"
++                       id="productName" name="title">
++            </div>
++            <div class="form-group">
++                <label for="price">Цена товара</label>
++                <div class="input-group mb-3">
++                    <input type="number" required class="form-control" id="price" name="price">
++                    <div class="input-group-append">
++                        <span class="input-group-text">₽</span>
++                    </div>
++                </div>
++            </div>
++            <div class="form-group">
++                <label for="searchCity">Город</label>
++                <select id="searchCity" required name="city" class="form-control">
++                    <option value="">Город не выбран</option>
++
++                    <option value="Москва">Москва</option>
++                    <option value="Красноярск">Красноярск</option>
++                    <option value="Казань">Казань</option>
++
++                </select>
++            </div>
++            <div class="form-group">
++                <label for="description">Описание товара</label>
++                <textarea required class="form-control" id="description" name="description"></textarea>
++            </div>
++            <div class="form-group">
++                <div class="custom-file">
++                    <input required type="file" name="file1" id="file1">
++                    <label class="custom-file-label" for="file1">Первая фотография к товару</label>
++                </div>
++            </div>
++            <div class="form-group">
++                <div class="custom-file">
++                    <input type="file" name="file2" id="file2">
++                    <label class="custom-file-label" for="file2">Вторая фотография к товару</label>
++                </div>
++            </div>
++            <div class="form-group">
++                <div class="custom-file">
++                    <input type="file" name="file3" id="file3">
++                    <label class="custom-file-label" for="file3">Третья фотография к товару</label>
++                </div>
++            </div>
++            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
++
++            <button type="submit" style="width: 100%" class="btn btn-dark">Добавить</button>
++        </form>
++    </div>
++    <div class="card-columns">
++        <#list products as product>
++            <a href="/product/${product.id}" class="product-link">
++                <div class="card text-white bg-dark my-3 product">
++                    <div class="card-top">
++                        <form action="/product/delete/${product.id}" method="post">
++                            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
++                            <button type="submit" class="btn btn-danger m-3">
++                                Удалить
++                            </button>
++                        </form>
++                    </div>
++                    <img src="/images/${product.previewImageId}"
++                         class="card-img-top">
++                    <div class="card-body">
++                        <h5 class="card-title">${product.title}</h5>
++                        <p class="card-text">${product.price} ₽</p>
++                    </div>
++                    <div class="card-footer">
++                        ${product.city}
++                    </div>
++                </div>
++            </a>
++        <#else>
++            <h1 style="text-align: center">Не найдено</h1>
++        </#list>
++    </div>
++</@t.template>
+\ No newline at end of file
+Index: src/main/resources/templates3/login.ftlh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates3/login.ftlh b/src/main/resources/templates3/login.ftlh
+new file mode 100644
+--- /dev/null	(date 1659820818620)
++++ b/src/main/resources/templates3/login.ftlh	(date 1659820818620)
+@@ -0,0 +1,25 @@
++<#import "blocks/template.ftlh" as t>
++<@t.template user>
++    <h1 style="text-align: center">Авторизация</h1>
++    <hr>
++    <form action="/login " method="post">
++        <div class="form-group">
++            <label for="email">Электронная почта</label>
++            <input type="email" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="email" name="username">
++            <div id="email" class="invalid-feedback">
++                Неверныя электронная почта
++            </div>
++        </div>
++        <div class="form-group">
++            <label for="password">Пароль</label>
++            <input type="password" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="password" name="password">
++            <div id="password" class="invalid-feedback">
++                Неверный пароль
++            </div>
++        </div>
++        <input type="hidden" name="_csrf" value="${_csrf.token}">
++        <button type="submit" style="width: 100%" class="btn btn-dark">Войти</button>
++    </form>
++    <hr>
++    <h2>Нет аккаунта BUYSELL? <a href="/registration">Зарегистрируйся!</a></h2>
++</@t.template>
+\ No newline at end of file
