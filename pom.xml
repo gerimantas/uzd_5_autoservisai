@@ -9,15 +9,17 @@
 		<version>2.6.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
 	<groupId>lt.autoservis</groupId>
 	<artifactId>u5</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<name>praktika5</name>
 	<description>Aplikacija, kurios pagalba automobilių servisų klientai randa informaciją apie automobilių remonto servisų meistrus bei juos įvertina</description>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>11</java.version>
 	</properties>
 

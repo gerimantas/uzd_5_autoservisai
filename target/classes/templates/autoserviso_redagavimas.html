@@ -10,16 +10,34 @@
 </head>
 <body>
 <div class="container">
-    <h1>Autoserviso redagavimas</h1>
+    <h5>Autoserviso redagavimas</h5>
     <hr>
-    <h1>Redaguokite autoserviso duomenis</h1>
+<!--    <h1>Redaguokite autoserviso duomenis</h1>-->
 
     <form th:action="@{/ideti/idejo_autoservisa}" th:object="${autoservisai}" method="POST">
         <input type="hidden" th:field="*{id}">
-        <option value="0">Pavadinimas</option>
+<!--        <option value="0">Pavadinimas</option>-->
         <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">
-        <option value="0">Vadovas</option>
+<!--        <option value="0">Vadovas</option>-->
         <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">
+
+<!--        <select th:field="*{autoservisoSpecializacija.id}" class="form-control" id="dropDownList">-->
+<!--&lt;!&ndash;            <option value="0">Pasirinkite specializaciją</option>&ndash;&gt;-->
+<!--            <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>-->
+<!--        </select>-->
+
+<!--        <select th:field="*{autoservisoMiestas}" class="form-control">-->
+<!--            <option value="0">Pasirinkite miestą</option>-->
+<!--            <option th:each="miestai : ${miestas}" th:value="${miestai.getId()}"th:text="${miestai.getPavadinimas()}"></option>-->
+<!--        </select>-->
+
+
+<!--        <select th:field="*{knygosKategorija.id}" class="form-control" id="dropDownList">-->
+<!--            <option th:each="kategorija : ${kategorijos}" th:value="${kategorija.getId()}" th:text="${kategorija.getPavadinimas()}" th:selected="knygosKategorija.id"></option>-->
+<!--        </select>-->
+<!--        -->
+<!--        <option value="0">Specializacija</option>-->
+<!--        <input th:field="*{specializacijaAutoserviso}"type="text"  placeholder="specializacijaAutoserviso" class="form-control mb-4 col-4">-->
 
 
 
@@ -29,7 +47,7 @@
 
     <hr>
 
-    <a th:href="@{/}"> Grįžti atgal</a>
+    <a th:href="@{/rodyti/visi_autoservisai}"> Grįžti į sąrašą</a>
 </div>
 </body>
 </html>
@@ -38,10 +56,7 @@
 <!--    <input th:field="*{pavadinimas}" type="text"  placeholder="Pavadinimas" class="form-control mb-4 col-4">-->
 <!--    <input th:field="*{vadovas}"type="text"  placeholder="Vadovas" class="form-control mb-4 col-4">-->
 
-<!--    <select th:field="*{autoservisoSpecializacija}" class="form-control" id="dropDownList">-->
-<!--        <option value="0">Pasirinkite specializaciją</option>-->
-<!--        <option th:each="specializacija : ${specializacijos}" th:value="${specializacija.getId()}"th:text="${specializacija.getPavadinimas()}"></option>-->
-<!--    </select>-->
+
 
 <!--    <select th:field="*{autoservisoMiestas}" class="form-control">-->
 <!--        <option value="0">Pasirinkite miestą</option>-->

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Visos specializacijos</title>
+    <meta charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -33,14 +33,37 @@
             </div>
         </nav>
     </nav>
+    <title>Meistru vertinimas</title>
 </head>
 <body>
+
 <div class="container">
-  <h4>Specializacijų sąrašas:</h4>
-  <hr>
- <div th:each="specializacija : ${visosSpecializacijos}" class="list-group">
-    <a th:text="${specializacija.getPavadinimas()}" th:href="@{/specializacija/rodyti_autoservisus/(id=${specializacija.getId()})}" class="list-group-item list-group-item-action"></a>
- </div>
+    <h5>Meistro įvertinimas</h5>
+    <hr>
+    <h6>Pasirink meistrą:</h6>
+    <hr>
+
+
+
+    <form  th:action="@{/idejo_vertinima}" th:object="${vertinimas}" method="POST">
+        <input type="hidden" th:field="*{id}">
+
+        <select th:field="*{meistroVertinimas.id}" class="form-control" id="dropDownList">
+            <option th:each="meistrai : ${meistrai}" th:value="${meistrai.getId()}" th:text="${meistrai.getVardas_pavarde()}" th:selected="meistroVertinimas.id"></option>
+        </select>
+        <hr>
+        <option value="0">Komentaras</option>
+        <input type="text" th:field="*{komentaras}" placeholder="Komentaras" class="form-control mb-4 col-4">
+        <option value="0">Įrašyk balą nuo 1 iki 5</option>
+        <input type="number" th:field="*{balas}" placeholder="" class="form-control mb-4 col-4">
+<!--        <input type="date" th:field="*{data}" placeholder="" class="form-control mb-4 col-4">-->
+
+        <button type="submit" class="btn btn-info col-2">Patvirtinti vertinimą</button>
+    </form>
+
+    <hr>
+
+    <a th:href="@{/duomenys/meistrai}"> Grįžti į meistrų sąrašą</a>
 </div>
 </body>
-</html>
+</html>>

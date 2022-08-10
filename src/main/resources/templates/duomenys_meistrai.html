@@ -1,21 +1,44 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <nav class="navbar navbar-light" style="background-color: #4172de;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Autoservisai.lt</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://localhost:8080/rodyti/visi_autoservisai">Sąrašas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:8080/test/visos_specializacijos">Specializacijos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:8080/meistru/vertinimas/{id}">Meistrų vertinimas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:8080/login">Išeiti</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </nav>
     <title>Meistru duomenys</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
 </head>
+
 <body>
+<div class="container">
 <table class="table table-striped">
+    <h5>Meistrų duomenys</h5>
     <tr>
-        <th>Meistras</th>
+        <th>Vardas</th>
         <td th:text="${vardas_pavarde}"></td>
     </tr>
-
     <tr>
         <th>Specializacija</th>
         <td>
@@ -24,19 +47,19 @@
 
          </ul>
         </td>
-
     </tr>
-
 
     <tr>
     <th>Vertinimas</th>
     <td>
         <ul th:each="vertinimas : ${meistroVertinimas}" class="list-group">
-            <li th:text= "${vertinimas.getMeistroVertinimas()}" class="list-group-item"></li>
+            <li th:text= "${vertinimas.getBalas()}" class="list-group-item"></li>
+
+<!--            <li th:text="${vertinimas.getAverage(balas)}" ></li>-->
+<!--            <li th:text="${#aggregates.avg(vertinimas![balas])}" ></li>-->
 
         </ul>
     </td>
-
     </tr>
 
 
@@ -48,12 +71,13 @@
 
             </ul>
         </td>
-
     </tr>
-
-
-
-
 </table>
+    <hr>
+
+
+
+
+</div>
 </body>
 </html>

@@ -1,7 +1,5 @@
 package lt.autoservis.u5.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
@@ -16,7 +14,17 @@ public class Vertinimas {
     private LocalDate data;
     private String komentaras;
 
-    @JsonIgnore
+
+//    @Entity
+//    public class Employee extends AbstractBaseEntity {
+//        @OneToMany( mappedBy = "employee",  cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+//        private List<Review> reviews;
+//
+//        public double getAverage() {
+//            return reviews.stream().map(Review::getGrade).mapToInt(Byte::intValue).average()
+//        }
+//    }
+
     @ManyToOne
     @JoinColumn(name = "meistrai_id")
     private Meistrai meistroVertinimas;
@@ -29,6 +37,9 @@ public class Vertinimas {
             inverseJoinColumns = @JoinColumn(name = "vartotojo_id")
     )
     private Set<Vartotojas> vartotojaiKurieVertino;
+
+
+
 
     public Vertinimas() {
     }

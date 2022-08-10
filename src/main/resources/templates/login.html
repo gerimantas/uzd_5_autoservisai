@@ -2,18 +2,42 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <head>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-        <title>Hello, world!</title>
+        <nav class="navbar navbar-light" style="background-color: #4172de;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Autoservisai.lt</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="http://localhost:8080/rodyti/visi_autoservisai">Sąrašas <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8080/test/visos_specializacijos">Specializacijos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8080/meistrai/visi_meistrai">Meistrai</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8080/meistru/vertinimas/{id}">Meistrų vertinimas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="http://localhost:8080/login">Išeiti</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </nav>
+        <title>Autoservisai</title>
     </head>
-</head>
+
 <body>
 <div class="container">
-<h1>Login page</h1>
+<h5>Prisijungimo puslapis</h5>
 <p th:if="${loginError}" class="error">Wrong user or password</p>
 <form th:action="@{/login}" method="post">
     <label for="username">Username</label>:

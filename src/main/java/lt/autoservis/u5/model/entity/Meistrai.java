@@ -1,8 +1,5 @@
 package lt.autoservis.u5.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -20,28 +17,30 @@ public class Meistrai {
             name = "sujungimas_meistrai_specializacija",
             joinColumns = @JoinColumn(name = "meistrai_id"),
             inverseJoinColumns = @JoinColumn(name = "specializacija_id"))
-    @JsonIgnore
+
     private Set<Specializacija> specializacijaMeistro;
 
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "autoservisai_id")
     private Autoservisai meistroAutoservisas;
 
-    @ManyToOne
-    @JoinColumn(name = "meistroVertinimas")
-    private Vertinimas vertinimasMeistru;
+//    @ManyToOne
+//    @JoinColumn(name = "meistroVertinimas")
+//    private Vertinimas vertinimasMeistru;
 
+    @OneToMany(mappedBy = "meistroVertinimas")
+    Set<Vertinimas> meistroVertinimas;
 
     public Meistrai() {
     }
 
-    public Meistrai(long id, String vardas_pavarde, Set<Specializacija> specializacijaMeistro, Autoservisai meistroAutoservisas, Vertinimas vertinimasMeistru) {
+    public Meistrai(long id, String vardas_pavarde, Set<Specializacija> specializacijaMeistro, Autoservisai meistroAutoservisas, Set<Vertinimas> meistroVertinimas) {
         this.id = id;
         this.vardas_pavarde = vardas_pavarde;
         this.specializacijaMeistro = specializacijaMeistro;
         this.meistroAutoservisas = meistroAutoservisas;
-        this.vertinimasMeistru = vertinimasMeistru;
+        this.meistroVertinimas = meistroVertinimas;
     }
 
     public long getId() {
@@ -76,12 +75,12 @@ public class Meistrai {
         this.meistroAutoservisas = meistroAutoservisas;
     }
 
-    public Vertinimas getVertinimasMeistru() {
-        return vertinimasMeistru;
+    public Set<Vertinimas> getMeistroVertinimas() {
+        return meistroVertinimas;
     }
 
-    public void setVertinimasMeistru(Vertinimas vertinimasMeistru) {
-        this.vertinimasMeistru = vertinimasMeistru;
+    public void setMeistroVertinimas(Set<Vertinimas> meistroVertinimas) {
+        this.meistroVertinimas = meistroVertinimas;
     }
 
     @Override
@@ -91,7 +90,7 @@ public class Meistrai {
                 ", vardas_pavarde='" + vardas_pavarde + '\'' +
                 ", specializacijaMeistro=" + specializacijaMeistro +
                 ", meistroAutoservisas=" + meistroAutoservisas +
-                ", vertinimasMeistru=" + vertinimasMeistru +
+                ", meistroVertinimas=" + meistroVertinimas +
                 '}';
     }
 }
