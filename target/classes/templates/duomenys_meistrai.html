@@ -53,12 +53,15 @@
     <th>Vertinimas</th>
     <td>
         <ul th:each="vertinimas : ${meistroVertinimas}" class="list-group">
-            <li th:text= "${vertinimas.getBalas()}" class="list-group-item"></li>
-
-<!--            <li th:text="${vertinimas.getAverage(balas)}" ></li>-->
-<!--            <li th:text="${#aggregates.avg(vertinimas![balas])}" ></li>-->
+<!--            <li th:text= "${vertinimas.getBalas()}" class="list-group-item"></li>-->
 
         </ul>
+        <option value="0">Vertinimų kiekis yra:</option>
+        <h3 th:text="${meistroVertinimas.size}" ></h3>
+
+        <option value="0">Visų vertinimų vidurkis yra:</option>
+        <h3 th:text="${#aggregates.avg(meistroVertinimas.![balas])}" ></h3>
+
     </td>
     </tr>
 

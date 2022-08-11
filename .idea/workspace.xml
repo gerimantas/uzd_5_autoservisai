@@ -4,55 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="security6 pradeta branche6">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/idetas_vertinimas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ideti_vertinima.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022_08_03_13_00_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022_08_03_13_00__Changes_.xml" beforeDir="false" />
+    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Ikeltas projektas">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_24__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_24__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_24__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_33__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_33__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_33__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_08_2022_08_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_08_2022_08_00__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_15_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_15_46__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/MeistraiControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaControler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/VertinimasControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/VertinimasControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Meistrai.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Meistrai.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Vertinimas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/entity/Vertinimas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/model/repository/SpecializacijaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/autoserviso_redagavimas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/duomenys_autoservisai.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/duomenys_meistrai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/duomenys_meistrai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ivertinti_meistra.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/redaguotas_autoservisas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/redaguotas_autoservisas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visi_autoservisai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visi_meistrai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visi_meistrai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visos_specializacijos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/AutoservisaiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/MeistraiControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/MeistraiControler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/SpecializacijaControler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/VertinimasControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/controller/VertinimasControler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Meistrai.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Meistrai.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Vertinimas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/model/entity/Vertinimas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/autoserviso_redagavimas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/duomenys_autoservisai.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/duomenys_meistrai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/duomenys_meistrai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/hello.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ivertinti_meistra.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/redaguotas_autoservisas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/redaguotas_autoservisas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visi_autoservisai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visi_meistrai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visi_meistrai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visos_specializacijos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/u355634419_autoservis (1).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" afterPath="$PROJECT_DIR$/uzd_5_autoservisai" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,21 +48,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/AutoservisaiMVControler.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Praktika5Application.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
@@ -102,9 +63,6 @@
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
-  </component>
-  <component name="KotlinCodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -127,44 +85,33 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="exceleditor.install" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\.mvn\wrapper" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates\blocks" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\lt\autoservis\u5" />
+      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5_web\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\templates3" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources\template2" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\resources" />
-      <recent name="C:\Users\37065\OneDrive\Desktop\Programavimas\u5_web\src\main\java\securingweb" />
+      <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="lt.autoservis.u5.services" />
-      <recent name="lt.autoservis.u5.security" />
-      <recent name="lt.autoservis.u5.model.repository" />
-      <recent name="lt.autoservis.u5.model.entity" />
-      <recent name="lt.autoservis.u5.Component" />
+      <recent name="lt.autoservis.u5.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Praktika5Application">
+  <component name="RunManager">
     <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
-      <module name="uzduotis_5_autoservisai" />
+      <module name="uzd_5_autoservisai-2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lt.autoservis.u5.*" />
@@ -175,49 +122,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="restservice.RestServiceApplication" />
-      <module name="uzduotis_5_autoservisai" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="templates in uzduotis_5_autoservisai" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="uzduotis_5_autoservisai" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="templates.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="templates" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Praktika5Application" />
-        <item itemvalue="JUnit.templates in uzduotis_5_autoservisai" />
-        <item itemvalue="Application.RestServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -381,35 +288,7 @@
       <option name="project" value="LOCAL" />
       <updated>1656520009409</updated>
     </task>
-    <task id="LOCAL-00024" summary="klaida 'flywayInitializer'">
-      <created>1659453134728</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1659453134728</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Atnaujintas prisijungimas security2">
-      <created>1660030834776</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1660030834776</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Atnaujinta duomenu baze">
-      <created>1660043762219</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1660043762219</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Ideta thymeleaf-extras-springsecurity5 dependency">
-      <created>1660116139919</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1660116139919</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -473,6 +352,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Pradzia" />
+    <MESSAGE value="Prijungta duomenu baze: autoservis" />
     <MESSAGE value="Sukurti paketai, entity - Autoservisai" />
     <MESSAGE value="Sukurtos Autoservisu ir Kategoriju jungciu lenteles" />
     <MESSAGE value="Pratestuota su Postman" />
@@ -490,15 +372,7 @@
     <MESSAGE value="Meistru sarasas ir pasirinkimo mygtukas" />
     <MESSAGE value="Atnaujinta 06-26" />
     <MESSAGE value="Ikeltas projektas" />
-    <MESSAGE value="Klaida security daryme 'flywayInitializer'" />
-    <MESSAGE value="klaida 'flywayInitializer'" />
-    <MESSAGE value="Atnaujintas prisijungimas security2" />
-    <MESSAGE value="Atnaujinta duomenu baze" />
-    <MESSAGE value="Veikia admin prisijungimas" />
-    <MESSAGE value="Padaryta navigacija" />
-    <MESSAGE value="Ideta thymeleaf-extras-springsecurity5 dependency" />
-    <MESSAGE value="security6 pradeta branche6" />
-    <option name="LAST_COMMIT_MESSAGE" value="security6 pradeta branche6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ikeltas projektas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -511,6 +385,11 @@
           <properties class="org.hibernate.MappingException" package="org.hibernate" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lt/autoservis/u5/controller/SpecializacijaMVControler.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
