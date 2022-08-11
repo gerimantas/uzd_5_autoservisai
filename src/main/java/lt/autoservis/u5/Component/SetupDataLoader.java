@@ -58,12 +58,12 @@ public class SetupDataLoader implements
         Role adminRole = roleRepository.findByName("ROLE_ADMIN");
         Set<Role> hashSet = new HashSet<Role>();
         hashSet.add (adminRole);
-        Vartotojas vartotojas = new Vartotojas();
-        vartotojas.setUsername("Test");
-        vartotojas.setPassword("test");
-        vartotojas.setRoles (hashSet);
-        vartotojas.setEnabled(true);
-        vartotojuRepozitorija.save(vartotojas);
+//        Vartotojas vartotojas = new Vartotojas();
+//        vartotojas.setUsername("Test");
+//        vartotojas.setPassword("test");
+//        vartotojas.setRoles (hashSet);
+//        vartotojas.setEnabled(true);
+//        vartotojuRepozitorija.save(vartotojas);
 
         alreadySetup = true;
 
