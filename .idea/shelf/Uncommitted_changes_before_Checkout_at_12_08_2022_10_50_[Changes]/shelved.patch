@@ -1,0 +1,17 @@
+Index: src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.autoservis.u5.security;\r\n\r\nimport org.springframework.context.annotation.Bean;\r\nimport org.springframework.context.annotation.Configuration;\r\nimport org.springframework.security.config.annotation.web.builders.HttpSecurity;\r\nimport org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;\r\nimport org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;\r\nimport org.springframework.security.core.userdetails.User;\r\nimport org.springframework.security.core.userdetails.UserDetails;\r\nimport org.springframework.security.core.userdetails.UserDetailsService;\r\nimport org.springframework.security.provisioning.InMemoryUserDetailsManager;\r\n\r\n@Configuration\r\n@EnableWebSecurity\r\npublic class WebSecurityConfig extends WebSecurityConfigurerAdapter {\r\n\r\n    @Override\r\n    protected void configure(HttpSecurity http) throws Exception {\r\n        http\r\n                .authorizeRequests()\r\n                .antMatchers(\"/\", \"/home\").permitAll()\r\n                .anyRequest().authenticated()\r\n                .and()\r\n                .formLogin()\r\n                .loginPage(\"/login\")\r\n                .permitAll()\r\n                .and()\r\n                .logout()\r\n                .permitAll();\r\n\r\n    }\r\n\r\n    @Bean\r\n    public UserDetailsService userDetailsService() {\r\n        UserDetails user =\r\n                User.withDefaultPasswordEncoder()\r\n                        .username(\"gerimantas\")\r\n                        .password(\"1\")\r\n                        .roles(\"ADMIN\")\r\n                        .build();\r\n\r\n        return new InMemoryUserDetailsManager(user);\r\n    }\r\n}
+===================================================================
+diff --git a/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java b/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java
+--- a/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java	
++++ b/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java	
+@@ -34,7 +34,7 @@
+     public UserDetailsService userDetailsService() {
+         UserDetails user =
+                 User.withDefaultPasswordEncoder()
+-                        .username("gerimantas")
++                        .username("admin")
+                         .password("1")
+                         .roles("ADMIN")
+                         .build();
