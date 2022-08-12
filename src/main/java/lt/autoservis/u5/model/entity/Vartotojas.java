@@ -1,14 +1,17 @@
 package lt.autoservis.u5.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lt.autoservis.u5.security.UserDetailsServiceImpl;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+
 @Entity
-public class Vartotojas {
+@Table(name = "vartotojas")
+public class Vartotojas implements UserDetailsServiceImpl {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
