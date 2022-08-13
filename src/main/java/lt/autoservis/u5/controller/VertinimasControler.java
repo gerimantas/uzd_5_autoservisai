@@ -2,7 +2,6 @@ package lt.autoservis.u5.controller;
 
 import lt.autoservis.u5.model.entity.Vertinimas;
 import lt.autoservis.u5.model.repository.MeistraiRepository;
-import lt.autoservis.u5.model.repository.VartotojasRepository;
 import lt.autoservis.u5.model.repository.VertinimasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,8 +19,8 @@ public class VertinimasControler {
     @Autowired
     MeistraiRepository meistraiRepository;
 
-    @Autowired
-    VartotojasRepository vartotojasRepository;
+//    @Autowired
+//    VartotojasRepository vartotojasRepository;
 
 
 

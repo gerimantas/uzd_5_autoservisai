@@ -2,7 +2,6 @@ package lt.autoservis.u5.model.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Set;
 
 @Entity
 public class Vertinimas {
@@ -30,27 +29,24 @@ public class Vertinimas {
     private Meistrai meistroVertinimas;
 
 
-    @ManyToMany
-    @JoinTable(
-            name = "vartotoju_vertinimai",
-            joinColumns = @JoinColumn(name = "vertinimas_id"),
-            inverseJoinColumns = @JoinColumn(name = "vartotojo_id")
-    )
-    private Set<Vartotojas> vartotojaiKurieVertino;
-
-
+//    @ManyToMany
+//    @JoinTable(
+//            name = "vartotoju_vertinimai",
+//            joinColumns = @JoinColumn(name = "vertinimas_id"),
+//            inverseJoinColumns = @JoinColumn(name = "vartotojo_id")
+//    )
+//    private Set<Vartotojas> vartotojaiKurieVertino;
 
 
     public Vertinimas() {
     }
 
-    public Vertinimas(long id, int balas, LocalDate data, String komentaras, Meistrai meistroVertinimas, Set<Vartotojas> vartotojaiKurieVertino) {
+    public Vertinimas(long id, int balas, LocalDate data, String komentaras, Meistrai meistroVertinimas) {
         this.id = id;
         this.balas = balas;
         this.data = data;
         this.komentaras = komentaras;
         this.meistroVertinimas = meistroVertinimas;
-        this.vartotojaiKurieVertino = vartotojaiKurieVertino;
     }
 
     public long getId() {
@@ -93,14 +89,6 @@ public class Vertinimas {
         this.meistroVertinimas = meistroVertinimas;
     }
 
-    public Set<Vartotojas> getVartotojaiKurieVertino() {
-        return vartotojaiKurieVertino;
-    }
-
-    public void setVartotojaiKurieVertino(Set<Vartotojas> vartotojaiKurieVertino) {
-        this.vartotojaiKurieVertino = vartotojaiKurieVertino;
-    }
-
     @Override
     public String toString() {
         return "Vertinimas{" +
@@ -109,7 +97,6 @@ public class Vertinimas {
                 ", data=" + data +
                 ", komentaras='" + komentaras + '\'' +
                 ", meistroVertinimas=" + meistroVertinimas +
-                ", vartotojaiKurieVertino=" + vartotojaiKurieVertino +
                 '}';
     }
 }
