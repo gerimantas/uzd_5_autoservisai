@@ -109,5 +109,10 @@ public class Vartotojas {
     public Map<Object, Object> roles() {
         return null;
     }
+
+
+    public boolean getEnabled() {
+        return enabled;
+    }
 }
 

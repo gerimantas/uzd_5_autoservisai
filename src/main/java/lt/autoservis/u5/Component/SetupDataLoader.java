@@ -12,6 +12,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,7 +24,7 @@ public class SetupDataLoader implements
         boolean alreadySetup = false;
 
         @Autowired
-        private VartotojasRepository vartotojuRepozitorija;
+        private VartotojasRepository vartotojasRepozitorija;
 
         @Autowired
         private RoleRepository roleRepository;
@@ -37,9 +38,10 @@ public class SetupDataLoader implements
         @Override
         @Transactional
         public void onApplicationEvent(ContextRefreshedEvent event) {
+        if (alreadySetup) {
+            return;
+        }
 
-        if (alreadySetup)
-             return;
         Privilegijos readPrivilegijos
                 = createPrivilegeIfNotFound("READ_PRIVILEGE");
         Privilegijos writePrivilege
@@ -90,4 +92,19 @@ public class SetupDataLoader implements
         }
         return roles;
     }
+
+    @Transactional
+       Vartotojas createUserIfNotFound(String username, String password, Collection<Role> roles) {
+        VartotojasRepository vartotojasRepository = null;
+        Vartotojas user = vartotojasRepository.findByUsername(username);
+        if (user == null) {
+            user = new Vartotojas();
+            user.setUsername(username);
+            user.setEnabled(true);
+        }
+        user.setRoles((Set<Role>) roles);
+        user = vartotojasRepository.save(user);
+        return user;
+    }
+
    }
