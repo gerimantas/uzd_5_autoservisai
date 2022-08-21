@@ -1,0 +1,99 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_19_08_2022_22_27_[Changes]" date="1660937242182" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2022_22_27_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 19/08/2022 22:27 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/MeistraiControler.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/Meistrai.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Update_at_09_08_2022_15_46_[Changes]/MvcConfig.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/Vertinimas.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/lt/autoservis/u5/Component/SetupDataLoader.class" />
+    <option name="AFTER_PATH" value="target/classes/lt/autoservis/u5/Component/SetupDataLoader.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2022_22_27_[Changes]/SetupDataLoader.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/Vartotojas.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/Meistrai.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/Vertinimas.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/lt/autoservis/u5/security/MyUserDetails.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/lt/autoservis/u5/model/entity/Privilegijos.class" />
+    <option name="AFTER_PATH" value="target/classes/lt/autoservis/u5/model/entity/Privilegijos.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2022_22_27_[Changes]/Privilegijos.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/lt/autoservis/u5/model/entity/Vartotojas.class" />
+    <option name="AFTER_PATH" value="target/classes/lt/autoservis/u5/model/entity/Vartotojas.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2022_22_27_[Changes]/Vartotojas.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/lt/autoservis/u5/model/entity/Role.class" />
+    <option name="AFTER_PATH" value="target/classes/lt/autoservis/u5/model/entity/Role.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2022_22_27_[Changes]/Role.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/VertinimasRepository.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/VertinimasRepository.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/lt/autoservis/u5/security/UserDetailsServiceImpl.class" />
+    <option name="AFTER_PATH" value="target/classes/lt/autoservis/u5/security/UserDetailsServiceImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_08_2022_22_27_[Changes]/UserDetailsServiceImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/VertinimasControler.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/Vartotojas.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_36_[Changes]/MeistraiControler.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_15_37_[Changes]/VertinimasControler.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
