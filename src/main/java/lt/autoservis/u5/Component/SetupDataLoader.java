@@ -61,8 +61,8 @@ public class SetupDataLoader implements
         Set<Role> hashSet = new HashSet<Role>();
         hashSet.add (adminRole);
         Vartotojas vartotojas = new Vartotojas();
-        vartotojas.setUsername("Test");
-        vartotojas.setPassword("test");
+//        vartotojas.setUsername("Test");
+//        vartotojas.setPassword("test");
         vartotojas.setRoles (hashSet);
         vartotojas.setEnabled(true);
         vartotojasRepozitorija.save(vartotojas);

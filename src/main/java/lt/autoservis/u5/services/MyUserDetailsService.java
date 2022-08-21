@@ -1,4 +1,4 @@
-package lt.autoservis.u5.security;
+package lt.autoservis.u5.services;
 
 import lt.autoservis.u5.model.entity.Privilegijos;
 import lt.autoservis.u5.model.entity.Role;
@@ -15,6 +15,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -90,11 +91,18 @@ public class MyUserDetailsService implements UserDetailsService {
         return roleHierarchy;
     }
 
+//        @Bean
+//    public DefaultWebSecurityExpressionHandler webSecurityExpressionHandler() {
+//        DefaultWebSecurityExpressionHandler expressionHandler = new DefaultWebSecurityExpressionHandler();
+//        expressionHandler.setRoleHierarchy(roleHierarchy());
+//        return expressionHandler;
+//    }
+
 //    @Override
 //    public Collection<? extends GrantedAuthority> getAuthorities() {
 //        return null;
 //    }
-
+//
 //    @Override
 //    public String getPassword() {
 //        return null;
