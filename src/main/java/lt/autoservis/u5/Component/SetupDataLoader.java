@@ -9,6 +9,7 @@ import lt.autoservis.u5.model.repository.VartotojasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
@@ -32,8 +33,8 @@ public class SetupDataLoader implements
         @Autowired
         private PrivilegijosRepository privilegijosRepository;
 
-   /*     @Autowired
-        private BCryptPasswordEncoder passwordEncoder;*/
+    @Autowired
+     private BCryptPasswordEncoder passwordEncoder;
 
         @Override
         @Transactional

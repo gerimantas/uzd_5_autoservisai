@@ -4,7 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Pradeta security9" />
+    <list default="true" id="0ea92179-6416-4648-8b29-ddac217a6bb2" name="Changes" comment="Klaida - There is no PasswordEncoder mapped for the id &quot;null&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/u355634419_autoservis.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_24__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_08_2022_13_33__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/Component/SetupDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/autoservis/u5/services/vartotojasService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/autoservis.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/autoservis.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/Component/SetupDataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/Component/SetupDataLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lt/autoservis/u5/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u5_web/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uzd_5_autoservisai" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,13 +110,14 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5_web\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\37065\IdeaProjects\Autoservis6v\src\main\resources" />
       <recent name="C:\Users\37065\IdeaProjects\Spring-boot\u5\src\main\resources" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -99,7 +130,7 @@
   <component name="RunManager">
     <configuration name="Praktika5Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lt.autoservis.u5.Praktika5Application" />
-      <module name="uzduotis_5_autoservisai" />
+      <module name="u5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lt.autoservis.u5.*" />
@@ -282,7 +313,21 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1660213402115</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Klaida http://localhost:8080/login?error">
+      <created>1661102754435</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1661102754435</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Klaida - There is no PasswordEncoder mapped for the id &quot;null&quot;">
+      <created>1661105419879</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1661105419879</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +412,9 @@
     <MESSAGE value="Atnaujinta 06-26" />
     <MESSAGE value="Ikeltas projektas" />
     <MESSAGE value="Padarytas meistro vertinimu vidurkio skaiciavimas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Padarytas meistro vertinimu vidurkio skaiciavimas" />
+    <MESSAGE value="Klaida http://localhost:8080/login?error" />
+    <MESSAGE value="Klaida - There is no PasswordEncoder mapped for the id &quot;null&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Klaida - There is no PasswordEncoder mapped for the id &quot;null&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
