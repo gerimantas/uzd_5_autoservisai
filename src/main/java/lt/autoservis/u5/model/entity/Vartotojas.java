@@ -8,19 +8,22 @@ import java.util.Map;
 import java.util.Set;
 
 @Entity
+@Table(name = "vartotojas")
+
 public class Vartotojas {
+
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
     private String password;
     private boolean enabled;
 
-    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",
-            joinColumns = @JoinColumn(name = "vartotojas_id"),
+            joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles = new HashSet<>();
@@ -106,13 +109,8 @@ public class Vartotojas {
                 '}';
     }
 
-    public Map<Object, Object> roles() {
-        return null;
-    }
-
-
     public boolean getEnabled() {
-        return enabled;
+        return true;
     }
 }
 

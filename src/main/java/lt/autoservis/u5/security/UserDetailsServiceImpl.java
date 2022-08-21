@@ -1,13 +1,14 @@
 package lt.autoservis.u5.security;
 
 import lt.autoservis.u5.model.entity.Privilegijos;
+
 import lt.autoservis.u5.model.entity.Role;
 import lt.autoservis.u5.model.entity.Vartotojas;
 import lt.autoservis.u5.model.repository.RoleRepository;
 import lt.autoservis.u5.model.repository.VartotojasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
+
 import org.springframework.security.access.hierarchicalroles.RoleHierarchy;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,45 +16,38 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-@Service("userDetailsService")
-@Transactional
-public class MyUserDetailsService implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private VartotojasRepository vartotojasRepository;
-
-    @Autowired
-    private MessageSource messages;
+    private VartotojasRepository userRepository;
 
     @Autowired
     private RoleRepository roleRepository;
 
-
     @Override
-    public UserDetails loadUserByUsername(String userName)
+    public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
 
-        Vartotojas vartotojas = vartotojasRepository.findByUsername(userName);
-        if (vartotojas == null) {
+        Vartotojas user = VartotojasRepository.findByUsername(username);
+
+        if (user == null) {
             return new org.springframework.security.core.userdetails.User(
                     " ", " ", true, true, true, true,
                     getAuthorities(Arrays.asList(
                             roleRepository.findByName("ROLE_USER"))));
+//            throw new UsernameNotFoundException("Could not find user");
         }
-
         return new org.springframework.security.core.userdetails.User(
-                vartotojas.getUsername(), vartotojas.getPassword(), vartotojas.getEnabled(), true, true,
-                true, getAuthorities(vartotojas.getRoles()));
+                user.getUsername(), user.getPassword(), user.getEnabled(), true, true,
+                true, getAuthorities(user.getRoles()));
+//        return new MyUserDetails(user);
     }
-
     private Collection<? extends GrantedAuthority> getAuthorities(
             Collection<Role> roles) {
 
@@ -90,38 +84,4 @@ public class MyUserDetailsService implements UserDetailsService {
         return roleHierarchy;
     }
 
-//    @Override
-//    public Collection<? extends GrantedAuthority> getAuthorities() {
-//        return null;
-//    }
-
-//    @Override
-//    public String getPassword() {
-//        return null;
-//    }
-//
-//    @Override
-//    public String getUsername() {
-//        return null;
-//    }
-//
-//    @Override
-//    public boolean isAccountNonExpired() {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean isAccountNonLocked() {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean isCredentialsNonExpired() {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean isEnabled() {
-//        return false;
-//    }
 }
